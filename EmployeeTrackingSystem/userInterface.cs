@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace EmployeeTrackingSystem
 {
-    public partial class Form1 : Form
+    public partial class userInterface : System.Windows.Forms.Form
     {
-        public Form1()
+        public userInterface()
         {
             InitializeComponent();
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

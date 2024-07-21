@@ -13,7 +13,8 @@ namespace EmployeeTrackingSystem
 {
     public partial class loginPage : System.Windows.Forms.Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=OKAN\SQLEXPRESS;Initial Catalog=Company;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=OKAN\SQLEXPRESS;Initial Catalog=Company;Integrated Security=True;Encrypt=False;TrustServerCertificate=True");
+
         public loginPage()
         {
             InitializeComponent();
@@ -38,16 +39,64 @@ namespace EmployeeTrackingSystem
         {
             if (username_input.Text == "" || password_input.Text == "")
             {
-                MessageBox.Show("Lütfen Tüm Alanları Doldurunuz!", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lütfen Tüm Alanları Doldurunuz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                if (conn.State == ConnectionState.Closed)
+                {
+                    try
+                    {
+                        conn.Open();
 
+                        String selectUser = "SELECT * FROM kullanıcılar WHERE kullanıcı_adı = @username AND parola = @password";
+
+                        using (SqlCommand cmd = new SqlCommand(selectUser, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@username", username_input.Text);
+                            cmd.Parameters.AddWithValue("@password", password_input.Text);
+
+                            SqlDataReader reader = cmd.ExecuteReader();
+
+                            if (reader.HasRows)
+                            {
+                                this.Hide();
+                                userInterface userInterfaceObj = new userInterface(); // Find and add the role of the user as a parameter inside userInterface();
+                                userInterfaceObj.ShowDialog();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Hatalı Kullanıcı Adı veya Şifre!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Hata: " + ex, "Hata Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
+                }
             }
+        }
 
-            userInterface userInterfaceObj = new userInterface();
-            userInterfaceObj.Show();
-            this.Hide();
+        private void password_input_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                login_btn_Click(sender, e);
+            }
+        }
+
+        private void username_input_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                password_input.Focus();
+                e.SuppressKeyPress = true;
+            }
         }
     }
 }

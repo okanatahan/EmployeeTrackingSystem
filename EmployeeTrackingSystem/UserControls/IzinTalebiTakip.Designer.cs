@@ -1,6 +1,6 @@
 ﻿namespace EmployeeTrackingSystem.UserControls
 {
-    partial class YoneticiAtama
+    partial class IzinTalebiTakip
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // YoneticiAtama
+            // IzinTalebiTakip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.Name = "YoneticiAtama";
+            this.Name = "IzinTalebiTakip";
             this.Size = new System.Drawing.Size(1600, 864);
             this.ResumeLayout(false);
 

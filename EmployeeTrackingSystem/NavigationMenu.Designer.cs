@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NavigationMenu));
             this.exit = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.izin_talebi2_btn = new System.Windows.Forms.Button();
             this.onay_talebi_btn = new System.Windows.Forms.Button();
             this.izin_talebi_btn = new System.Windows.Forms.Button();
             this.izin_tipi_btn = new System.Windows.Forms.Button();
@@ -53,18 +53,18 @@
             this.exit.Text = "X";
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
-            // button1
+            // izin_talebi2_btn
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::EmployeeTrackingSystem.Properties.Resources.search;
-            this.button1.Location = new System.Drawing.Point(889, 128);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 150);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "İzin Talebi Takip";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.izin_talebi2_btn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.izin_talebi2_btn.Image = global::EmployeeTrackingSystem.Properties.Resources.search;
+            this.izin_talebi2_btn.Location = new System.Drawing.Point(889, 128);
+            this.izin_talebi2_btn.Name = "izin_talebi2_btn";
+            this.izin_talebi2_btn.Size = new System.Drawing.Size(175, 150);
+            this.izin_talebi2_btn.TabIndex = 28;
+            this.izin_talebi2_btn.Text = "İzin Talebi Takip";
+            this.izin_talebi2_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.izin_talebi2_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.izin_talebi2_btn.UseVisualStyleBackColor = true;
             // 
             // onay_talebi_btn
             // 
@@ -156,7 +156,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1600, 900);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.izin_talebi2_btn);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.onay_talebi_btn);
             this.Controls.Add(this.izin_talebi_btn);
@@ -182,6 +182,6 @@
         private System.Windows.Forms.Button departman_btn;
         private System.Windows.Forms.Button yonetici_atama_btn;
         private System.Windows.Forms.Button personel_tanımlama_btn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button izin_talebi2_btn;
     }
 }

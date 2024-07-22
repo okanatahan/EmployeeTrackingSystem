@@ -28,37 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.exit = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // exit
-            // 
-            this.exit.AutoSize = true;
-            this.exit.BackColor = System.Drawing.Color.Transparent;
-            this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exit.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit.ForeColor = System.Drawing.Color.Black;
-            this.exit.Location = new System.Drawing.Point(1560, 15);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(24, 25);
-            this.exit.TabIndex = 16;
-            this.exit.Text = "X";
             // 
             // OnayTalepleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.Controls.Add(this.exit);
             this.Name = "OnayTalepleri";
-            this.Size = new System.Drawing.Size(1600, 900);
+            this.Size = new System.Drawing.Size(1600, 864);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label exit;
     }
 }

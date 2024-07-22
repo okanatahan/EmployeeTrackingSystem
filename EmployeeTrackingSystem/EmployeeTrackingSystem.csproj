@@ -76,6 +76,12 @@
     <Compile Include="UserControls\IzinTalebiOlustur.Designer.cs">
       <DependentUpon>IzinTalebiOlustur.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\IzinTalebiTakip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\IzinTalebiTakip.Designer.cs">
+      <DependentUpon>IzinTalebiTakip.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\IzinTipiTanımlama.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\IzinTalebiOlustur.resx">
       <DependentUpon>IzinTalebiOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\IzinTalebiTakip.resx">
+      <DependentUpon>IzinTalebiTakip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\IzinTipiTanımlama.resx">
       <DependentUpon>IzinTipiTanımlama.cs</DependentUpon>

@@ -23,6 +23,7 @@ namespace EmployeeTrackingSystem
             if (rol == "ik")
             {
                 izin_talebi_btn.Enabled = false;
+                izin_talebi2_btn.Enabled = false;
                 onay_talebi_btn.Enabled = false;
             }
             else if (rol == "personel")
@@ -40,6 +41,7 @@ namespace EmployeeTrackingSystem
                 departman_btn.Enabled = false;
                 izin_tipi_btn.Enabled = false;
                 izin_talebi_btn.Enabled = false;
+                izin_talebi2_btn.Enabled = false;
             }
         }
 

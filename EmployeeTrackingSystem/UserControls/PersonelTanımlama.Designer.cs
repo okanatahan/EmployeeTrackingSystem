@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.Name = "PersonelTanımlama";
-            this.Size = new System.Drawing.Size(1600, 900);
+            this.Size = new System.Drawing.Size(1600, 864);
             this.ResumeLayout(false);
 
         }

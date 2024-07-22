@@ -52,10 +52,53 @@
     <Compile Include="loginPage.Designer.cs">
       <DependentUpon>loginPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="NavigationControl.cs" />
+    <Compile Include="NavigationMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NavigationMenu.Designer.cs">
+      <DependentUpon>NavigationMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DepartmanTanımlama.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DepartmanTanımlama.Designer.cs">
+      <DependentUpon>DepartmanTanımlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\IzinTalebiOlustur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\IzinTalebiOlustur.Designer.cs">
+      <DependentUpon>IzinTalebiOlustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\IzinTipiTanımlama.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\IzinTipiTanımlama.Designer.cs">
+      <DependentUpon>IzinTipiTanımlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OnayTalepleri.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\OnayTalepleri.Designer.cs">
+      <DependentUpon>OnayTalepleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PersonelTanımlama.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PersonelTanımlama.Designer.cs">
+      <DependentUpon>PersonelTanımlama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\YoneticiAtama.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\YoneticiAtama.Designer.cs">
+      <DependentUpon>YoneticiAtama.cs</DependentUpon>
     </Compile>
     <Compile Include="userInterface.cs">
       <SubType>Form</SubType>
@@ -67,6 +110,27 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="loginPage.resx">
       <DependentUpon>loginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationMenu.resx">
+      <DependentUpon>NavigationMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DepartmanTanımlama.resx">
+      <DependentUpon>DepartmanTanımlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\IzinTalebiOlustur.resx">
+      <DependentUpon>IzinTalebiOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\IzinTipiTanımlama.resx">
+      <DependentUpon>IzinTipiTanımlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\OnayTalepleri.resx">
+      <DependentUpon>OnayTalepleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PersonelTanımlama.resx">
+      <DependentUpon>PersonelTanımlama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\YoneticiAtama.resx">
+      <DependentUpon>YoneticiAtama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userInterface.resx">
       <DependentUpon>userInterface.cs</DependentUpon>
@@ -106,6 +170,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\approval.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

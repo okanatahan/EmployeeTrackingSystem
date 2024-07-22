@@ -60,9 +60,19 @@ namespace EmployeeTrackingSystem
 
                             if (reader.HasRows)
                             {
+                                reader.Close();
+
+                                cmd.Parameters.Clear();
+                                String rolQuery = "SELECT rol FROM kullanıcılar WHERE kullanıcı_adı = @username AND parola = @password";
+                                cmd.CommandText = rolQuery;
+                                cmd.Parameters.AddWithValue("@username", username_input.Text);
+                                cmd.Parameters.AddWithValue("@password", password_input.Text);
+                                object result = cmd.ExecuteScalar();
+                                string rol = result.ToString();
+
                                 this.Hide();
-                                userInterface userInterfaceObj = new userInterface(); // Find and add the role of the user as a parameter inside userInterface();
-                                userInterfaceObj.ShowDialog();
+                                NavigationMenu NaviObj = new NavigationMenu(rol); // Find and add the role of the user as a parameter.
+                                NaviObj.ShowDialog();
                             }
                             else
                             {

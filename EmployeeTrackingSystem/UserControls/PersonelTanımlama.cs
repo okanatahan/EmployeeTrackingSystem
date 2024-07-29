@@ -15,7 +15,14 @@ namespace EmployeeTrackingSystem.UserControls
         public PersonelTanımlama()
         {
             InitializeComponent();
+            dob.CustomFormat = "dd/MM/yyyy";
+            girisTar.CustomFormat = "dd/MM/yyyy";
+            cikisTar.CustomFormat = "dd/MM/yyyy";
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(dob.Value.Date.ToString());
+        }
     }
 }

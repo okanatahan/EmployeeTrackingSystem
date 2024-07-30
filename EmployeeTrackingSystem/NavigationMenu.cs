@@ -13,12 +13,14 @@ namespace EmployeeTrackingSystem
     public partial class NavigationMenu : Form
     {
         string rol;
+        int id;
         int index;
         userInterface userInterface;
-        public NavigationMenu(string rol)
+        public NavigationMenu(string rol, int id)
         {
             InitializeComponent();
             this.rol = rol;
+            this.id = id;
 
             if (rol == "ik")
             {
@@ -53,42 +55,42 @@ namespace EmployeeTrackingSystem
         private void personel_tanımlama_btn_Click(object sender, EventArgs e)
         {
             this.index = 0;
-            userInterface = new userInterface(index);
+            userInterface = new userInterface(index, id);
             userInterface.ShowDialog();
         }
 
         private void yonetici_atama_btn_Click(object sender, EventArgs e)
         {
             this.index = 1;
-            userInterface = new userInterface(index);
+            userInterface = new userInterface(index, id);
             userInterface.ShowDialog();
         }
 
         private void departman_btn_Click(object sender, EventArgs e)
         {
             this.index = 2;
-            userInterface = new userInterface(index);
+            userInterface = new userInterface(index, id);
             userInterface.ShowDialog();
         }
 
         private void izin_tipi_btn_Click(object sender, EventArgs e)
         {
             this.index = 3;
-            userInterface = new userInterface(index);
+            userInterface = new userInterface(index, id);
             userInterface.ShowDialog();
         }
 
         private void izin_talebi_btn_Click(object sender, EventArgs e)
         {
             this.index = 4;
-            userInterface = new userInterface(index);
+            userInterface = new userInterface(index, id);
             userInterface.ShowDialog();
         }
 
         private void onay_talebi_btn_Click(object sender, EventArgs e)
         {
             this.index = 5;
-            userInterface = new userInterface(index);
+            userInterface = new userInterface(index, id);
             userInterface.ShowDialog();
         }
     }

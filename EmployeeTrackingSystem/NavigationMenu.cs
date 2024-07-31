@@ -13,10 +13,10 @@ namespace EmployeeTrackingSystem
     public partial class NavigationMenu : Form
     {
         string rol;
-        int id;
+        string id;
         int index;
         userInterface userInterface;
-        public NavigationMenu(string rol, int id)
+        public NavigationMenu(string rol, string id)
         {
             InitializeComponent();
             this.rol = rol;

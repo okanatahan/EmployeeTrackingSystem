@@ -75,7 +75,8 @@ namespace EmployeeTrackingSystem
                                 cmd.CommandText = idQuery;
                                 cmd.Parameters.AddWithValue("@username", username_input.Text);
                                 cmd.Parameters.AddWithValue("@password", password_input.Text);
-                                int id = (int)cmd.ExecuteScalar();
+                                result = cmd.ExecuteScalar();
+                                string id = cmd.ExecuteScalar().ToString();
 
                                 this.Hide();
                                 NavigationMenu NaviObj = new NavigationMenu(rol, id); // Find and add the role of the user as a parameter.

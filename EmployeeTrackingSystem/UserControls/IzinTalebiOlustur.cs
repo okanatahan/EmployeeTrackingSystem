@@ -13,18 +13,25 @@ namespace EmployeeTrackingSystem.UserControls
 {
     public partial class IzinTalebiOlustur : UserControl
     {
-        int id;
-        String yonetici;
+        string id;
+        string YoneticiID;
         SqlConnection conn = new SqlConnection(@"Data Source=OKAN\SQLEXPRESS;Initial Catalog=Company;Integrated Security=True;Encrypt=False;TrustServerCertificate=True");
-        public IzinTalebiOlustur(int id)
+        public IzinTalebiOlustur(string id)
         {
             InitializeComponent();
             IzinBaslangicTar.MinDate = DateTime.Now;
+            IzinBitisTar.MinDate = DateTime.Now;
             this.id = id;
         }
 
         private void IzinBaslangicTar_ValueChanged(object sender, EventArgs e)
         {
+            // Could be added the years of working value to the "Personel" table and according to that value, change the value
+            // for IzinBitisTar.MaxDate
+            // An Example: int c; string years; # Get the years from the database using PersonelID.
+            // if (years >= 1 || years < 5) { c = 13 } else if (years >= 5 || years < 15) { c = 19 } else if (years >= 15) { c = 25 }
+            // else { "Cannot request an annual leave" }
+            // IzinBitisTar.MaxDate = IzinBaslangicTar.Value.AddDays(c);
             IzinBitisTar.MaxDate = IzinBaslangicTar.Value.AddDays(13);
             IzinBitisTar.MinDate = IzinBaslangicTar.Value;
         }
@@ -34,27 +41,39 @@ namespace EmployeeTrackingSystem.UserControls
             try
             {
                 conn.Open();
-                string InsertQuery = "INSERT INTO IzinTalepleri (FK_PersonelID, IzinBaslangicTar, IzinBitisTar, Yonetici) VALUES (@PersonelID, @IzinBasTar, @IzinBitTar, @Yonetici)";
-                string query = "SELECT yonetici FROM Personel WHERE PersonelID = @id";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn)) {
-                    cmd.Parameters.AddWithValue("@id", id);
-                    this.yonetici = cmd.ExecuteScalar().ToString();
-                }
+                String GetYoneticiID = "SELECT YoneticiID FROM Personel WHERE PersonelID = @id";
+                String InsertQuery = "INSERT INTO IzinTalepleri (FK_PersonelID, IzinBaslangicTar, IzinBitisTar, Yonetici) VALUES (@PersonelID, @IzinBasTar, @IzinBitTar, @Yonetici)";
                 
-                using (SqlCommand cmd = new SqlCommand(InsertQuery, conn))
+                using (SqlCommand cmd = new SqlCommand(GetYoneticiID, conn))
                 {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    object result = cmd.ExecuteScalar();
+                    this.YoneticiID = result.ToString();
+
+                    String GetYonetici = "SELECT AD_SOYAD FROM Yoneticiler WHERE YoneticiID = @YoneticiID";
+                    cmd.Parameters.Clear();
+                    cmd.CommandText = GetYonetici;
+                    cmd.Parameters.AddWithValue("@YoneticiID", YoneticiID);
+                    string YoneticiAD_SOYAD = cmd.ExecuteScalar().ToString();
+
+                    cmd.Parameters.Clear();
+                    cmd.CommandText = InsertQuery;
+
                     cmd.Parameters.AddWithValue("@PersonelID", id);
                     cmd.Parameters.AddWithValue("@IzinBasTar", IzinBaslangicTar.Value.Date);
                     cmd.Parameters.AddWithValue("@IzinBitTar", IzinBitisTar.Value.Date);
-                    cmd.Parameters.AddWithValue("@Yonetici", yonetici);
+                    cmd.Parameters.AddWithValue("@Yonetici", YoneticiAD_SOYAD);
 
                     cmd.ExecuteScalar();
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show("Hata: " + ex, "Hata Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
             }
         }
     }

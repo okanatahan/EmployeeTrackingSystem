@@ -15,22 +15,21 @@ namespace EmployeeTrackingSystem
     {
         NavigationControl navigationControl;
         int index;
-        int id;
-        public userInterface(int index, int id)
+        string id;
+        public userInterface(int index, string id)
         {
             InitializeComponent();
-            InitializeNavigationControl(index);
             this.id = id;
+            InitializeNavigationControl(index, id);
         }
 
-        private void InitializeNavigationControl(int index)
+        private void InitializeNavigationControl(int index, string id)
         {
             List<UserControl> userControls = new List<UserControl>()
             { new PersonelTanımlama(), new YoneticiAtama(), new DepartmanTanımlama(), new IzinTipiTanımlama(), new IzinTalebiOlustur(id), new OnayTalepleri() };
 
             navigationControl = new NavigationControl(userControls, panel1);
             navigationControl.Display(index);
-
         }
 
         private void exit_Click(object sender, EventArgs e)

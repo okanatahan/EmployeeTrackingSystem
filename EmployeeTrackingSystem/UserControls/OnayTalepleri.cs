@@ -20,6 +20,9 @@ namespace EmployeeTrackingSystem.UserControls
         {
             InitializeComponent();
             this.id = id;
+        }
+        private void tlp_grntl_btn_Click(object sender, EventArgs e)
+        {
             GetYoneticiID(id);
             DisplayTable(YoneticiID);
         }
@@ -78,13 +81,19 @@ namespace EmployeeTrackingSystem.UserControls
             try
             {
                 conn.Open();
-                String UpdateQuery = "UPDATE IzinTalepleri SET OnayDurumu = @Onay WHERE FK_PersonelID = @id";
+                string PersonelID = dgv.Rows[dgv.CurrentRow.Index].Cells[0].Value.ToString();
+                string IzinBasTar= dgv.Rows[dgv.CurrentRow.Index].Cells[2].Value.ToString();
+                string IzinBitTar = dgv.Rows[dgv.CurrentRow.Index].Cells[3].Value.ToString();
+
+                String UpdateQuery = "UPDATE IzinTalepleri SET OnayDurumu = @Onay WHERE FK_PersonelID = @id AND IzinBaslangicTar = @IzinBasTar AND IzinBitisTar = @IzinBitTar";
                 string onay = "Onaylandı";
 
                 using (SqlCommand cmd = new SqlCommand(UpdateQuery, conn))
                 {
                     cmd.Parameters.AddWithValue("@Onay", onay);
-                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@id", PersonelID);
+                    cmd.Parameters.AddWithValue("@IzinBasTar", IzinBasTar);
+                    cmd.Parameters.AddWithValue("@IzinBitTar", IzinBitTar);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -104,13 +113,19 @@ namespace EmployeeTrackingSystem.UserControls
             try
             {
                 conn.Open();
-                String UpdateQuery = "UPDATE IzinTalepleri SET OnayDurumu = @Onay WHERE FK_PersonelID = @id";
+                string PersonelID = dgv.Rows[dgv.CurrentRow.Index].Cells[0].Value.ToString();
+                string IzinBasTar = dgv.Rows[dgv.CurrentRow.Index].Cells[2].Value.ToString();
+                string IzinBitTar = dgv.Rows[dgv.CurrentRow.Index].Cells[3].Value.ToString();
+
+                String UpdateQuery = "UPDATE IzinTalepleri SET OnayDurumu = @Onay WHERE FK_PersonelID = @id AND IzinBaslangicTar = @IzinBasTar AND IzinBitisTar = @IzinBitTar";
                 string onay = "Reddedildi";
 
                 using (SqlCommand cmd = new SqlCommand(UpdateQuery, conn))
                 {
                     cmd.Parameters.AddWithValue("@Onay", onay);
-                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@id", PersonelID);
+                    cmd.Parameters.AddWithValue("@IzinBasTar", IzinBasTar);
+                    cmd.Parameters.AddWithValue("@IzinBitTar", IzinBitTar);
                     cmd.ExecuteNonQuery();
                 }
             }

@@ -86,10 +86,16 @@ namespace EmployeeTrackingSystem
             userInterface = new userInterface(index, id);
             userInterface.ShowDialog();
         }
+        private void izin_talebi2_btn_Click(object sender, EventArgs e)
+        {
+            this.index = 5;
+            userInterface = new userInterface(index, id);
+            userInterface.ShowDialog();
+        }
 
         private void onay_talebi_btn_Click(object sender, EventArgs e)
         {
-            this.index = 5;
+            this.index = 6;
             userInterface = new userInterface(index, id);
             userInterface.ShowDialog();
         }

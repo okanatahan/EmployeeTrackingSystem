@@ -12,8 +12,10 @@ namespace EmployeeTrackingSystem.UserControls
 {
     public partial class IzinTalebiTakip : UserControl
     {
-        public IzinTalebiTakip()
+        string id;
+        public IzinTalebiTakip(string id)
         {
+            this.id = id;
             InitializeComponent();
         }
     }

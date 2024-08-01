@@ -65,6 +65,7 @@
             this.izin_talebi2_btn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.izin_talebi2_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.izin_talebi2_btn.UseVisualStyleBackColor = true;
+            this.izin_talebi2_btn.Click += new System.EventHandler(this.izin_talebi2_btn_Click);
             // 
             // onay_talebi_btn
             // 

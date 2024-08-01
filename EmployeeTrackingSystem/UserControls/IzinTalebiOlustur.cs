@@ -42,7 +42,7 @@ namespace EmployeeTrackingSystem.UserControls
             {
                 conn.Open();
                 String GetYoneticiID = "SELECT YoneticiID FROM Personel WHERE PersonelID = @id";
-                String InsertQuery = "INSERT INTO IzinTalepleri (FK_PersonelID, IzinBaslangicTar, IzinBitisTar, Yonetici) VALUES (@PersonelID, @IzinBasTar, @IzinBitTar, @Yonetici)";
+                String InsertQuery = "INSERT INTO IzinTalepleri (FK_PersonelID, Ad_Soyad, IzinBaslangicTar, IzinBitisTar, FK_YoneticiID, Yonetici) VALUES (@PersonelID, @Ad_Soyad, @IzinBasTar, @IzinBitTar, @YoneticiID, @Yonetici)";
                 
                 using (SqlCommand cmd = new SqlCommand(GetYoneticiID, conn))
                 {
@@ -56,12 +56,19 @@ namespace EmployeeTrackingSystem.UserControls
                     cmd.Parameters.AddWithValue("@YoneticiID", YoneticiID);
                     string YoneticiAD_SOYAD = cmd.ExecuteScalar().ToString();
 
+                    String GetAd_Soyad = "SELECT AD_SOYAD FROM Personel WHERE PersonelID = @id";
+                    cmd.Parameters.Clear();
+                    cmd.CommandText = GetAd_Soyad;
+                    cmd.Parameters.AddWithValue("@id", id);
+                    string PersonelAd_Soyad = cmd.ExecuteScalar().ToString();
+
                     cmd.Parameters.Clear();
                     cmd.CommandText = InsertQuery;
-
                     cmd.Parameters.AddWithValue("@PersonelID", id);
+                    cmd.Parameters.AddWithValue("@Ad_Soyad", PersonelAd_Soyad);
                     cmd.Parameters.AddWithValue("@IzinBasTar", IzinBaslangicTar.Value.Date);
                     cmd.Parameters.AddWithValue("@IzinBitTar", IzinBitisTar.Value.Date);
+                    cmd.Parameters.AddWithValue("@YoneticiID", YoneticiID);
                     cmd.Parameters.AddWithValue("@Yonetici", YoneticiAD_SOYAD);
 
                     cmd.ExecuteScalar();

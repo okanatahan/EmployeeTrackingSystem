@@ -26,7 +26,7 @@ namespace EmployeeTrackingSystem
         private void InitializeNavigationControl(int index, string id)
         {
             List<UserControl> userControls = new List<UserControl>()
-            { new PersonelTanımlama(), new YoneticiAtama(), new DepartmanTanımlama(), new IzinTipiTanımlama(), new IzinTalebiOlustur(id), new OnayTalepleri() };
+            { new PersonelTanımlama(), new YoneticiAtama(), new DepartmanTanımlama(), new IzinTipiTanımlama(), new IzinTalebiOlustur(id), new IzinTalebiTakip(id), new OnayTalepleri(id) };
 
             navigationControl = new NavigationControl(userControls, panel1);
             navigationControl.Display(index);

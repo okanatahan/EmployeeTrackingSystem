@@ -14,12 +14,9 @@ namespace EmployeeTrackingSystem
     public partial class userInterface : System.Windows.Forms.Form
     {
         NavigationControl navigationControl;
-        int index;
-        string id;
         public userInterface(int index, string id)
         {
             InitializeComponent();
-            this.id = id;
             InitializeNavigationControl(index, id);
         }
 

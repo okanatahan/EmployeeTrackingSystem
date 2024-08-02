@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace EmployeeTrackingSystem
 {
-    public partial class loginPage : System.Windows.Forms.Form
+    public partial class LoginPage : System.Windows.Forms.Form
     {
         SqlConnection conn = new SqlConnection(@"Data Source=OKAN\SQLEXPRESS;Initial Catalog=Company;Integrated Security=True;Encrypt=False;TrustServerCertificate=True");
 
-        public loginPage()
+        public LoginPage()
         {
             InitializeComponent();
         }
@@ -79,7 +79,8 @@ namespace EmployeeTrackingSystem
                                 string id = cmd.ExecuteScalar().ToString();
 
                                 this.Hide();
-                                NavigationMenu NaviObj = new NavigationMenu(rol, id); // Find and add the role of the user as a parameter.
+                                Singleton.SetInstance(rol, id);
+                                NavigationMenu NaviObj = Singleton.GetInstance();
                                 NaviObj.ShowDialog();
                             }
                             else

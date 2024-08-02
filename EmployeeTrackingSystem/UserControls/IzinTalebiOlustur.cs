@@ -72,6 +72,8 @@ namespace EmployeeTrackingSystem.UserControls
                     cmd.Parameters.AddWithValue("@Yonetici", YoneticiAD_SOYAD);
 
                     cmd.ExecuteScalar();
+
+                    MessageBox.Show("Talebiniz Başarıyla Oluşturuldu.", "Talep Başarılı!");
                 }
             }
             catch (Exception ex)

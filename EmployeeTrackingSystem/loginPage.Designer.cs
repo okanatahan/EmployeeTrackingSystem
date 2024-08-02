@@ -1,6 +1,6 @@
 ﻿namespace EmployeeTrackingSystem
 {
-    partial class loginPage
+    partial class LoginPage
     {
         /// <summary>
         /// Required designer variable.

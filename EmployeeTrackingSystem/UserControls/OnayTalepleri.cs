@@ -21,7 +21,7 @@ namespace EmployeeTrackingSystem.UserControls
             InitializeComponent();
             this.id = id;
         }
-        private void tlp_grntl_btn_Click(object sender, EventArgs e)
+        private void TalepGorBtn_Click(object sender, EventArgs e)
         {
             GetYoneticiID(id);
             DisplayTable(YoneticiID);

@@ -1,6 +1,6 @@
 ﻿namespace EmployeeTrackingSystem
 {
-    partial class userInterface
+    partial class UserInterface
     {
         /// <summary>
         /// Required designer variable.

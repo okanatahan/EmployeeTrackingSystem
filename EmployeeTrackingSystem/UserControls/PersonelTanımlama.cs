@@ -12,7 +12,7 @@ namespace EmployeeTrackingSystem.UserControls
 {
     public partial class PersonelTanımlama : UserControl
     {
-        public PersonelTanımlama()
+        public PersonelTanımlama(string id)
         {
             InitializeComponent();
             dob.CustomFormat = "dd/MM/yyyy";

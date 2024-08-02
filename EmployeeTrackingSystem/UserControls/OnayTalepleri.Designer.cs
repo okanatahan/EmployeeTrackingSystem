@@ -31,7 +31,7 @@
             this.dgv = new System.Windows.Forms.DataGridView();
             this.OnayBtn = new System.Windows.Forms.Button();
             this.RedBtn = new System.Windows.Forms.Button();
-            this.tlp_grntl_btn = new System.Windows.Forms.Button();
+            this.TalepGorBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,24 +67,24 @@
             this.RedBtn.UseVisualStyleBackColor = false;
             this.RedBtn.Click += new System.EventHandler(this.RedBtn_Click);
             // 
-            // tlp_grntl_btn
+            // TalepGorBtn
             // 
-            this.tlp_grntl_btn.BackColor = System.Drawing.Color.Magenta;
-            this.tlp_grntl_btn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tlp_grntl_btn.Location = new System.Drawing.Point(1108, 275);
-            this.tlp_grntl_btn.Name = "tlp_grntl_btn";
-            this.tlp_grntl_btn.Size = new System.Drawing.Size(175, 64);
-            this.tlp_grntl_btn.TabIndex = 3;
-            this.tlp_grntl_btn.Text = "TALEPLERİ GÖRÜNTÜLE";
-            this.tlp_grntl_btn.UseVisualStyleBackColor = false;
-            this.tlp_grntl_btn.Click += new System.EventHandler(this.tlp_grntl_btn_Click);
+            this.TalepGorBtn.BackColor = System.Drawing.Color.Magenta;
+            this.TalepGorBtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TalepGorBtn.Location = new System.Drawing.Point(1108, 275);
+            this.TalepGorBtn.Name = "TalepGorBtn";
+            this.TalepGorBtn.Size = new System.Drawing.Size(175, 64);
+            this.TalepGorBtn.TabIndex = 3;
+            this.TalepGorBtn.Text = "TALEPLERİ GÖRÜNTÜLE";
+            this.TalepGorBtn.UseVisualStyleBackColor = false;
+            this.TalepGorBtn.Click += new System.EventHandler(this.TalepGorBtn_Click);
             // 
             // OnayTalepleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.Controls.Add(this.tlp_grntl_btn);
+            this.Controls.Add(this.TalepGorBtn);
             this.Controls.Add(this.RedBtn);
             this.Controls.Add(this.OnayBtn);
             this.Controls.Add(this.dgv);
@@ -100,6 +100,6 @@
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Button OnayBtn;
         private System.Windows.Forms.Button RedBtn;
-        private System.Windows.Forms.Button tlp_grntl_btn;
+        private System.Windows.Forms.Button TalepGorBtn;
     }
 }

@@ -15,7 +15,7 @@ namespace EmployeeTrackingSystem
         string rol;
         string id;
         int index;
-        userInterface userInterface;
+        UserInterface userInterface;
         public NavigationMenu(string rol, string id)
         {
             InitializeComponent();
@@ -55,48 +55,55 @@ namespace EmployeeTrackingSystem
         private void personel_tanımlama_btn_Click(object sender, EventArgs e)
         {
             this.index = 0;
-            userInterface = new userInterface(index, id);
+            userInterface = new UserInterface(index, id);
+            this.Hide();
             userInterface.ShowDialog();
         }
 
         private void yonetici_atama_btn_Click(object sender, EventArgs e)
         {
             this.index = 1;
-            userInterface = new userInterface(index, id);
+            userInterface = new UserInterface(index, id);
+            this.Hide();
             userInterface.ShowDialog();
         }
 
         private void departman_btn_Click(object sender, EventArgs e)
         {
             this.index = 2;
-            userInterface = new userInterface(index, id);
+            userInterface = new UserInterface(index, id);
+            this.Hide();
             userInterface.ShowDialog();
         }
 
         private void izin_tipi_btn_Click(object sender, EventArgs e)
         {
             this.index = 3;
-            userInterface = new userInterface(index, id);
+            userInterface = new UserInterface(index, id);
+            this.Hide();
             userInterface.ShowDialog();
         }
 
         private void izin_talebi_btn_Click(object sender, EventArgs e)
         {
             this.index = 4;
-            userInterface = new userInterface(index, id);
+            userInterface = new UserInterface(index, id);
+            this.Hide();
             userInterface.ShowDialog();
         }
         private void izin_talebi2_btn_Click(object sender, EventArgs e)
         {
             this.index = 5;
-            userInterface = new userInterface(index, id);
+            userInterface = new UserInterface(index, id);
+            this.Hide();
             userInterface.ShowDialog();
         }
 
         private void onay_talebi_btn_Click(object sender, EventArgs e)
         {
             this.index = 6;
-            userInterface = new userInterface(index, id);
+            userInterface = new UserInterface(index, id);
+            this.Hide();
             userInterface.ShowDialog();
         }
     }

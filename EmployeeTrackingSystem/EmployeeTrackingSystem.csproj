@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="loginPage.cs">
+    <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="loginPage.Designer.cs">
-      <DependentUpon>loginPage.cs</DependentUpon>
+    <Compile Include="LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
     <Compile Include="NavigationControl.cs" />
     <Compile Include="NavigationMenu.cs">
@@ -64,6 +64,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Singleton.cs" />
     <Compile Include="UserControls\DepartmanTanımlama.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -106,16 +107,16 @@
     <Compile Include="UserControls\YoneticiAtama.Designer.cs">
       <DependentUpon>YoneticiAtama.cs</DependentUpon>
     </Compile>
-    <Compile Include="userInterface.cs">
+    <Compile Include="UserInterface.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="userInterface.Designer.cs">
-      <DependentUpon>userInterface.cs</DependentUpon>
+    <Compile Include="UserInterface.Designer.cs">
+      <DependentUpon>UserInterface.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="loginPage.resx">
-      <DependentUpon>loginPage.cs</DependentUpon>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NavigationMenu.resx">
       <DependentUpon>NavigationMenu.cs</DependentUpon>
@@ -141,8 +142,8 @@
     <EmbeddedResource Include="UserControls\YoneticiAtama.resx">
       <DependentUpon>YoneticiAtama.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="userInterface.resx">
-      <DependentUpon>userInterface.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterface.resx">
+      <DependentUpon>UserInterface.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -20,9 +20,14 @@ namespace EmployeeTrackingSystem.UserControls
             cikisTar.CustomFormat = "dd/MM/yyyy";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void PersonelEkleBtn_Click(object sender, EventArgs e)
         {
             MessageBox.Show(dob.Value.Date.ToString());
+            string Ad, Soyad, Sicil, Cins, Unvan, Yaka, IsletmeKod, DepartmanKod, DepartmanAltKod, PozisyonKod, LokasyonKod, GecisKod,
+                Senkron, SendikaKod, TaseronKod, CalismaSekli, CalismaKonumu, Durum, SicilEk, SGK, MasrafKod;
+
+            Ad = AdInput.Text; Soyad = SoyadInput.Text; Sicil = SicilInput.Text; Unvan = UnvanInput.Text; Yaka = YakaInput.Text;
+
         }
     }
 }

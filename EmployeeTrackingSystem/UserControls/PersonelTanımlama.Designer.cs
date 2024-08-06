@@ -31,7 +31,36 @@
             this.components = new System.ComponentModel.Container();
             this.PersonelEkleBtn = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.PersonellerDGV = new System.Windows.Forms.DataGridView();
+            this.personelIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sICILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sOYADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aDSOYADDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cINSIYETDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOGUMTARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gIRISTARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cIKISTARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uNVANDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yAKADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iSLETMEKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dEPARTMANKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dEPARTMANALTKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pOZISYONKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lOKASYONKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gECISKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sENKRONDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.sENDIKAKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tASERONKODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cALISMASEKLIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cALISMAKONUMUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dURUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sICILEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sGKNODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mASRAFKODUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yoneticiIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personelDataSet = new EmployeeTrackingSystem.PersonelDataSet();
             this.SenkronInput = new System.Windows.Forms.ComboBox();
             this.UnvanInput = new System.Windows.Forms.ComboBox();
             this.CalismaKonumuInput = new System.Windows.Forms.ComboBox();
@@ -73,28 +102,38 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.Departmanlar = new System.Windows.Forms.ComboBox();
+            this.departmanlarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.departmanlarDataSet = new EmployeeTrackingSystem.DepartmanlarDataSet();
+            this.AltDepartmanlar = new System.Windows.Forms.ComboBox();
+            this.Pozisyonlar = new System.Windows.Forms.ComboBox();
+            this.Lokasyonlar = new System.Windows.Forms.ComboBox();
+            this.Sendikalar = new System.Windows.Forms.ComboBox();
+            this.Taseronlar = new System.Windows.Forms.ComboBox();
             this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.companyDataSet = new EmployeeTrackingSystem.CompanyDataSet();
+            this.personelTableAdapter = new EmployeeTrackingSystem.PersonelDataSetTableAdapters.PersonelTableAdapter();
+            this.PersonelCikartBtn = new System.Windows.Forms.Button();
+            this.PersonelGncBtn = new System.Windows.Forms.Button();
+            this.Isletmeler = new System.Windows.Forms.ComboBox();
             this.isletmelerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.isletmelerTableAdapter = new EmployeeTrackingSystem.CompanyDataSetTableAdapters.IsletmelerTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companyDataSet)).BeginInit();
+            this.isletmelerDataSet = new EmployeeTrackingSystem.IsletmelerDataSet();
+            this.isletmelerTableAdapter = new EmployeeTrackingSystem.IsletmelerDataSetTableAdapters.IsletmelerTableAdapter();
+            this.departmanlarTableAdapter = new EmployeeTrackingSystem.DepartmanlarDataSetTableAdapters.DepartmanlarTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.PersonellerDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personelDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmanlarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmanlarDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.isletmelerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.isletmelerDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // PersonelEkleBtn
             // 
             this.PersonelEkleBtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PersonelEkleBtn.Location = new System.Drawing.Point(756, 800);
+            this.PersonelEkleBtn.Location = new System.Drawing.Point(543, 800);
             this.PersonelEkleBtn.Name = "PersonelEkleBtn";
-            this.PersonelEkleBtn.Size = new System.Drawing.Size(137, 44);
+            this.PersonelEkleBtn.Size = new System.Drawing.Size(137, 50);
             this.PersonelEkleBtn.TabIndex = 6;
             this.PersonelEkleBtn.Text = "Personel Ekle";
             this.PersonelEkleBtn.UseVisualStyleBackColor = true;
@@ -105,16 +144,273 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // dataGridView1
+            // PersonellerDGV
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1594, 325);
-            this.dataGridView1.TabIndex = 60;
+            this.PersonellerDGV.AllowUserToAddRows = false;
+            this.PersonellerDGV.AllowUserToDeleteRows = false;
+            this.PersonellerDGV.AutoGenerateColumns = false;
+            this.PersonellerDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.PersonellerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PersonellerDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.personelIDDataGridViewTextBoxColumn,
+            this.sICILDataGridViewTextBoxColumn,
+            this.aDDataGridViewTextBoxColumn,
+            this.sOYADDataGridViewTextBoxColumn,
+            this.aDSOYADDataGridViewTextBoxColumn,
+            this.cINSIYETDataGridViewTextBoxColumn,
+            this.dOGUMTARDataGridViewTextBoxColumn,
+            this.gIRISTARDataGridViewTextBoxColumn,
+            this.cIKISTARDataGridViewTextBoxColumn,
+            this.uNVANDataGridViewTextBoxColumn,
+            this.yAKADataGridViewTextBoxColumn,
+            this.iSLETMEKODDataGridViewTextBoxColumn,
+            this.dEPARTMANKODDataGridViewTextBoxColumn,
+            this.dEPARTMANALTKODDataGridViewTextBoxColumn,
+            this.pOZISYONKODDataGridViewTextBoxColumn,
+            this.lOKASYONKODDataGridViewTextBoxColumn,
+            this.gECISKODDataGridViewTextBoxColumn,
+            this.sENKRONDataGridViewCheckBoxColumn,
+            this.sENDIKAKODDataGridViewTextBoxColumn,
+            this.tASERONKODDataGridViewTextBoxColumn,
+            this.cALISMASEKLIDataGridViewTextBoxColumn,
+            this.cALISMAKONUMUDataGridViewTextBoxColumn,
+            this.dURUMDataGridViewTextBoxColumn,
+            this.sICILEKDataGridViewTextBoxColumn,
+            this.sGKNODataGridViewTextBoxColumn,
+            this.mASRAFKODUDataGridViewTextBoxColumn,
+            this.yoneticiIDDataGridViewTextBoxColumn});
+            this.PersonellerDGV.DataSource = this.personelBindingSource;
+            this.PersonellerDGV.Location = new System.Drawing.Point(6, 3);
+            this.PersonellerDGV.Name = "PersonellerDGV";
+            this.PersonellerDGV.ReadOnly = true;
+            this.PersonellerDGV.Size = new System.Drawing.Size(1594, 325);
+            this.PersonellerDGV.TabIndex = 60;
+            // 
+            // personelIDDataGridViewTextBoxColumn
+            // 
+            this.personelIDDataGridViewTextBoxColumn.DataPropertyName = "PersonelID";
+            this.personelIDDataGridViewTextBoxColumn.HeaderText = "PersonelID";
+            this.personelIDDataGridViewTextBoxColumn.Name = "personelIDDataGridViewTextBoxColumn";
+            this.personelIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.personelIDDataGridViewTextBoxColumn.Width = 84;
+            // 
+            // sICILDataGridViewTextBoxColumn
+            // 
+            this.sICILDataGridViewTextBoxColumn.DataPropertyName = "SICIL";
+            this.sICILDataGridViewTextBoxColumn.HeaderText = "SICIL";
+            this.sICILDataGridViewTextBoxColumn.Name = "sICILDataGridViewTextBoxColumn";
+            this.sICILDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sICILDataGridViewTextBoxColumn.Width = 58;
+            // 
+            // aDDataGridViewTextBoxColumn
+            // 
+            this.aDDataGridViewTextBoxColumn.DataPropertyName = "AD";
+            this.aDDataGridViewTextBoxColumn.HeaderText = "AD";
+            this.aDDataGridViewTextBoxColumn.Name = "aDDataGridViewTextBoxColumn";
+            this.aDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aDDataGridViewTextBoxColumn.Width = 47;
+            // 
+            // sOYADDataGridViewTextBoxColumn
+            // 
+            this.sOYADDataGridViewTextBoxColumn.DataPropertyName = "SOYAD";
+            this.sOYADDataGridViewTextBoxColumn.HeaderText = "SOYAD";
+            this.sOYADDataGridViewTextBoxColumn.Name = "sOYADDataGridViewTextBoxColumn";
+            this.sOYADDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sOYADDataGridViewTextBoxColumn.Width = 69;
+            // 
+            // aDSOYADDataGridViewTextBoxColumn
+            // 
+            this.aDSOYADDataGridViewTextBoxColumn.DataPropertyName = "AD_SOYAD";
+            this.aDSOYADDataGridViewTextBoxColumn.HeaderText = "AD_SOYAD";
+            this.aDSOYADDataGridViewTextBoxColumn.Name = "aDSOYADDataGridViewTextBoxColumn";
+            this.aDSOYADDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aDSOYADDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // cINSIYETDataGridViewTextBoxColumn
+            // 
+            this.cINSIYETDataGridViewTextBoxColumn.DataPropertyName = "CINSIYET";
+            this.cINSIYETDataGridViewTextBoxColumn.HeaderText = "CINSIYET";
+            this.cINSIYETDataGridViewTextBoxColumn.Name = "cINSIYETDataGridViewTextBoxColumn";
+            this.cINSIYETDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cINSIYETDataGridViewTextBoxColumn.Width = 81;
+            // 
+            // dOGUMTARDataGridViewTextBoxColumn
+            // 
+            this.dOGUMTARDataGridViewTextBoxColumn.DataPropertyName = "DOGUM_TAR";
+            this.dOGUMTARDataGridViewTextBoxColumn.HeaderText = "DOGUM_TAR";
+            this.dOGUMTARDataGridViewTextBoxColumn.Name = "dOGUMTARDataGridViewTextBoxColumn";
+            this.dOGUMTARDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dOGUMTARDataGridViewTextBoxColumn.Width = 101;
+            // 
+            // gIRISTARDataGridViewTextBoxColumn
+            // 
+            this.gIRISTARDataGridViewTextBoxColumn.DataPropertyName = "GIRIS_TAR";
+            this.gIRISTARDataGridViewTextBoxColumn.HeaderText = "GIRIS_TAR";
+            this.gIRISTARDataGridViewTextBoxColumn.Name = "gIRISTARDataGridViewTextBoxColumn";
+            this.gIRISTARDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gIRISTARDataGridViewTextBoxColumn.Width = 89;
+            // 
+            // cIKISTARDataGridViewTextBoxColumn
+            // 
+            this.cIKISTARDataGridViewTextBoxColumn.DataPropertyName = "CIKIS_TAR";
+            this.cIKISTARDataGridViewTextBoxColumn.HeaderText = "CIKIS_TAR";
+            this.cIKISTARDataGridViewTextBoxColumn.Name = "cIKISTARDataGridViewTextBoxColumn";
+            this.cIKISTARDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cIKISTARDataGridViewTextBoxColumn.Width = 87;
+            // 
+            // uNVANDataGridViewTextBoxColumn
+            // 
+            this.uNVANDataGridViewTextBoxColumn.DataPropertyName = "UNVAN";
+            this.uNVANDataGridViewTextBoxColumn.HeaderText = "UNVAN";
+            this.uNVANDataGridViewTextBoxColumn.Name = "uNVANDataGridViewTextBoxColumn";
+            this.uNVANDataGridViewTextBoxColumn.ReadOnly = true;
+            this.uNVANDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // yAKADataGridViewTextBoxColumn
+            // 
+            this.yAKADataGridViewTextBoxColumn.DataPropertyName = "YAKA";
+            this.yAKADataGridViewTextBoxColumn.HeaderText = "YAKA";
+            this.yAKADataGridViewTextBoxColumn.Name = "yAKADataGridViewTextBoxColumn";
+            this.yAKADataGridViewTextBoxColumn.ReadOnly = true;
+            this.yAKADataGridViewTextBoxColumn.Width = 60;
+            // 
+            // iSLETMEKODDataGridViewTextBoxColumn
+            // 
+            this.iSLETMEKODDataGridViewTextBoxColumn.DataPropertyName = "ISLETME_KOD";
+            this.iSLETMEKODDataGridViewTextBoxColumn.HeaderText = "ISLETME_KOD";
+            this.iSLETMEKODDataGridViewTextBoxColumn.Name = "iSLETMEKODDataGridViewTextBoxColumn";
+            this.iSLETMEKODDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iSLETMEKODDataGridViewTextBoxColumn.Width = 107;
+            // 
+            // dEPARTMANKODDataGridViewTextBoxColumn
+            // 
+            this.dEPARTMANKODDataGridViewTextBoxColumn.DataPropertyName = "DEPARTMAN_KOD";
+            this.dEPARTMANKODDataGridViewTextBoxColumn.HeaderText = "DEPARTMAN_KOD";
+            this.dEPARTMANKODDataGridViewTextBoxColumn.Name = "dEPARTMANKODDataGridViewTextBoxColumn";
+            this.dEPARTMANKODDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dEPARTMANKODDataGridViewTextBoxColumn.Width = 129;
+            // 
+            // dEPARTMANALTKODDataGridViewTextBoxColumn
+            // 
+            this.dEPARTMANALTKODDataGridViewTextBoxColumn.DataPropertyName = "DEPARTMAN_ALT_KOD";
+            this.dEPARTMANALTKODDataGridViewTextBoxColumn.HeaderText = "DEPARTMAN_ALT_KOD";
+            this.dEPARTMANALTKODDataGridViewTextBoxColumn.Name = "dEPARTMANALTKODDataGridViewTextBoxColumn";
+            this.dEPARTMANALTKODDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dEPARTMANALTKODDataGridViewTextBoxColumn.Width = 155;
+            // 
+            // pOZISYONKODDataGridViewTextBoxColumn
+            // 
+            this.pOZISYONKODDataGridViewTextBoxColumn.DataPropertyName = "POZISYON_KOD";
+            this.pOZISYONKODDataGridViewTextBoxColumn.HeaderText = "POZISYON_KOD";
+            this.pOZISYONKODDataGridViewTextBoxColumn.Name = "pOZISYONKODDataGridViewTextBoxColumn";
+            this.pOZISYONKODDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pOZISYONKODDataGridViewTextBoxColumn.Width = 116;
+            // 
+            // lOKASYONKODDataGridViewTextBoxColumn
+            // 
+            this.lOKASYONKODDataGridViewTextBoxColumn.DataPropertyName = "LOKASYON_KOD";
+            this.lOKASYONKODDataGridViewTextBoxColumn.HeaderText = "LOKASYON_KOD";
+            this.lOKASYONKODDataGridViewTextBoxColumn.Name = "lOKASYONKODDataGridViewTextBoxColumn";
+            this.lOKASYONKODDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lOKASYONKODDataGridViewTextBoxColumn.Width = 119;
+            // 
+            // gECISKODDataGridViewTextBoxColumn
+            // 
+            this.gECISKODDataGridViewTextBoxColumn.DataPropertyName = "GECIS_KOD";
+            this.gECISKODDataGridViewTextBoxColumn.HeaderText = "GECIS_KOD";
+            this.gECISKODDataGridViewTextBoxColumn.Name = "gECISKODDataGridViewTextBoxColumn";
+            this.gECISKODDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gECISKODDataGridViewTextBoxColumn.Width = 93;
+            // 
+            // sENKRONDataGridViewCheckBoxColumn
+            // 
+            this.sENKRONDataGridViewCheckBoxColumn.DataPropertyName = "SENKRON";
+            this.sENKRONDataGridViewCheckBoxColumn.HeaderText = "SENKRON";
+            this.sENKRONDataGridViewCheckBoxColumn.Name = "sENKRONDataGridViewCheckBoxColumn";
+            this.sENKRONDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.sENKRONDataGridViewCheckBoxColumn.Width = 66;
+            // 
+            // sENDIKAKODDataGridViewTextBoxColumn
+            // 
+            this.sENDIKAKODDataGridViewTextBoxColumn.DataPropertyName = "SENDIKA_KOD";
+            this.sENDIKAKODDataGridViewTextBoxColumn.HeaderText = "SENDIKA_KOD";
+            this.sENDIKAKODDataGridViewTextBoxColumn.Name = "sENDIKAKODDataGridViewTextBoxColumn";
+            this.sENDIKAKODDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sENDIKAKODDataGridViewTextBoxColumn.Width = 108;
+            // 
+            // tASERONKODDataGridViewTextBoxColumn
+            // 
+            this.tASERONKODDataGridViewTextBoxColumn.DataPropertyName = "TASERON_KOD";
+            this.tASERONKODDataGridViewTextBoxColumn.HeaderText = "TASERON_KOD";
+            this.tASERONKODDataGridViewTextBoxColumn.Name = "tASERONKODDataGridViewTextBoxColumn";
+            this.tASERONKODDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tASERONKODDataGridViewTextBoxColumn.Width = 113;
+            // 
+            // cALISMASEKLIDataGridViewTextBoxColumn
+            // 
+            this.cALISMASEKLIDataGridViewTextBoxColumn.DataPropertyName = "CALISMA_SEKLI";
+            this.cALISMASEKLIDataGridViewTextBoxColumn.HeaderText = "CALISMA_SEKLI";
+            this.cALISMASEKLIDataGridViewTextBoxColumn.Name = "cALISMASEKLIDataGridViewTextBoxColumn";
+            this.cALISMASEKLIDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cALISMASEKLIDataGridViewTextBoxColumn.Width = 114;
+            // 
+            // cALISMAKONUMUDataGridViewTextBoxColumn
+            // 
+            this.cALISMAKONUMUDataGridViewTextBoxColumn.DataPropertyName = "CALISMA_KONUMU";
+            this.cALISMAKONUMUDataGridViewTextBoxColumn.HeaderText = "CALISMA_KONUMU";
+            this.cALISMAKONUMUDataGridViewTextBoxColumn.Name = "cALISMAKONUMUDataGridViewTextBoxColumn";
+            this.cALISMAKONUMUDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cALISMAKONUMUDataGridViewTextBoxColumn.Width = 132;
+            // 
+            // dURUMDataGridViewTextBoxColumn
+            // 
+            this.dURUMDataGridViewTextBoxColumn.DataPropertyName = "DURUM";
+            this.dURUMDataGridViewTextBoxColumn.HeaderText = "DURUM";
+            this.dURUMDataGridViewTextBoxColumn.Name = "dURUMDataGridViewTextBoxColumn";
+            this.dURUMDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dURUMDataGridViewTextBoxColumn.Width = 73;
+            // 
+            // sICILEKDataGridViewTextBoxColumn
+            // 
+            this.sICILEKDataGridViewTextBoxColumn.DataPropertyName = "SICIL_EK";
+            this.sICILEKDataGridViewTextBoxColumn.HeaderText = "SICIL_EK";
+            this.sICILEKDataGridViewTextBoxColumn.Name = "sICILEKDataGridViewTextBoxColumn";
+            this.sICILEKDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sICILEKDataGridViewTextBoxColumn.Width = 78;
+            // 
+            // sGKNODataGridViewTextBoxColumn
+            // 
+            this.sGKNODataGridViewTextBoxColumn.DataPropertyName = "SGK_NO";
+            this.sGKNODataGridViewTextBoxColumn.HeaderText = "SGK_NO";
+            this.sGKNODataGridViewTextBoxColumn.Name = "sGKNODataGridViewTextBoxColumn";
+            this.sGKNODataGridViewTextBoxColumn.ReadOnly = true;
+            this.sGKNODataGridViewTextBoxColumn.Width = 76;
+            // 
+            // mASRAFKODUDataGridViewTextBoxColumn
+            // 
+            this.mASRAFKODUDataGridViewTextBoxColumn.DataPropertyName = "MASRAF_KODU";
+            this.mASRAFKODUDataGridViewTextBoxColumn.HeaderText = "MASRAF_KODU";
+            this.mASRAFKODUDataGridViewTextBoxColumn.Name = "mASRAFKODUDataGridViewTextBoxColumn";
+            this.mASRAFKODUDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mASRAFKODUDataGridViewTextBoxColumn.Width = 113;
+            // 
+            // yoneticiIDDataGridViewTextBoxColumn
+            // 
+            this.yoneticiIDDataGridViewTextBoxColumn.DataPropertyName = "YoneticiID";
+            this.yoneticiIDDataGridViewTextBoxColumn.HeaderText = "YoneticiID";
+            this.yoneticiIDDataGridViewTextBoxColumn.Name = "yoneticiIDDataGridViewTextBoxColumn";
+            this.yoneticiIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.yoneticiIDDataGridViewTextBoxColumn.Width = 81;
+            // 
+            // personelBindingSource
+            // 
+            this.personelBindingSource.DataMember = "Personel";
+            this.personelBindingSource.DataSource = this.personelDataSet;
+            // 
+            // personelDataSet
+            // 
+            this.personelDataSet.DataSetName = "PersonelDataSet";
+            this.personelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // SenkronInput
             // 
@@ -524,69 +820,69 @@
             this.label1.TabIndex = 61;
             this.label1.Text = "AD:";
             // 
-            // comboBox1
+            // Departmanlar
             // 
-            this.comboBox1.DataSource = this.isletmelerBindingSource;
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(799, 403);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 25);
-            this.comboBox1.TabIndex = 110;
+            this.Departmanlar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Departmanlar.FormattingEnabled = true;
+            this.Departmanlar.Location = new System.Drawing.Point(799, 461);
+            this.Departmanlar.Name = "Departmanlar";
+            this.Departmanlar.Size = new System.Drawing.Size(200, 25);
+            this.Departmanlar.TabIndex = 111;
             // 
-            // comboBox2
+            // departmanlarBindingSource
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(799, 461);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 25);
-            this.comboBox2.TabIndex = 111;
+            this.departmanlarBindingSource.DataMember = "Departmanlar";
+            this.departmanlarBindingSource.DataSource = this.departmanlarDataSet;
             // 
-            // comboBox3
+            // departmanlarDataSet
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(799, 519);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(200, 25);
-            this.comboBox3.TabIndex = 112;
+            this.departmanlarDataSet.DataSetName = "DepartmanlarDataSet";
+            this.departmanlarDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // comboBox4
+            // AltDepartmanlar
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(799, 574);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(200, 25);
-            this.comboBox4.TabIndex = 113;
+            this.AltDepartmanlar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AltDepartmanlar.FormattingEnabled = true;
+            this.AltDepartmanlar.Location = new System.Drawing.Point(799, 519);
+            this.AltDepartmanlar.Name = "AltDepartmanlar";
+            this.AltDepartmanlar.Size = new System.Drawing.Size(200, 25);
+            this.AltDepartmanlar.TabIndex = 112;
             // 
-            // comboBox5
+            // Pozisyonlar
             // 
-            this.comboBox5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(799, 633);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(200, 25);
-            this.comboBox5.TabIndex = 114;
+            this.Pozisyonlar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pozisyonlar.FormattingEnabled = true;
+            this.Pozisyonlar.Location = new System.Drawing.Point(799, 574);
+            this.Pozisyonlar.Name = "Pozisyonlar";
+            this.Pozisyonlar.Size = new System.Drawing.Size(200, 25);
+            this.Pozisyonlar.TabIndex = 113;
             // 
-            // comboBox6
+            // Lokasyonlar
             // 
-            this.comboBox6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(1275, 345);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(200, 25);
-            this.comboBox6.TabIndex = 115;
+            this.Lokasyonlar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lokasyonlar.FormattingEnabled = true;
+            this.Lokasyonlar.Location = new System.Drawing.Point(799, 633);
+            this.Lokasyonlar.Name = "Lokasyonlar";
+            this.Lokasyonlar.Size = new System.Drawing.Size(200, 25);
+            this.Lokasyonlar.TabIndex = 114;
             // 
-            // comboBox7
+            // Sendikalar
             // 
-            this.comboBox7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(1275, 403);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(200, 25);
-            this.comboBox7.TabIndex = 116;
+            this.Sendikalar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sendikalar.FormattingEnabled = true;
+            this.Sendikalar.Location = new System.Drawing.Point(1275, 345);
+            this.Sendikalar.Name = "Sendikalar";
+            this.Sendikalar.Size = new System.Drawing.Size(200, 25);
+            this.Sendikalar.TabIndex = 115;
+            // 
+            // Taseronlar
+            // 
+            this.Taseronlar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Taseronlar.FormattingEnabled = true;
+            this.Taseronlar.Location = new System.Drawing.Point(1275, 403);
+            this.Taseronlar.Name = "Taseronlar";
+            this.Taseronlar.Size = new System.Drawing.Size(200, 25);
+            this.Taseronlar.TabIndex = 116;
             // 
             // comboBox8
             // 
@@ -597,33 +893,72 @@
             this.comboBox8.Size = new System.Drawing.Size(200, 25);
             this.comboBox8.TabIndex = 117;
             // 
-            // companyDataSet
+            // personelTableAdapter
             // 
-            this.companyDataSet.DataSetName = "CompanyDataSet";
-            this.companyDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.personelTableAdapter.ClearBeforeFill = true;
+            // 
+            // PersonelCikartBtn
+            // 
+            this.PersonelCikartBtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PersonelCikartBtn.Location = new System.Drawing.Point(736, 800);
+            this.PersonelCikartBtn.Name = "PersonelCikartBtn";
+            this.PersonelCikartBtn.Size = new System.Drawing.Size(137, 50);
+            this.PersonelCikartBtn.TabIndex = 118;
+            this.PersonelCikartBtn.Text = "Personel Çıkart";
+            this.PersonelCikartBtn.UseVisualStyleBackColor = true;
+            // 
+            // PersonelGncBtn
+            // 
+            this.PersonelGncBtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PersonelGncBtn.Location = new System.Drawing.Point(930, 800);
+            this.PersonelGncBtn.Name = "PersonelGncBtn";
+            this.PersonelGncBtn.Size = new System.Drawing.Size(137, 50);
+            this.PersonelGncBtn.TabIndex = 119;
+            this.PersonelGncBtn.Text = "Personeli Güncelle";
+            this.PersonelGncBtn.UseVisualStyleBackColor = true;
+            // 
+            // Isletmeler
+            // 
+            this.Isletmeler.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Isletmeler.FormattingEnabled = true;
+            this.Isletmeler.Location = new System.Drawing.Point(799, 403);
+            this.Isletmeler.Name = "Isletmeler";
+            this.Isletmeler.Size = new System.Drawing.Size(200, 25);
+            this.Isletmeler.TabIndex = 120;
             // 
             // isletmelerBindingSource
             // 
             this.isletmelerBindingSource.DataMember = "Isletmeler";
-            this.isletmelerBindingSource.DataSource = this.companyDataSet;
+            this.isletmelerBindingSource.DataSource = this.isletmelerDataSet;
+            // 
+            // isletmelerDataSet
+            // 
+            this.isletmelerDataSet.DataSetName = "IsletmelerDataSet";
+            this.isletmelerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // isletmelerTableAdapter
             // 
             this.isletmelerTableAdapter.ClearBeforeFill = true;
+            // 
+            // departmanlarTableAdapter
+            // 
+            this.departmanlarTableAdapter.ClearBeforeFill = true;
             // 
             // PersonelTanımlama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
+            this.Controls.Add(this.Isletmeler);
+            this.Controls.Add(this.PersonelGncBtn);
+            this.Controls.Add(this.PersonelCikartBtn);
             this.Controls.Add(this.comboBox8);
-            this.Controls.Add(this.comboBox7);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.Taseronlar);
+            this.Controls.Add(this.Sendikalar);
+            this.Controls.Add(this.Lokasyonlar);
+            this.Controls.Add(this.Pozisyonlar);
+            this.Controls.Add(this.AltDepartmanlar);
+            this.Controls.Add(this.Departmanlar);
             this.Controls.Add(this.SenkronInput);
             this.Controls.Add(this.UnvanInput);
             this.Controls.Add(this.CalismaKonumuInput);
@@ -665,13 +1000,17 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.PersonellerDGV);
             this.Controls.Add(this.PersonelEkleBtn);
             this.Name = "PersonelTanımlama";
-            this.Size = new System.Drawing.Size(1600, 864);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.companyDataSet)).EndInit();
+            this.Size = new System.Drawing.Size(1620, 864);
+            ((System.ComponentModel.ISupportInitialize)(this.PersonellerDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personelDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmanlarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmanlarDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.isletmelerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.isletmelerDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -680,7 +1019,7 @@
         #endregion
         private System.Windows.Forms.Button PersonelEkleBtn;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView PersonellerDGV;
         private System.Windows.Forms.ComboBox SenkronInput;
         private System.Windows.Forms.ComboBox UnvanInput;
         private System.Windows.Forms.ComboBox CalismaKonumuInput;
@@ -722,16 +1061,51 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox Departmanlar;
+        private System.Windows.Forms.ComboBox AltDepartmanlar;
+        private System.Windows.Forms.ComboBox Pozisyonlar;
+        private System.Windows.Forms.ComboBox Lokasyonlar;
+        private System.Windows.Forms.ComboBox Sendikalar;
+        private System.Windows.Forms.ComboBox Taseronlar;
         private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn personelIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sICILDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sOYADDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aDSOYADDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cINSIYETDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dOGUMTARDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gIRISTARDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cIKISTARDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uNVANDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn yAKADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iSLETMEKODDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dEPARTMANKODDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dEPARTMANALTKODDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pOZISYONKODDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lOKASYONKODDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gECISKODDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn sENKRONDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sENDIKAKODDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tASERONKODDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cALISMASEKLIDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cALISMAKONUMUDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dURUMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sICILEKDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sGKNODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mASRAFKODUDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn yoneticiIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource personelBindingSource;
+        private PersonelDataSet personelDataSet;
+        private PersonelDataSetTableAdapters.PersonelTableAdapter personelTableAdapter;
+        private System.Windows.Forms.Button PersonelCikartBtn;
+        private System.Windows.Forms.Button PersonelGncBtn;
+        private System.Windows.Forms.ComboBox Isletmeler;
         private System.Windows.Forms.BindingSource isletmelerBindingSource;
-        private CompanyDataSet companyDataSet;
-        private CompanyDataSetTableAdapters.IsletmelerTableAdapter isletmelerTableAdapter;
+        private IsletmelerDataSet isletmelerDataSet;
+        private IsletmelerDataSetTableAdapters.IsletmelerTableAdapter isletmelerTableAdapter;
+        private System.Windows.Forms.BindingSource departmanlarBindingSource;
+        private DepartmanlarDataSet departmanlarDataSet;
+        private DepartmanlarDataSetTableAdapters.DepartmanlarTableAdapter departmanlarTableAdapter;
     }
 }

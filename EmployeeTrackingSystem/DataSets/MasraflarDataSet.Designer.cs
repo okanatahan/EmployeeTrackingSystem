@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace EmployeeTrackingSystem {
+namespace EmployeeTrackingSystem.DataSets {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace EmployeeTrackingSystem {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DepartmanlarDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("MasraflarDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DepartmanlarDataSet : global::System.Data.DataSet {
+    public partial class MasraflarDataSet : global::System.Data.DataSet {
         
-        private DepartmanlarDataTable tableDepartmanlar;
+        private MasraflarDataTable tableMasraflar;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public DepartmanlarDataSet() {
+        public MasraflarDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace EmployeeTrackingSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected DepartmanlarDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected MasraflarDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace EmployeeTrackingSystem {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Departmanlar"] != null)) {
-                    base.Tables.Add(new DepartmanlarDataTable(ds.Tables["Departmanlar"]));
+                if ((ds.Tables["Masraflar"] != null)) {
+                    base.Tables.Add(new MasraflarDataTable(ds.Tables["Masraflar"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace EmployeeTrackingSystem {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DepartmanlarDataTable Departmanlar {
+        public MasraflarDataTable Masraflar {
             get {
-                return this.tableDepartmanlar;
+                return this.tableMasraflar;
             }
         }
         
@@ -127,7 +127,7 @@ namespace EmployeeTrackingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DepartmanlarDataSet cln = ((DepartmanlarDataSet)(base.Clone()));
+            MasraflarDataSet cln = ((MasraflarDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace EmployeeTrackingSystem {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Departmanlar"] != null)) {
-                    base.Tables.Add(new DepartmanlarDataTable(ds.Tables["Departmanlar"]));
+                if ((ds.Tables["Masraflar"] != null)) {
+                    base.Tables.Add(new MasraflarDataTable(ds.Tables["Masraflar"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace EmployeeTrackingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDepartmanlar = ((DepartmanlarDataTable)(base.Tables["Departmanlar"]));
+            this.tableMasraflar = ((MasraflarDataTable)(base.Tables["Masraflar"]));
             if ((initTable == true)) {
-                if ((this.tableDepartmanlar != null)) {
-                    this.tableDepartmanlar.InitVars();
+                if ((this.tableMasraflar != null)) {
+                    this.tableMasraflar.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace EmployeeTrackingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DepartmanlarDataSet";
+            this.DataSetName = "MasraflarDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DepartmanlarDataSet.xsd";
+            this.Namespace = "http://tempuri.org/MasraflarDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDepartmanlar = new DepartmanlarDataTable();
-            base.Tables.Add(this.tableDepartmanlar);
+            this.tableMasraflar = new MasraflarDataTable();
+            base.Tables.Add(this.tableMasraflar);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeDepartmanlar() {
+        private bool ShouldSerializeMasraflar() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace EmployeeTrackingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DepartmanlarDataSet ds = new DepartmanlarDataSet();
+            MasraflarDataSet ds = new MasraflarDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,25 +270,25 @@ namespace EmployeeTrackingSystem {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void DepartmanlarRowChangeEventHandler(object sender, DepartmanlarRowChangeEvent e);
+        public delegate void MasraflarRowChangeEventHandler(object sender, MasraflarRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DepartmanlarDataTable : global::System.Data.TypedTableBase<DepartmanlarRow> {
+        public partial class MasraflarDataTable : global::System.Data.TypedTableBase<MasraflarRow> {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnDepartmanID;
+            private global::System.Data.DataColumn columnMasrafID;
             
-            private global::System.Data.DataColumn columnDepartman_Adı;
+            private global::System.Data.DataColumn columnMasraf_Bilgisi;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DepartmanlarDataTable() {
-                this.TableName = "Departmanlar";
+            public MasraflarDataTable() {
+                this.TableName = "Masraflar";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -296,7 +296,7 @@ namespace EmployeeTrackingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal DepartmanlarDataTable(global::System.Data.DataTable table) {
+            internal MasraflarDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -313,7 +313,7 @@ namespace EmployeeTrackingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected DepartmanlarDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected MasraflarDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -328,17 +328,17 @@ namespace EmployeeTrackingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DepartmanIDColumn {
+            public global::System.Data.DataColumn MasrafIDColumn {
                 get {
-                    return this.columnDepartmanID;
+                    return this.columnMasrafID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Departman_AdıColumn {
+            public global::System.Data.DataColumn Masraf_BilgisiColumn {
                 get {
-                    return this.columnDepartman_Adı;
+                    return this.columnMasraf_Bilgisi;
                 }
             }
             
@@ -353,54 +353,54 @@ namespace EmployeeTrackingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DepartmanlarRow this[int index] {
+            public MasraflarRow this[int index] {
                 get {
-                    return ((DepartmanlarRow)(this.Rows[index]));
+                    return ((MasraflarRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DepartmanlarRowChangeEventHandler DepartmanlarRowChanging;
+            public event MasraflarRowChangeEventHandler MasraflarRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DepartmanlarRowChangeEventHandler DepartmanlarRowChanged;
+            public event MasraflarRowChangeEventHandler MasraflarRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DepartmanlarRowChangeEventHandler DepartmanlarRowDeleting;
+            public event MasraflarRowChangeEventHandler MasraflarRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DepartmanlarRowChangeEventHandler DepartmanlarRowDeleted;
+            public event MasraflarRowChangeEventHandler MasraflarRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddDepartmanlarRow(DepartmanlarRow row) {
+            public void AddMasraflarRow(MasraflarRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DepartmanlarRow AddDepartmanlarRow(string DepartmanID, string Departman_Adı) {
-                DepartmanlarRow rowDepartmanlarRow = ((DepartmanlarRow)(this.NewRow()));
+            public MasraflarRow AddMasraflarRow(string MasrafID, string Masraf_Bilgisi) {
+                MasraflarRow rowMasraflarRow = ((MasraflarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        DepartmanID,
-                        Departman_Adı};
-                rowDepartmanlarRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDepartmanlarRow);
-                return rowDepartmanlarRow;
+                        MasrafID,
+                        Masraf_Bilgisi};
+                rowMasraflarRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMasraflarRow);
+                return rowMasraflarRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DepartmanlarRow FindByID(int ID) {
-                return ((DepartmanlarRow)(this.Rows.Find(new object[] {
+            public MasraflarRow FindByID(int ID) {
+                return ((MasraflarRow)(this.Rows.Find(new object[] {
                             ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DepartmanlarDataTable cln = ((DepartmanlarDataTable)(base.Clone()));
+                MasraflarDataTable cln = ((MasraflarDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -408,15 +408,15 @@ namespace EmployeeTrackingSystem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DepartmanlarDataTable();
+                return new MasraflarDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnDepartmanID = base.Columns["DepartmanID"];
-                this.columnDepartman_Adı = base.Columns["Departman_Adı"];
+                this.columnMasrafID = base.Columns["MasrafID"];
+                this.columnMasraf_Bilgisi = base.Columns["Masraf_Bilgisi"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -424,10 +424,10 @@ namespace EmployeeTrackingSystem {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnDepartmanID = new global::System.Data.DataColumn("DepartmanID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDepartmanID);
-                this.columnDepartman_Adı = new global::System.Data.DataColumn("Departman_Adı", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDepartman_Adı);
+                this.columnMasrafID = new global::System.Data.DataColumn("MasrafID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMasrafID);
+                this.columnMasraf_Bilgisi = new global::System.Data.DataColumn("Masraf_Bilgisi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMasraf_Bilgisi);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -436,36 +436,36 @@ namespace EmployeeTrackingSystem {
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
-                this.columnDepartmanID.ReadOnly = true;
-                this.columnDepartmanID.MaxLength = 10;
-                this.columnDepartman_Adı.AllowDBNull = false;
-                this.columnDepartman_Adı.MaxLength = 100;
+                this.columnMasrafID.ReadOnly = true;
+                this.columnMasrafID.MaxLength = 10;
+                this.columnMasraf_Bilgisi.AllowDBNull = false;
+                this.columnMasraf_Bilgisi.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DepartmanlarRow NewDepartmanlarRow() {
-                return ((DepartmanlarRow)(this.NewRow()));
+            public MasraflarRow NewMasraflarRow() {
+                return ((MasraflarRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DepartmanlarRow(builder);
+                return new MasraflarRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DepartmanlarRow);
+                return typeof(MasraflarRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DepartmanlarRowChanged != null)) {
-                    this.DepartmanlarRowChanged(this, new DepartmanlarRowChangeEvent(((DepartmanlarRow)(e.Row)), e.Action));
+                if ((this.MasraflarRowChanged != null)) {
+                    this.MasraflarRowChanged(this, new MasraflarRowChangeEvent(((MasraflarRow)(e.Row)), e.Action));
                 }
             }
             
@@ -473,8 +473,8 @@ namespace EmployeeTrackingSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DepartmanlarRowChanging != null)) {
-                    this.DepartmanlarRowChanging(this, new DepartmanlarRowChangeEvent(((DepartmanlarRow)(e.Row)), e.Action));
+                if ((this.MasraflarRowChanging != null)) {
+                    this.MasraflarRowChanging(this, new MasraflarRowChangeEvent(((MasraflarRow)(e.Row)), e.Action));
                 }
             }
             
@@ -482,8 +482,8 @@ namespace EmployeeTrackingSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DepartmanlarRowDeleted != null)) {
-                    this.DepartmanlarRowDeleted(this, new DepartmanlarRowChangeEvent(((DepartmanlarRow)(e.Row)), e.Action));
+                if ((this.MasraflarRowDeleted != null)) {
+                    this.MasraflarRowDeleted(this, new MasraflarRowChangeEvent(((MasraflarRow)(e.Row)), e.Action));
                 }
             }
             
@@ -491,14 +491,14 @@ namespace EmployeeTrackingSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DepartmanlarRowDeleting != null)) {
-                    this.DepartmanlarRowDeleting(this, new DepartmanlarRowChangeEvent(((DepartmanlarRow)(e.Row)), e.Action));
+                if ((this.MasraflarRowDeleting != null)) {
+                    this.MasraflarRowDeleting(this, new MasraflarRowChangeEvent(((MasraflarRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveDepartmanlarRow(DepartmanlarRow row) {
+            public void RemoveMasraflarRow(MasraflarRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -507,7 +507,7 @@ namespace EmployeeTrackingSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DepartmanlarDataSet ds = new DepartmanlarDataSet();
+                MasraflarDataSet ds = new MasraflarDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -525,7 +525,7 @@ namespace EmployeeTrackingSystem {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DepartmanlarDataTable";
+                attribute2.FixedValue = "MasraflarDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -569,65 +569,65 @@ namespace EmployeeTrackingSystem {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DepartmanlarRow : global::System.Data.DataRow {
+        public partial class MasraflarRow : global::System.Data.DataRow {
             
-            private DepartmanlarDataTable tableDepartmanlar;
+            private MasraflarDataTable tableMasraflar;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal DepartmanlarRow(global::System.Data.DataRowBuilder rb) : 
+            internal MasraflarRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDepartmanlar = ((DepartmanlarDataTable)(this.Table));
+                this.tableMasraflar = ((MasraflarDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableDepartmanlar.IDColumn]));
+                    return ((int)(this[this.tableMasraflar.IDColumn]));
                 }
                 set {
-                    this[this.tableDepartmanlar.IDColumn] = value;
+                    this[this.tableMasraflar.IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string DepartmanID {
+            public string MasrafID {
                 get {
                     try {
-                        return ((string)(this[this.tableDepartmanlar.DepartmanIDColumn]));
+                        return ((string)(this[this.tableMasraflar.MasrafIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DepartmanID\' in table \'Departmanlar\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'MasrafID\' in table \'Masraflar\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDepartmanlar.DepartmanIDColumn] = value;
+                    this[this.tableMasraflar.MasrafIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Departman_Adı {
+            public string Masraf_Bilgisi {
                 get {
-                    return ((string)(this[this.tableDepartmanlar.Departman_AdıColumn]));
+                    return ((string)(this[this.tableMasraflar.Masraf_BilgisiColumn]));
                 }
                 set {
-                    this[this.tableDepartmanlar.Departman_AdıColumn] = value;
+                    this[this.tableMasraflar.Masraf_BilgisiColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsDepartmanIDNull() {
-                return this.IsNull(this.tableDepartmanlar.DepartmanIDColumn);
+            public bool IsMasrafIDNull() {
+                return this.IsNull(this.tableMasraflar.MasrafIDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetDepartmanIDNull() {
-                this[this.tableDepartmanlar.DepartmanIDColumn] = global::System.Convert.DBNull;
+            public void SetMasrafIDNull() {
+                this[this.tableMasraflar.MasrafIDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -635,22 +635,22 @@ namespace EmployeeTrackingSystem {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class DepartmanlarRowChangeEvent : global::System.EventArgs {
+        public class MasraflarRowChangeEvent : global::System.EventArgs {
             
-            private DepartmanlarRow eventRow;
+            private MasraflarRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DepartmanlarRowChangeEvent(DepartmanlarRow row, global::System.Data.DataRowAction action) {
+            public MasraflarRowChangeEvent(MasraflarRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DepartmanlarRow Row {
+            public MasraflarRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -666,7 +666,7 @@ namespace EmployeeTrackingSystem {
         }
     }
 }
-namespace EmployeeTrackingSystem.DepartmanlarDataSetTableAdapters {
+namespace EmployeeTrackingSystem.DataSets.MasraflarDataSetTableAdapters {
     
     
     /// <summary>
@@ -678,7 +678,7 @@ namespace EmployeeTrackingSystem.DepartmanlarDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DepartmanlarTableAdapter : global::System.ComponentModel.Component {
+    public partial class MasraflarTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -692,7 +692,7 @@ namespace EmployeeTrackingSystem.DepartmanlarDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public DepartmanlarTableAdapter() {
+        public MasraflarTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -789,38 +789,37 @@ namespace EmployeeTrackingSystem.DepartmanlarDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Departmanlar";
+            tableMapping.DataSetTable = "Masraflar";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("DepartmanID", "DepartmanID");
-            tableMapping.ColumnMappings.Add("Departman_Adı", "Departman_Adı");
+            tableMapping.ColumnMappings.Add("MasrafID", "MasrafID");
+            tableMapping.ColumnMappings.Add("Masraf_Bilgisi", "Masraf_Bilgisi");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Departmanlar] WHERE (([ID] = @Original_ID) AND ((@IsNull_Depar" +
-                "tmanID = 1 AND [DepartmanID] IS NULL) OR ([DepartmanID] = @Original_DepartmanID)" +
-                ") AND ([Departman_Adı] = @Original_Departman_Adı))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Masraflar] WHERE (([ID] = @Original_ID) AND ((@IsNull_MasrafID" +
+                " = 1 AND [MasrafID] IS NULL) OR ([MasrafID] = @Original_MasrafID)) AND ([Masraf_" +
+                "Bilgisi] = @Original_Masraf_Bilgisi))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DepartmanID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmanID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepartmanID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmanID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Departman_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Departman_Adı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MasrafID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MasrafID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MasrafID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MasrafID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Masraf_Bilgisi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Masraf_Bilgisi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Departmanlar] ([Departman_Adı]) VALUES (@Departman_Adı);\r\nSELE" +
-                "CT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = SCOPE_IDENTITY()" +
-                ")";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Masraflar] ([Masraf_Bilgisi]) VALUES (@Masraf_Bilgisi);\r\nSELEC" +
+                "T ID, MasrafID, Masraf_Bilgisi FROM Masraflar WHERE (ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Departman_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Departman_Adı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Masraf_Bilgisi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Masraf_Bilgisi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Departmanlar] SET [Departman_Adı] = @Departman_Adı WHERE (([ID] = @Original_ID) AND ((@IsNull_DepartmanID = 1 AND [DepartmanID] IS NULL) OR ([DepartmanID] = @Original_DepartmanID)) AND ([Departman_Adı] = @Original_Departman_Adı));
-SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Masraflar] SET [Masraf_Bilgisi] = @Masraf_Bilgisi WHERE (([ID] = @Original_ID) AND ((@IsNull_MasrafID = 1 AND [MasrafID] IS NULL) OR ([MasrafID] = @Original_MasrafID)) AND ([Masraf_Bilgisi] = @Original_Masraf_Bilgisi));
+SELECT ID, MasrafID, Masraf_Bilgisi FROM Masraflar WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Departman_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Departman_Adı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Masraf_Bilgisi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Masraf_Bilgisi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DepartmanID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmanID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepartmanID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmanID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Departman_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Departman_Adı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MasrafID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MasrafID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MasrafID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MasrafID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Masraf_Bilgisi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Masraf_Bilgisi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -837,7 +836,7 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, DepartmanID, Departman_Adı FROM dbo.Departmanlar";
+            this._commandCollection[0].CommandText = "SELECT ID, MasrafID, Masraf_Bilgisi FROM dbo.Masraflar";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -845,7 +844,7 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DepartmanlarDataSet.DepartmanlarDataTable dataTable) {
+        public virtual int Fill(MasraflarDataSet.MasraflarDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -858,9 +857,9 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DepartmanlarDataSet.DepartmanlarDataTable GetData() {
+        public virtual MasraflarDataSet.MasraflarDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DepartmanlarDataSet.DepartmanlarDataTable dataTable = new DepartmanlarDataSet.DepartmanlarDataTable();
+            MasraflarDataSet.MasraflarDataTable dataTable = new MasraflarDataSet.MasraflarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -868,15 +867,15 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DepartmanlarDataSet.DepartmanlarDataTable dataTable) {
+        public virtual int Update(MasraflarDataSet.MasraflarDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DepartmanlarDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Departmanlar");
+        public virtual int Update(MasraflarDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Masraflar");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -898,21 +897,21 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_DepartmanID, string Original_Departman_Adı) {
+        public virtual int Delete(int Original_ID, string Original_MasrafID, string Original_Masraf_Bilgisi) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            if ((Original_DepartmanID == null)) {
+            if ((Original_MasrafID == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_DepartmanID));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_MasrafID));
             }
-            if ((Original_Departman_Adı == null)) {
-                throw new global::System.ArgumentNullException("Original_Departman_Adı");
+            if ((Original_Masraf_Bilgisi == null)) {
+                throw new global::System.ArgumentNullException("Original_Masraf_Bilgisi");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Departman_Adı));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Masraf_Bilgisi));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -934,12 +933,12 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Departman_Adı) {
-            if ((Departman_Adı == null)) {
-                throw new global::System.ArgumentNullException("Departman_Adı");
+        public virtual int Insert(string Masraf_Bilgisi) {
+            if ((Masraf_Bilgisi == null)) {
+                throw new global::System.ArgumentNullException("Masraf_Bilgisi");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Departman_Adı));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Masraf_Bilgisi));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -961,27 +960,27 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Departman_Adı, int Original_ID, string Original_DepartmanID, string Original_Departman_Adı, int ID) {
-            if ((Departman_Adı == null)) {
-                throw new global::System.ArgumentNullException("Departman_Adı");
+        public virtual int Update(string Masraf_Bilgisi, int Original_ID, string Original_MasrafID, string Original_Masraf_Bilgisi, int ID) {
+            if ((Masraf_Bilgisi == null)) {
+                throw new global::System.ArgumentNullException("Masraf_Bilgisi");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Departman_Adı));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Masraf_Bilgisi));
             }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_ID));
-            if ((Original_DepartmanID == null)) {
+            if ((Original_MasrafID == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_DepartmanID));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_MasrafID));
             }
-            if ((Original_Departman_Adı == null)) {
-                throw new global::System.ArgumentNullException("Original_Departman_Adı");
+            if ((Original_Masraf_Bilgisi == null)) {
+                throw new global::System.ArgumentNullException("Original_Masraf_Bilgisi");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Departman_Adı));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Masraf_Bilgisi));
             }
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
@@ -1004,8 +1003,8 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Departman_Adı, int Original_ID, string Original_DepartmanID, string Original_Departman_Adı) {
-            return this.Update(Departman_Adı, Original_ID, Original_DepartmanID, Original_Departman_Adı, Original_ID);
+        public virtual int Update(string Masraf_Bilgisi, int Original_ID, string Original_MasrafID, string Original_Masraf_Bilgisi) {
+            return this.Update(Masraf_Bilgisi, Original_ID, Original_MasrafID, Original_Masraf_Bilgisi, Original_ID);
         }
     }
     
@@ -1021,7 +1020,7 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
         
         private UpdateOrderOption _updateOrder;
         
-        private DepartmanlarTableAdapter _departmanlarTableAdapter;
+        private MasraflarTableAdapter _masraflarTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1043,12 +1042,12 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public DepartmanlarTableAdapter DepartmanlarTableAdapter {
+        public MasraflarTableAdapter MasraflarTableAdapter {
             get {
-                return this._departmanlarTableAdapter;
+                return this._masraflarTableAdapter;
             }
             set {
-                this._departmanlarTableAdapter = value;
+                this._masraflarTableAdapter = value;
             }
         }
         
@@ -1071,9 +1070,9 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._departmanlarTableAdapter != null) 
-                            && (this._departmanlarTableAdapter.Connection != null))) {
-                    return this._departmanlarTableAdapter.Connection;
+                if (((this._masraflarTableAdapter != null) 
+                            && (this._masraflarTableAdapter.Connection != null))) {
+                    return this._masraflarTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1088,7 +1087,7 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._departmanlarTableAdapter != null)) {
+                if ((this._masraflarTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1100,14 +1099,14 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(DepartmanlarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(MasraflarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._departmanlarTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Departmanlar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._masraflarTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Masraflar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._departmanlarTableAdapter.Update(updatedRows));
+                    result = (result + this._masraflarTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1119,13 +1118,13 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(DepartmanlarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(MasraflarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._departmanlarTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Departmanlar.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._masraflarTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Masraflar.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._departmanlarTableAdapter.Update(addedRows));
+                    result = (result + this._masraflarTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1137,13 +1136,13 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(DepartmanlarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(MasraflarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._departmanlarTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Departmanlar.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._masraflarTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Masraflar.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._departmanlarTableAdapter.Update(deletedRows));
+                    result = (result + this._masraflarTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1179,15 +1178,15 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(DepartmanlarDataSet dataSet) {
+        public virtual int UpdateAll(MasraflarDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._departmanlarTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._departmanlarTableAdapter.Connection) == false))) {
+            if (((this._masraflarTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._masraflarTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1223,13 +1222,13 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._departmanlarTableAdapter != null)) {
-                    revertConnections.Add(this._departmanlarTableAdapter, this._departmanlarTableAdapter.Connection);
-                    this._departmanlarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._departmanlarTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._departmanlarTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._departmanlarTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._departmanlarTableAdapter.Adapter);
+                if ((this._masraflarTableAdapter != null)) {
+                    revertConnections.Add(this._masraflarTableAdapter, this._masraflarTableAdapter.Connection);
+                    this._masraflarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._masraflarTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._masraflarTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._masraflarTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._masraflarTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1290,9 +1289,9 @@ SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._departmanlarTableAdapter != null)) {
-                    this._departmanlarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._departmanlarTableAdapter]));
-                    this._departmanlarTableAdapter.Transaction = null;
+                if ((this._masraflarTableAdapter != null)) {
+                    this._masraflarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._masraflarTableAdapter]));
+                    this._masraflarTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

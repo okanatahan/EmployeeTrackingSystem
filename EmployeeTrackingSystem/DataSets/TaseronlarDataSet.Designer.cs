@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace EmployeeTrackingSystem {
+namespace EmployeeTrackingSystem.DataSets {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace EmployeeTrackingSystem {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("AltDepartmanlarDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("TaseronlarDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class AltDepartmanlarDataSet : global::System.Data.DataSet {
+    public partial class TaseronlarDataSet : global::System.Data.DataSet {
         
-        private AltDepartmanlarDataTable tableAltDepartmanlar;
+        private TaseronlarDataTable tableTaseronlar;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public AltDepartmanlarDataSet() {
+        public TaseronlarDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace EmployeeTrackingSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected AltDepartmanlarDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected TaseronlarDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace EmployeeTrackingSystem {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["AltDepartmanlar"] != null)) {
-                    base.Tables.Add(new AltDepartmanlarDataTable(ds.Tables["AltDepartmanlar"]));
+                if ((ds.Tables["Taseronlar"] != null)) {
+                    base.Tables.Add(new TaseronlarDataTable(ds.Tables["Taseronlar"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace EmployeeTrackingSystem {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public AltDepartmanlarDataTable AltDepartmanlar {
+        public TaseronlarDataTable Taseronlar {
             get {
-                return this.tableAltDepartmanlar;
+                return this.tableTaseronlar;
             }
         }
         
@@ -127,7 +127,7 @@ namespace EmployeeTrackingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            AltDepartmanlarDataSet cln = ((AltDepartmanlarDataSet)(base.Clone()));
+            TaseronlarDataSet cln = ((TaseronlarDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace EmployeeTrackingSystem {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["AltDepartmanlar"] != null)) {
-                    base.Tables.Add(new AltDepartmanlarDataTable(ds.Tables["AltDepartmanlar"]));
+                if ((ds.Tables["Taseronlar"] != null)) {
+                    base.Tables.Add(new TaseronlarDataTable(ds.Tables["Taseronlar"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace EmployeeTrackingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableAltDepartmanlar = ((AltDepartmanlarDataTable)(base.Tables["AltDepartmanlar"]));
+            this.tableTaseronlar = ((TaseronlarDataTable)(base.Tables["Taseronlar"]));
             if ((initTable == true)) {
-                if ((this.tableAltDepartmanlar != null)) {
-                    this.tableAltDepartmanlar.InitVars();
+                if ((this.tableTaseronlar != null)) {
+                    this.tableTaseronlar.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace EmployeeTrackingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "AltDepartmanlarDataSet";
+            this.DataSetName = "TaseronlarDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/AltDepartmanlarDataSet.xsd";
+            this.Namespace = "http://tempuri.org/TaseronlarDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableAltDepartmanlar = new AltDepartmanlarDataTable();
-            base.Tables.Add(this.tableAltDepartmanlar);
+            this.tableTaseronlar = new TaseronlarDataTable();
+            base.Tables.Add(this.tableTaseronlar);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeAltDepartmanlar() {
+        private bool ShouldSerializeTaseronlar() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace EmployeeTrackingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            AltDepartmanlarDataSet ds = new AltDepartmanlarDataSet();
+            TaseronlarDataSet ds = new TaseronlarDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,25 +270,25 @@ namespace EmployeeTrackingSystem {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void AltDepartmanlarRowChangeEventHandler(object sender, AltDepartmanlarRowChangeEvent e);
+        public delegate void TaseronlarRowChangeEventHandler(object sender, TaseronlarRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class AltDepartmanlarDataTable : global::System.Data.TypedTableBase<AltDepartmanlarRow> {
+        public partial class TaseronlarDataTable : global::System.Data.TypedTableBase<TaseronlarRow> {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnAltDepartmanID;
+            private global::System.Data.DataColumn columnTaseronID;
             
-            private global::System.Data.DataColumn columnAlt_Departman_Adı;
+            private global::System.Data.DataColumn columnTaseron_Bilgisi;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AltDepartmanlarDataTable() {
-                this.TableName = "AltDepartmanlar";
+            public TaseronlarDataTable() {
+                this.TableName = "Taseronlar";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -296,7 +296,7 @@ namespace EmployeeTrackingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal AltDepartmanlarDataTable(global::System.Data.DataTable table) {
+            internal TaseronlarDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -313,7 +313,7 @@ namespace EmployeeTrackingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected AltDepartmanlarDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TaseronlarDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -328,17 +328,17 @@ namespace EmployeeTrackingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn AltDepartmanIDColumn {
+            public global::System.Data.DataColumn TaseronIDColumn {
                 get {
-                    return this.columnAltDepartmanID;
+                    return this.columnTaseronID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Alt_Departman_AdıColumn {
+            public global::System.Data.DataColumn Taseron_BilgisiColumn {
                 get {
-                    return this.columnAlt_Departman_Adı;
+                    return this.columnTaseron_Bilgisi;
                 }
             }
             
@@ -353,54 +353,54 @@ namespace EmployeeTrackingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AltDepartmanlarRow this[int index] {
+            public TaseronlarRow this[int index] {
                 get {
-                    return ((AltDepartmanlarRow)(this.Rows[index]));
+                    return ((TaseronlarRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AltDepartmanlarRowChangeEventHandler AltDepartmanlarRowChanging;
+            public event TaseronlarRowChangeEventHandler TaseronlarRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AltDepartmanlarRowChangeEventHandler AltDepartmanlarRowChanged;
+            public event TaseronlarRowChangeEventHandler TaseronlarRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AltDepartmanlarRowChangeEventHandler AltDepartmanlarRowDeleting;
+            public event TaseronlarRowChangeEventHandler TaseronlarRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AltDepartmanlarRowChangeEventHandler AltDepartmanlarRowDeleted;
+            public event TaseronlarRowChangeEventHandler TaseronlarRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddAltDepartmanlarRow(AltDepartmanlarRow row) {
+            public void AddTaseronlarRow(TaseronlarRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AltDepartmanlarRow AddAltDepartmanlarRow(string AltDepartmanID, string Alt_Departman_Adı) {
-                AltDepartmanlarRow rowAltDepartmanlarRow = ((AltDepartmanlarRow)(this.NewRow()));
+            public TaseronlarRow AddTaseronlarRow(string TaseronID, string Taseron_Bilgisi) {
+                TaseronlarRow rowTaseronlarRow = ((TaseronlarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        AltDepartmanID,
-                        Alt_Departman_Adı};
-                rowAltDepartmanlarRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowAltDepartmanlarRow);
-                return rowAltDepartmanlarRow;
+                        TaseronID,
+                        Taseron_Bilgisi};
+                rowTaseronlarRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTaseronlarRow);
+                return rowTaseronlarRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AltDepartmanlarRow FindByID(int ID) {
-                return ((AltDepartmanlarRow)(this.Rows.Find(new object[] {
+            public TaseronlarRow FindByID(int ID) {
+                return ((TaseronlarRow)(this.Rows.Find(new object[] {
                             ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                AltDepartmanlarDataTable cln = ((AltDepartmanlarDataTable)(base.Clone()));
+                TaseronlarDataTable cln = ((TaseronlarDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -408,15 +408,15 @@ namespace EmployeeTrackingSystem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new AltDepartmanlarDataTable();
+                return new TaseronlarDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnAltDepartmanID = base.Columns["AltDepartmanID"];
-                this.columnAlt_Departman_Adı = base.Columns["Alt_Departman_Adı"];
+                this.columnTaseronID = base.Columns["TaseronID"];
+                this.columnTaseron_Bilgisi = base.Columns["Taseron_Bilgisi"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -424,10 +424,10 @@ namespace EmployeeTrackingSystem {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnAltDepartmanID = new global::System.Data.DataColumn("AltDepartmanID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAltDepartmanID);
-                this.columnAlt_Departman_Adı = new global::System.Data.DataColumn("Alt_Departman_Adı", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAlt_Departman_Adı);
+                this.columnTaseronID = new global::System.Data.DataColumn("TaseronID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTaseronID);
+                this.columnTaseron_Bilgisi = new global::System.Data.DataColumn("Taseron_Bilgisi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTaseron_Bilgisi);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -436,36 +436,36 @@ namespace EmployeeTrackingSystem {
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
-                this.columnAltDepartmanID.ReadOnly = true;
-                this.columnAltDepartmanID.MaxLength = 10;
-                this.columnAlt_Departman_Adı.AllowDBNull = false;
-                this.columnAlt_Departman_Adı.MaxLength = 100;
+                this.columnTaseronID.ReadOnly = true;
+                this.columnTaseronID.MaxLength = 10;
+                this.columnTaseron_Bilgisi.AllowDBNull = false;
+                this.columnTaseron_Bilgisi.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AltDepartmanlarRow NewAltDepartmanlarRow() {
-                return ((AltDepartmanlarRow)(this.NewRow()));
+            public TaseronlarRow NewTaseronlarRow() {
+                return ((TaseronlarRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new AltDepartmanlarRow(builder);
+                return new TaseronlarRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(AltDepartmanlarRow);
+                return typeof(TaseronlarRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.AltDepartmanlarRowChanged != null)) {
-                    this.AltDepartmanlarRowChanged(this, new AltDepartmanlarRowChangeEvent(((AltDepartmanlarRow)(e.Row)), e.Action));
+                if ((this.TaseronlarRowChanged != null)) {
+                    this.TaseronlarRowChanged(this, new TaseronlarRowChangeEvent(((TaseronlarRow)(e.Row)), e.Action));
                 }
             }
             
@@ -473,8 +473,8 @@ namespace EmployeeTrackingSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.AltDepartmanlarRowChanging != null)) {
-                    this.AltDepartmanlarRowChanging(this, new AltDepartmanlarRowChangeEvent(((AltDepartmanlarRow)(e.Row)), e.Action));
+                if ((this.TaseronlarRowChanging != null)) {
+                    this.TaseronlarRowChanging(this, new TaseronlarRowChangeEvent(((TaseronlarRow)(e.Row)), e.Action));
                 }
             }
             
@@ -482,8 +482,8 @@ namespace EmployeeTrackingSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.AltDepartmanlarRowDeleted != null)) {
-                    this.AltDepartmanlarRowDeleted(this, new AltDepartmanlarRowChangeEvent(((AltDepartmanlarRow)(e.Row)), e.Action));
+                if ((this.TaseronlarRowDeleted != null)) {
+                    this.TaseronlarRowDeleted(this, new TaseronlarRowChangeEvent(((TaseronlarRow)(e.Row)), e.Action));
                 }
             }
             
@@ -491,14 +491,14 @@ namespace EmployeeTrackingSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.AltDepartmanlarRowDeleting != null)) {
-                    this.AltDepartmanlarRowDeleting(this, new AltDepartmanlarRowChangeEvent(((AltDepartmanlarRow)(e.Row)), e.Action));
+                if ((this.TaseronlarRowDeleting != null)) {
+                    this.TaseronlarRowDeleting(this, new TaseronlarRowChangeEvent(((TaseronlarRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveAltDepartmanlarRow(AltDepartmanlarRow row) {
+            public void RemoveTaseronlarRow(TaseronlarRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -507,7 +507,7 @@ namespace EmployeeTrackingSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                AltDepartmanlarDataSet ds = new AltDepartmanlarDataSet();
+                TaseronlarDataSet ds = new TaseronlarDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -525,7 +525,7 @@ namespace EmployeeTrackingSystem {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "AltDepartmanlarDataTable";
+                attribute2.FixedValue = "TaseronlarDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -569,65 +569,65 @@ namespace EmployeeTrackingSystem {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class AltDepartmanlarRow : global::System.Data.DataRow {
+        public partial class TaseronlarRow : global::System.Data.DataRow {
             
-            private AltDepartmanlarDataTable tableAltDepartmanlar;
+            private TaseronlarDataTable tableTaseronlar;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal AltDepartmanlarRow(global::System.Data.DataRowBuilder rb) : 
+            internal TaseronlarRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableAltDepartmanlar = ((AltDepartmanlarDataTable)(this.Table));
+                this.tableTaseronlar = ((TaseronlarDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableAltDepartmanlar.IDColumn]));
+                    return ((int)(this[this.tableTaseronlar.IDColumn]));
                 }
                 set {
-                    this[this.tableAltDepartmanlar.IDColumn] = value;
+                    this[this.tableTaseronlar.IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string AltDepartmanID {
+            public string TaseronID {
                 get {
                     try {
-                        return ((string)(this[this.tableAltDepartmanlar.AltDepartmanIDColumn]));
+                        return ((string)(this[this.tableTaseronlar.TaseronIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'AltDepartmanID\' in table \'AltDepartmanlar\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TaseronID\' in table \'Taseronlar\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAltDepartmanlar.AltDepartmanIDColumn] = value;
+                    this[this.tableTaseronlar.TaseronIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Alt_Departman_Adı {
+            public string Taseron_Bilgisi {
                 get {
-                    return ((string)(this[this.tableAltDepartmanlar.Alt_Departman_AdıColumn]));
+                    return ((string)(this[this.tableTaseronlar.Taseron_BilgisiColumn]));
                 }
                 set {
-                    this[this.tableAltDepartmanlar.Alt_Departman_AdıColumn] = value;
+                    this[this.tableTaseronlar.Taseron_BilgisiColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsAltDepartmanIDNull() {
-                return this.IsNull(this.tableAltDepartmanlar.AltDepartmanIDColumn);
+            public bool IsTaseronIDNull() {
+                return this.IsNull(this.tableTaseronlar.TaseronIDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetAltDepartmanIDNull() {
-                this[this.tableAltDepartmanlar.AltDepartmanIDColumn] = global::System.Convert.DBNull;
+            public void SetTaseronIDNull() {
+                this[this.tableTaseronlar.TaseronIDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -635,22 +635,22 @@ namespace EmployeeTrackingSystem {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class AltDepartmanlarRowChangeEvent : global::System.EventArgs {
+        public class TaseronlarRowChangeEvent : global::System.EventArgs {
             
-            private AltDepartmanlarRow eventRow;
+            private TaseronlarRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AltDepartmanlarRowChangeEvent(AltDepartmanlarRow row, global::System.Data.DataRowAction action) {
+            public TaseronlarRowChangeEvent(TaseronlarRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AltDepartmanlarRow Row {
+            public TaseronlarRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -666,7 +666,7 @@ namespace EmployeeTrackingSystem {
         }
     }
 }
-namespace EmployeeTrackingSystem.AltDepartmanlarDataSetTableAdapters {
+namespace EmployeeTrackingSystem.DataSets.TaseronlarDataSetTableAdapters {
     
     
     /// <summary>
@@ -678,7 +678,7 @@ namespace EmployeeTrackingSystem.AltDepartmanlarDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class AltDepartmanlarTableAdapter : global::System.ComponentModel.Component {
+    public partial class TaseronlarTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -692,7 +692,7 @@ namespace EmployeeTrackingSystem.AltDepartmanlarDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public AltDepartmanlarTableAdapter() {
+        public TaseronlarTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -789,38 +789,38 @@ namespace EmployeeTrackingSystem.AltDepartmanlarDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "AltDepartmanlar";
+            tableMapping.DataSetTable = "Taseronlar";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("AltDepartmanID", "AltDepartmanID");
-            tableMapping.ColumnMappings.Add("Alt_Departman_Adı", "Alt_Departman_Adı");
+            tableMapping.ColumnMappings.Add("TaseronID", "TaseronID");
+            tableMapping.ColumnMappings.Add("Taseron_Bilgisi", "Taseron_Bilgisi");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[AltDepartmanlar] WHERE (([ID] = @Original_ID) AND ((@IsNull_Al" +
-                "tDepartmanID = 1 AND [AltDepartmanID] IS NULL) OR ([AltDepartmanID] = @Original_" +
-                "AltDepartmanID)) AND ([Alt_Departman_Adı] = @Original_Alt_Departman_Adı))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Taseronlar] WHERE (([ID] = @Original_ID) AND ((@IsNull_Taseron" +
+                "ID = 1 AND [TaseronID] IS NULL) OR ([TaseronID] = @Original_TaseronID)) AND ([Ta" +
+                "seron_Bilgisi] = @Original_Taseron_Bilgisi))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AltDepartmanID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AltDepartmanID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AltDepartmanID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AltDepartmanID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Alt_Departman_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alt_Departman_Adı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TaseronID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TaseronID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TaseronID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TaseronID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Taseron_Bilgisi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Taseron_Bilgisi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[AltDepartmanlar] ([Alt_Departman_Adı]) VALUES (@Alt_Departman_" +
-                "Adı);\r\nSELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (" +
-                "ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Taseronlar] ([Taseron_Bilgisi]) VALUES (@Taseron_Bilgisi);\r\nSE" +
+                "LECT ID, TaseronID, Taseron_Bilgisi FROM Taseronlar WHERE (ID = SCOPE_IDENTITY()" +
+                ")";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alt_Departman_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alt_Departman_Adı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Taseron_Bilgisi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Taseron_Bilgisi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[AltDepartmanlar] SET [Alt_Departman_Adı] = @Alt_Departman_Adı WHERE (([ID] = @Original_ID) AND ((@IsNull_AltDepartmanID = 1 AND [AltDepartmanID] IS NULL) OR ([AltDepartmanID] = @Original_AltDepartmanID)) AND ([Alt_Departman_Adı] = @Original_Alt_Departman_Adı));
-SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Taseronlar] SET [Taseron_Bilgisi] = @Taseron_Bilgisi WHERE (([ID] = @Original_ID) AND ((@IsNull_TaseronID = 1 AND [TaseronID] IS NULL) OR ([TaseronID] = @Original_TaseronID)) AND ([Taseron_Bilgisi] = @Original_Taseron_Bilgisi));
+SELECT ID, TaseronID, Taseron_Bilgisi FROM Taseronlar WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Alt_Departman_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alt_Departman_Adı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Taseron_Bilgisi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Taseron_Bilgisi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AltDepartmanID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AltDepartmanID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AltDepartmanID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AltDepartmanID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Alt_Departman_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Alt_Departman_Adı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TaseronID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TaseronID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TaseronID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TaseronID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Taseron_Bilgisi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Taseron_Bilgisi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -837,7 +837,7 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM dbo.AltDepartmanlar";
+            this._commandCollection[0].CommandText = "SELECT ID, TaseronID, Taseron_Bilgisi FROM dbo.Taseronlar";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -845,7 +845,7 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(AltDepartmanlarDataSet.AltDepartmanlarDataTable dataTable) {
+        public virtual int Fill(TaseronlarDataSet.TaseronlarDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -858,9 +858,9 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual AltDepartmanlarDataSet.AltDepartmanlarDataTable GetData() {
+        public virtual TaseronlarDataSet.TaseronlarDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            AltDepartmanlarDataSet.AltDepartmanlarDataTable dataTable = new AltDepartmanlarDataSet.AltDepartmanlarDataTable();
+            TaseronlarDataSet.TaseronlarDataTable dataTable = new TaseronlarDataSet.TaseronlarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -868,15 +868,15 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AltDepartmanlarDataSet.AltDepartmanlarDataTable dataTable) {
+        public virtual int Update(TaseronlarDataSet.TaseronlarDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(AltDepartmanlarDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "AltDepartmanlar");
+        public virtual int Update(TaseronlarDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Taseronlar");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -898,21 +898,21 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_AltDepartmanID, string Original_Alt_Departman_Adı) {
+        public virtual int Delete(int Original_ID, string Original_TaseronID, string Original_Taseron_Bilgisi) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            if ((Original_AltDepartmanID == null)) {
+            if ((Original_TaseronID == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_AltDepartmanID));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_TaseronID));
             }
-            if ((Original_Alt_Departman_Adı == null)) {
-                throw new global::System.ArgumentNullException("Original_Alt_Departman_Adı");
+            if ((Original_Taseron_Bilgisi == null)) {
+                throw new global::System.ArgumentNullException("Original_Taseron_Bilgisi");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Alt_Departman_Adı));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Taseron_Bilgisi));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -934,12 +934,12 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Alt_Departman_Adı) {
-            if ((Alt_Departman_Adı == null)) {
-                throw new global::System.ArgumentNullException("Alt_Departman_Adı");
+        public virtual int Insert(string Taseron_Bilgisi) {
+            if ((Taseron_Bilgisi == null)) {
+                throw new global::System.ArgumentNullException("Taseron_Bilgisi");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Alt_Departman_Adı));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Taseron_Bilgisi));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -961,27 +961,27 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Alt_Departman_Adı, int Original_ID, string Original_AltDepartmanID, string Original_Alt_Departman_Adı, int ID) {
-            if ((Alt_Departman_Adı == null)) {
-                throw new global::System.ArgumentNullException("Alt_Departman_Adı");
+        public virtual int Update(string Taseron_Bilgisi, int Original_ID, string Original_TaseronID, string Original_Taseron_Bilgisi, int ID) {
+            if ((Taseron_Bilgisi == null)) {
+                throw new global::System.ArgumentNullException("Taseron_Bilgisi");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Alt_Departman_Adı));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Taseron_Bilgisi));
             }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_ID));
-            if ((Original_AltDepartmanID == null)) {
+            if ((Original_TaseronID == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_AltDepartmanID));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_TaseronID));
             }
-            if ((Original_Alt_Departman_Adı == null)) {
-                throw new global::System.ArgumentNullException("Original_Alt_Departman_Adı");
+            if ((Original_Taseron_Bilgisi == null)) {
+                throw new global::System.ArgumentNullException("Original_Taseron_Bilgisi");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Alt_Departman_Adı));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Taseron_Bilgisi));
             }
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
@@ -1004,8 +1004,8 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Alt_Departman_Adı, int Original_ID, string Original_AltDepartmanID, string Original_Alt_Departman_Adı) {
-            return this.Update(Alt_Departman_Adı, Original_ID, Original_AltDepartmanID, Original_Alt_Departman_Adı, Original_ID);
+        public virtual int Update(string Taseron_Bilgisi, int Original_ID, string Original_TaseronID, string Original_Taseron_Bilgisi) {
+            return this.Update(Taseron_Bilgisi, Original_ID, Original_TaseronID, Original_Taseron_Bilgisi, Original_ID);
         }
     }
     
@@ -1021,7 +1021,7 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
         
         private UpdateOrderOption _updateOrder;
         
-        private AltDepartmanlarTableAdapter _altDepartmanlarTableAdapter;
+        private TaseronlarTableAdapter _taseronlarTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1043,12 +1043,12 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public AltDepartmanlarTableAdapter AltDepartmanlarTableAdapter {
+        public TaseronlarTableAdapter TaseronlarTableAdapter {
             get {
-                return this._altDepartmanlarTableAdapter;
+                return this._taseronlarTableAdapter;
             }
             set {
-                this._altDepartmanlarTableAdapter = value;
+                this._taseronlarTableAdapter = value;
             }
         }
         
@@ -1071,9 +1071,9 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._altDepartmanlarTableAdapter != null) 
-                            && (this._altDepartmanlarTableAdapter.Connection != null))) {
-                    return this._altDepartmanlarTableAdapter.Connection;
+                if (((this._taseronlarTableAdapter != null) 
+                            && (this._taseronlarTableAdapter.Connection != null))) {
+                    return this._taseronlarTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1088,7 +1088,7 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._altDepartmanlarTableAdapter != null)) {
+                if ((this._taseronlarTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1100,14 +1100,14 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(AltDepartmanlarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(TaseronlarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._altDepartmanlarTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.AltDepartmanlar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._taseronlarTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Taseronlar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._altDepartmanlarTableAdapter.Update(updatedRows));
+                    result = (result + this._taseronlarTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1119,13 +1119,13 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(AltDepartmanlarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(TaseronlarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._altDepartmanlarTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.AltDepartmanlar.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._taseronlarTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Taseronlar.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._altDepartmanlarTableAdapter.Update(addedRows));
+                    result = (result + this._taseronlarTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1137,13 +1137,13 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(AltDepartmanlarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(TaseronlarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._altDepartmanlarTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.AltDepartmanlar.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._taseronlarTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Taseronlar.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._altDepartmanlarTableAdapter.Update(deletedRows));
+                    result = (result + this._taseronlarTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1179,15 +1179,15 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(AltDepartmanlarDataSet dataSet) {
+        public virtual int UpdateAll(TaseronlarDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._altDepartmanlarTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._altDepartmanlarTableAdapter.Connection) == false))) {
+            if (((this._taseronlarTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._taseronlarTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1223,13 +1223,13 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._altDepartmanlarTableAdapter != null)) {
-                    revertConnections.Add(this._altDepartmanlarTableAdapter, this._altDepartmanlarTableAdapter.Connection);
-                    this._altDepartmanlarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._altDepartmanlarTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._altDepartmanlarTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._altDepartmanlarTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._altDepartmanlarTableAdapter.Adapter);
+                if ((this._taseronlarTableAdapter != null)) {
+                    revertConnections.Add(this._taseronlarTableAdapter, this._taseronlarTableAdapter.Connection);
+                    this._taseronlarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._taseronlarTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._taseronlarTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._taseronlarTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._taseronlarTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1290,9 +1290,9 @@ SELECT ID, AltDepartmanID, Alt_Departman_Adı FROM AltDepartmanlar WHERE (ID = @
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._altDepartmanlarTableAdapter != null)) {
-                    this._altDepartmanlarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._altDepartmanlarTableAdapter]));
-                    this._altDepartmanlarTableAdapter.Transaction = null;
+                if ((this._taseronlarTableAdapter != null)) {
+                    this._taseronlarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._taseronlarTableAdapter]));
+                    this._taseronlarTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

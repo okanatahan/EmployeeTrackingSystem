@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace EmployeeTrackingSystem {
+namespace EmployeeTrackingSystem.DataSets {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace EmployeeTrackingSystem {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("IsletmelerDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DepartmanlarDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class IsletmelerDataSet : global::System.Data.DataSet {
+    public partial class DepartmanlarDataSet : global::System.Data.DataSet {
         
-        private IsletmelerDataTable tableIsletmeler;
+        private DepartmanlarDataTable tableDepartmanlar;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public IsletmelerDataSet() {
+        public DepartmanlarDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace EmployeeTrackingSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected IsletmelerDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DepartmanlarDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace EmployeeTrackingSystem {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Isletmeler"] != null)) {
-                    base.Tables.Add(new IsletmelerDataTable(ds.Tables["Isletmeler"]));
+                if ((ds.Tables["Departmanlar"] != null)) {
+                    base.Tables.Add(new DepartmanlarDataTable(ds.Tables["Departmanlar"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace EmployeeTrackingSystem {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public IsletmelerDataTable Isletmeler {
+        public DepartmanlarDataTable Departmanlar {
             get {
-                return this.tableIsletmeler;
+                return this.tableDepartmanlar;
             }
         }
         
@@ -127,7 +127,7 @@ namespace EmployeeTrackingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            IsletmelerDataSet cln = ((IsletmelerDataSet)(base.Clone()));
+            DepartmanlarDataSet cln = ((DepartmanlarDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace EmployeeTrackingSystem {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Isletmeler"] != null)) {
-                    base.Tables.Add(new IsletmelerDataTable(ds.Tables["Isletmeler"]));
+                if ((ds.Tables["Departmanlar"] != null)) {
+                    base.Tables.Add(new DepartmanlarDataTable(ds.Tables["Departmanlar"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace EmployeeTrackingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableIsletmeler = ((IsletmelerDataTable)(base.Tables["Isletmeler"]));
+            this.tableDepartmanlar = ((DepartmanlarDataTable)(base.Tables["Departmanlar"]));
             if ((initTable == true)) {
-                if ((this.tableIsletmeler != null)) {
-                    this.tableIsletmeler.InitVars();
+                if ((this.tableDepartmanlar != null)) {
+                    this.tableDepartmanlar.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace EmployeeTrackingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "IsletmelerDataSet";
+            this.DataSetName = "DepartmanlarDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/IsletmelerDataSet.xsd";
+            this.Namespace = "http://tempuri.org/DepartmanlarDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableIsletmeler = new IsletmelerDataTable();
-            base.Tables.Add(this.tableIsletmeler);
+            this.tableDepartmanlar = new DepartmanlarDataTable();
+            base.Tables.Add(this.tableDepartmanlar);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeIsletmeler() {
+        private bool ShouldSerializeDepartmanlar() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace EmployeeTrackingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            IsletmelerDataSet ds = new IsletmelerDataSet();
+            DepartmanlarDataSet ds = new DepartmanlarDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,25 +270,25 @@ namespace EmployeeTrackingSystem {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void IsletmelerRowChangeEventHandler(object sender, IsletmelerRowChangeEvent e);
+        public delegate void DepartmanlarRowChangeEventHandler(object sender, DepartmanlarRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class IsletmelerDataTable : global::System.Data.TypedTableBase<IsletmelerRow> {
+        public partial class DepartmanlarDataTable : global::System.Data.TypedTableBase<DepartmanlarRow> {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnIsletmeID;
+            private global::System.Data.DataColumn columnDepartmanID;
             
-            private global::System.Data.DataColumn columnIsletme_Adı;
+            private global::System.Data.DataColumn columnDepartman_Adı;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public IsletmelerDataTable() {
-                this.TableName = "Isletmeler";
+            public DepartmanlarDataTable() {
+                this.TableName = "Departmanlar";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -296,7 +296,7 @@ namespace EmployeeTrackingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal IsletmelerDataTable(global::System.Data.DataTable table) {
+            internal DepartmanlarDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -313,7 +313,7 @@ namespace EmployeeTrackingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected IsletmelerDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DepartmanlarDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -328,17 +328,17 @@ namespace EmployeeTrackingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IsletmeIDColumn {
+            public global::System.Data.DataColumn DepartmanIDColumn {
                 get {
-                    return this.columnIsletmeID;
+                    return this.columnDepartmanID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Isletme_AdıColumn {
+            public global::System.Data.DataColumn Departman_AdıColumn {
                 get {
-                    return this.columnIsletme_Adı;
+                    return this.columnDepartman_Adı;
                 }
             }
             
@@ -353,54 +353,54 @@ namespace EmployeeTrackingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public IsletmelerRow this[int index] {
+            public DepartmanlarRow this[int index] {
                 get {
-                    return ((IsletmelerRow)(this.Rows[index]));
+                    return ((DepartmanlarRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event IsletmelerRowChangeEventHandler IsletmelerRowChanging;
+            public event DepartmanlarRowChangeEventHandler DepartmanlarRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event IsletmelerRowChangeEventHandler IsletmelerRowChanged;
+            public event DepartmanlarRowChangeEventHandler DepartmanlarRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event IsletmelerRowChangeEventHandler IsletmelerRowDeleting;
+            public event DepartmanlarRowChangeEventHandler DepartmanlarRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event IsletmelerRowChangeEventHandler IsletmelerRowDeleted;
+            public event DepartmanlarRowChangeEventHandler DepartmanlarRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddIsletmelerRow(IsletmelerRow row) {
+            public void AddDepartmanlarRow(DepartmanlarRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public IsletmelerRow AddIsletmelerRow(string IsletmeID, string Isletme_Adı) {
-                IsletmelerRow rowIsletmelerRow = ((IsletmelerRow)(this.NewRow()));
+            public DepartmanlarRow AddDepartmanlarRow(string DepartmanID, string Departman_Adı) {
+                DepartmanlarRow rowDepartmanlarRow = ((DepartmanlarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        IsletmeID,
-                        Isletme_Adı};
-                rowIsletmelerRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowIsletmelerRow);
-                return rowIsletmelerRow;
+                        DepartmanID,
+                        Departman_Adı};
+                rowDepartmanlarRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDepartmanlarRow);
+                return rowDepartmanlarRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public IsletmelerRow FindByID(int ID) {
-                return ((IsletmelerRow)(this.Rows.Find(new object[] {
+            public DepartmanlarRow FindByID(int ID) {
+                return ((DepartmanlarRow)(this.Rows.Find(new object[] {
                             ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                IsletmelerDataTable cln = ((IsletmelerDataTable)(base.Clone()));
+                DepartmanlarDataTable cln = ((DepartmanlarDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -408,15 +408,15 @@ namespace EmployeeTrackingSystem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new IsletmelerDataTable();
+                return new DepartmanlarDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnIsletmeID = base.Columns["IsletmeID"];
-                this.columnIsletme_Adı = base.Columns["Isletme_Adı"];
+                this.columnDepartmanID = base.Columns["DepartmanID"];
+                this.columnDepartman_Adı = base.Columns["Departman_Adı"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -424,10 +424,10 @@ namespace EmployeeTrackingSystem {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnIsletmeID = new global::System.Data.DataColumn("IsletmeID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIsletmeID);
-                this.columnIsletme_Adı = new global::System.Data.DataColumn("Isletme_Adı", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIsletme_Adı);
+                this.columnDepartmanID = new global::System.Data.DataColumn("DepartmanID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDepartmanID);
+                this.columnDepartman_Adı = new global::System.Data.DataColumn("Departman_Adı", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDepartman_Adı);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -436,36 +436,36 @@ namespace EmployeeTrackingSystem {
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
-                this.columnIsletmeID.ReadOnly = true;
-                this.columnIsletmeID.MaxLength = 10;
-                this.columnIsletme_Adı.AllowDBNull = false;
-                this.columnIsletme_Adı.MaxLength = 100;
+                this.columnDepartmanID.ReadOnly = true;
+                this.columnDepartmanID.MaxLength = 10;
+                this.columnDepartman_Adı.AllowDBNull = false;
+                this.columnDepartman_Adı.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public IsletmelerRow NewIsletmelerRow() {
-                return ((IsletmelerRow)(this.NewRow()));
+            public DepartmanlarRow NewDepartmanlarRow() {
+                return ((DepartmanlarRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new IsletmelerRow(builder);
+                return new DepartmanlarRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(IsletmelerRow);
+                return typeof(DepartmanlarRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.IsletmelerRowChanged != null)) {
-                    this.IsletmelerRowChanged(this, new IsletmelerRowChangeEvent(((IsletmelerRow)(e.Row)), e.Action));
+                if ((this.DepartmanlarRowChanged != null)) {
+                    this.DepartmanlarRowChanged(this, new DepartmanlarRowChangeEvent(((DepartmanlarRow)(e.Row)), e.Action));
                 }
             }
             
@@ -473,8 +473,8 @@ namespace EmployeeTrackingSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.IsletmelerRowChanging != null)) {
-                    this.IsletmelerRowChanging(this, new IsletmelerRowChangeEvent(((IsletmelerRow)(e.Row)), e.Action));
+                if ((this.DepartmanlarRowChanging != null)) {
+                    this.DepartmanlarRowChanging(this, new DepartmanlarRowChangeEvent(((DepartmanlarRow)(e.Row)), e.Action));
                 }
             }
             
@@ -482,8 +482,8 @@ namespace EmployeeTrackingSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.IsletmelerRowDeleted != null)) {
-                    this.IsletmelerRowDeleted(this, new IsletmelerRowChangeEvent(((IsletmelerRow)(e.Row)), e.Action));
+                if ((this.DepartmanlarRowDeleted != null)) {
+                    this.DepartmanlarRowDeleted(this, new DepartmanlarRowChangeEvent(((DepartmanlarRow)(e.Row)), e.Action));
                 }
             }
             
@@ -491,14 +491,14 @@ namespace EmployeeTrackingSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.IsletmelerRowDeleting != null)) {
-                    this.IsletmelerRowDeleting(this, new IsletmelerRowChangeEvent(((IsletmelerRow)(e.Row)), e.Action));
+                if ((this.DepartmanlarRowDeleting != null)) {
+                    this.DepartmanlarRowDeleting(this, new DepartmanlarRowChangeEvent(((DepartmanlarRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveIsletmelerRow(IsletmelerRow row) {
+            public void RemoveDepartmanlarRow(DepartmanlarRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -507,7 +507,7 @@ namespace EmployeeTrackingSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                IsletmelerDataSet ds = new IsletmelerDataSet();
+                DepartmanlarDataSet ds = new DepartmanlarDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -525,7 +525,7 @@ namespace EmployeeTrackingSystem {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "IsletmelerDataTable";
+                attribute2.FixedValue = "DepartmanlarDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -569,65 +569,65 @@ namespace EmployeeTrackingSystem {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class IsletmelerRow : global::System.Data.DataRow {
+        public partial class DepartmanlarRow : global::System.Data.DataRow {
             
-            private IsletmelerDataTable tableIsletmeler;
+            private DepartmanlarDataTable tableDepartmanlar;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal IsletmelerRow(global::System.Data.DataRowBuilder rb) : 
+            internal DepartmanlarRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableIsletmeler = ((IsletmelerDataTable)(this.Table));
+                this.tableDepartmanlar = ((DepartmanlarDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableIsletmeler.IDColumn]));
+                    return ((int)(this[this.tableDepartmanlar.IDColumn]));
                 }
                 set {
-                    this[this.tableIsletmeler.IDColumn] = value;
+                    this[this.tableDepartmanlar.IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string IsletmeID {
+            public string DepartmanID {
                 get {
                     try {
-                        return ((string)(this[this.tableIsletmeler.IsletmeIDColumn]));
+                        return ((string)(this[this.tableDepartmanlar.DepartmanIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IsletmeID\' in table \'Isletmeler\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DepartmanID\' in table \'Departmanlar\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableIsletmeler.IsletmeIDColumn] = value;
+                    this[this.tableDepartmanlar.DepartmanIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Isletme_Adı {
+            public string Departman_Adı {
                 get {
-                    return ((string)(this[this.tableIsletmeler.Isletme_AdıColumn]));
+                    return ((string)(this[this.tableDepartmanlar.Departman_AdıColumn]));
                 }
                 set {
-                    this[this.tableIsletmeler.Isletme_AdıColumn] = value;
+                    this[this.tableDepartmanlar.Departman_AdıColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsIsletmeIDNull() {
-                return this.IsNull(this.tableIsletmeler.IsletmeIDColumn);
+            public bool IsDepartmanIDNull() {
+                return this.IsNull(this.tableDepartmanlar.DepartmanIDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetIsletmeIDNull() {
-                this[this.tableIsletmeler.IsletmeIDColumn] = global::System.Convert.DBNull;
+            public void SetDepartmanIDNull() {
+                this[this.tableDepartmanlar.DepartmanIDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -635,22 +635,22 @@ namespace EmployeeTrackingSystem {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class IsletmelerRowChangeEvent : global::System.EventArgs {
+        public class DepartmanlarRowChangeEvent : global::System.EventArgs {
             
-            private IsletmelerRow eventRow;
+            private DepartmanlarRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public IsletmelerRowChangeEvent(IsletmelerRow row, global::System.Data.DataRowAction action) {
+            public DepartmanlarRowChangeEvent(DepartmanlarRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public IsletmelerRow Row {
+            public DepartmanlarRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -666,7 +666,7 @@ namespace EmployeeTrackingSystem {
         }
     }
 }
-namespace EmployeeTrackingSystem.IsletmelerDataSetTableAdapters {
+namespace EmployeeTrackingSystem.DataSets.DepartmanlarDataSetTableAdapters {
     
     
     /// <summary>
@@ -678,7 +678,7 @@ namespace EmployeeTrackingSystem.IsletmelerDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class IsletmelerTableAdapter : global::System.ComponentModel.Component {
+    public partial class DepartmanlarTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -692,7 +692,7 @@ namespace EmployeeTrackingSystem.IsletmelerDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public IsletmelerTableAdapter() {
+        public DepartmanlarTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -789,37 +789,38 @@ namespace EmployeeTrackingSystem.IsletmelerDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Isletmeler";
+            tableMapping.DataSetTable = "Departmanlar";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("IsletmeID", "IsletmeID");
-            tableMapping.ColumnMappings.Add("Isletme_Adı", "Isletme_Adı");
+            tableMapping.ColumnMappings.Add("DepartmanID", "DepartmanID");
+            tableMapping.ColumnMappings.Add("Departman_Adı", "Departman_Adı");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Isletmeler] WHERE (([ID] = @Original_ID) AND ((@IsNull_Isletme" +
-                "ID = 1 AND [IsletmeID] IS NULL) OR ([IsletmeID] = @Original_IsletmeID)) AND ([Is" +
-                "letme_Adı] = @Original_Isletme_Adı))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Departmanlar] WHERE (([ID] = @Original_ID) AND ((@IsNull_Depar" +
+                "tmanID = 1 AND [DepartmanID] IS NULL) OR ([DepartmanID] = @Original_DepartmanID)" +
+                ") AND ([Departman_Adı] = @Original_Departman_Adı))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsletmeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsletmeID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsletmeID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsletmeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Isletme_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Isletme_Adı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DepartmanID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmanID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepartmanID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmanID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Departman_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Departman_Adı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Isletmeler] ([Isletme_Adı]) VALUES (@Isletme_Adı);\r\nSELECT ID," +
-                " IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Departmanlar] ([Departman_Adı]) VALUES (@Departman_Adı);\r\nSELE" +
+                "CT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = SCOPE_IDENTITY()" +
+                ")";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Isletme_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Isletme_Adı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Departman_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Departman_Adı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Isletmeler] SET [Isletme_Adı] = @Isletme_Adı WHERE (([ID] = @Original_ID) AND ((@IsNull_IsletmeID = 1 AND [IsletmeID] IS NULL) OR ([IsletmeID] = @Original_IsletmeID)) AND ([Isletme_Adı] = @Original_Isletme_Adı));
-SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Departmanlar] SET [Departman_Adı] = @Departman_Adı WHERE (([ID] = @Original_ID) AND ((@IsNull_DepartmanID = 1 AND [DepartmanID] IS NULL) OR ([DepartmanID] = @Original_DepartmanID)) AND ([Departman_Adı] = @Original_Departman_Adı));
+SELECT ID, DepartmanID, Departman_Adı FROM Departmanlar WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Isletme_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Isletme_Adı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Departman_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Departman_Adı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsletmeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsletmeID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsletmeID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsletmeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Isletme_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Isletme_Adı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DepartmanID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmanID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepartmanID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepartmanID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Departman_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Departman_Adı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -836,7 +837,7 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, IsletmeID, Isletme_Adı FROM dbo.Isletmeler";
+            this._commandCollection[0].CommandText = "SELECT ID, DepartmanID, Departman_Adı FROM dbo.Departmanlar";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -844,7 +845,7 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(IsletmelerDataSet.IsletmelerDataTable dataTable) {
+        public virtual int Fill(DepartmanlarDataSet.DepartmanlarDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -857,9 +858,9 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual IsletmelerDataSet.IsletmelerDataTable GetData() {
+        public virtual DepartmanlarDataSet.DepartmanlarDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            IsletmelerDataSet.IsletmelerDataTable dataTable = new IsletmelerDataSet.IsletmelerDataTable();
+            DepartmanlarDataSet.DepartmanlarDataTable dataTable = new DepartmanlarDataSet.DepartmanlarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -867,15 +868,15 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(IsletmelerDataSet.IsletmelerDataTable dataTable) {
+        public virtual int Update(DepartmanlarDataSet.DepartmanlarDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(IsletmelerDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Isletmeler");
+        public virtual int Update(DepartmanlarDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Departmanlar");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -897,21 +898,21 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_IsletmeID, string Original_Isletme_Adı) {
+        public virtual int Delete(int Original_ID, string Original_DepartmanID, string Original_Departman_Adı) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            if ((Original_IsletmeID == null)) {
+            if ((Original_DepartmanID == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_IsletmeID));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_DepartmanID));
             }
-            if ((Original_Isletme_Adı == null)) {
-                throw new global::System.ArgumentNullException("Original_Isletme_Adı");
+            if ((Original_Departman_Adı == null)) {
+                throw new global::System.ArgumentNullException("Original_Departman_Adı");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Isletme_Adı));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Departman_Adı));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -933,12 +934,12 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Isletme_Adı) {
-            if ((Isletme_Adı == null)) {
-                throw new global::System.ArgumentNullException("Isletme_Adı");
+        public virtual int Insert(string Departman_Adı) {
+            if ((Departman_Adı == null)) {
+                throw new global::System.ArgumentNullException("Departman_Adı");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Isletme_Adı));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Departman_Adı));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -960,27 +961,27 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Isletme_Adı, int Original_ID, string Original_IsletmeID, string Original_Isletme_Adı, int ID) {
-            if ((Isletme_Adı == null)) {
-                throw new global::System.ArgumentNullException("Isletme_Adı");
+        public virtual int Update(string Departman_Adı, int Original_ID, string Original_DepartmanID, string Original_Departman_Adı, int ID) {
+            if ((Departman_Adı == null)) {
+                throw new global::System.ArgumentNullException("Departman_Adı");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Isletme_Adı));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Departman_Adı));
             }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_ID));
-            if ((Original_IsletmeID == null)) {
+            if ((Original_DepartmanID == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_IsletmeID));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_DepartmanID));
             }
-            if ((Original_Isletme_Adı == null)) {
-                throw new global::System.ArgumentNullException("Original_Isletme_Adı");
+            if ((Original_Departman_Adı == null)) {
+                throw new global::System.ArgumentNullException("Original_Departman_Adı");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Isletme_Adı));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Departman_Adı));
             }
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
@@ -1003,8 +1004,8 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Isletme_Adı, int Original_ID, string Original_IsletmeID, string Original_Isletme_Adı) {
-            return this.Update(Isletme_Adı, Original_ID, Original_IsletmeID, Original_Isletme_Adı, Original_ID);
+        public virtual int Update(string Departman_Adı, int Original_ID, string Original_DepartmanID, string Original_Departman_Adı) {
+            return this.Update(Departman_Adı, Original_ID, Original_DepartmanID, Original_Departman_Adı, Original_ID);
         }
     }
     
@@ -1020,7 +1021,7 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
         
         private UpdateOrderOption _updateOrder;
         
-        private IsletmelerTableAdapter _isletmelerTableAdapter;
+        private DepartmanlarTableAdapter _departmanlarTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1042,12 +1043,12 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public IsletmelerTableAdapter IsletmelerTableAdapter {
+        public DepartmanlarTableAdapter DepartmanlarTableAdapter {
             get {
-                return this._isletmelerTableAdapter;
+                return this._departmanlarTableAdapter;
             }
             set {
-                this._isletmelerTableAdapter = value;
+                this._departmanlarTableAdapter = value;
             }
         }
         
@@ -1070,9 +1071,9 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._isletmelerTableAdapter != null) 
-                            && (this._isletmelerTableAdapter.Connection != null))) {
-                    return this._isletmelerTableAdapter.Connection;
+                if (((this._departmanlarTableAdapter != null) 
+                            && (this._departmanlarTableAdapter.Connection != null))) {
+                    return this._departmanlarTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1087,7 +1088,7 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._isletmelerTableAdapter != null)) {
+                if ((this._departmanlarTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1099,14 +1100,14 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(IsletmelerDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DepartmanlarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._isletmelerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Isletmeler.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._departmanlarTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Departmanlar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._isletmelerTableAdapter.Update(updatedRows));
+                    result = (result + this._departmanlarTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1118,13 +1119,13 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(IsletmelerDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DepartmanlarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._isletmelerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Isletmeler.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._departmanlarTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Departmanlar.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._isletmelerTableAdapter.Update(addedRows));
+                    result = (result + this._departmanlarTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1136,13 +1137,13 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(IsletmelerDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DepartmanlarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._isletmelerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Isletmeler.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._departmanlarTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Departmanlar.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._isletmelerTableAdapter.Update(deletedRows));
+                    result = (result + this._departmanlarTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1178,15 +1179,15 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(IsletmelerDataSet dataSet) {
+        public virtual int UpdateAll(DepartmanlarDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._isletmelerTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._isletmelerTableAdapter.Connection) == false))) {
+            if (((this._departmanlarTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._departmanlarTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1222,13 +1223,13 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._isletmelerTableAdapter != null)) {
-                    revertConnections.Add(this._isletmelerTableAdapter, this._isletmelerTableAdapter.Connection);
-                    this._isletmelerTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._isletmelerTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._isletmelerTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._isletmelerTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._isletmelerTableAdapter.Adapter);
+                if ((this._departmanlarTableAdapter != null)) {
+                    revertConnections.Add(this._departmanlarTableAdapter, this._departmanlarTableAdapter.Connection);
+                    this._departmanlarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._departmanlarTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._departmanlarTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._departmanlarTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._departmanlarTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1289,9 +1290,9 @@ SELECT ID, IsletmeID, Isletme_Adı FROM Isletmeler WHERE (ID = @ID)";
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._isletmelerTableAdapter != null)) {
-                    this._isletmelerTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._isletmelerTableAdapter]));
-                    this._isletmelerTableAdapter.Transaction = null;
+                if ((this._departmanlarTableAdapter != null)) {
+                    this._departmanlarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._departmanlarTableAdapter]));
+                    this._departmanlarTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

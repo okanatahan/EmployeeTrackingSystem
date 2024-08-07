@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmployeeTrackingSystem.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,6 @@ namespace EmployeeTrackingSystem
     {
         string rol;
         string id;
-        int index;
         UserInterface userInterface;
         public NavigationMenu(string rol, string id)
         {
@@ -54,55 +54,55 @@ namespace EmployeeTrackingSystem
 
         private void personel_tanımlama_btn_Click(object sender, EventArgs e)
         {
-            this.index = 0;
-            userInterface = new UserInterface(index, id);
+            UserControl per = new PersonelTanımlama(id);
+            userInterface = new UserInterface(per);
             this.Hide();
             userInterface.ShowDialog();
         }
 
         private void yonetici_atama_btn_Click(object sender, EventArgs e)
         {
-            this.index = 1;
-            userInterface = new UserInterface(index, id);
+            UserControl yon = new YoneticiAtama();
+            userInterface = new UserInterface(yon);
             this.Hide();
             userInterface.ShowDialog();
         }
 
         private void departman_btn_Click(object sender, EventArgs e)
         {
-            this.index = 2;
-            userInterface = new UserInterface(index, id);
+            UserControl dep = new DepartmanTanımlama();
+            userInterface = new UserInterface(dep);
             this.Hide();
             userInterface.ShowDialog();
         }
 
         private void izin_tipi_btn_Click(object sender, EventArgs e)
         {
-            this.index = 3;
-            userInterface = new UserInterface(index, id);
+            UserControl izin = new IzinTipiTanımlama();
+            userInterface = new UserInterface(izin);
             this.Hide();
             userInterface.ShowDialog();
         }
 
         private void izin_talebi_btn_Click(object sender, EventArgs e)
         {
-            this.index = 4;
-            userInterface = new UserInterface(index, id);
+            UserControl izin2 = new IzinTalebiOlustur(id);
+            userInterface = new UserInterface(izin2);
             this.Hide();
             userInterface.ShowDialog();
         }
         private void izin_talebi2_btn_Click(object sender, EventArgs e)
         {
-            this.index = 5;
-            userInterface = new UserInterface(index, id);
+            UserControl izin3 = new IzinTalebiTakip(id);
+            userInterface = new UserInterface(izin3);
             this.Hide();
             userInterface.ShowDialog();
         }
 
         private void onay_talebi_btn_Click(object sender, EventArgs e)
         {
-            this.index = 6;
-            userInterface = new UserInterface(index, id);
+            UserControl onay = new OnayTalepleri(id);
+            userInterface = new UserInterface(onay);
             this.Hide();
             userInterface.ShowDialog();
         }

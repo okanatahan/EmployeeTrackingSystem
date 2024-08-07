@@ -39,14 +39,14 @@
             this.PersonellerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PersonellerDGV.Location = new System.Drawing.Point(3, 3);
             this.PersonellerDGV.Name = "PersonellerDGV";
-            this.PersonellerDGV.Size = new System.Drawing.Size(1594, 574);
+            this.PersonellerDGV.Size = new System.Drawing.Size(1794, 607);
             this.PersonellerDGV.TabIndex = 0;
             // 
             // YoneticiAtaBtn
             // 
             this.YoneticiAtaBtn.BackColor = System.Drawing.Color.Purple;
             this.YoneticiAtaBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YoneticiAtaBtn.Location = new System.Drawing.Point(712, 650);
+            this.YoneticiAtaBtn.Location = new System.Drawing.Point(812, 683);
             this.YoneticiAtaBtn.Name = "YoneticiAtaBtn";
             this.YoneticiAtaBtn.Size = new System.Drawing.Size(175, 64);
             this.YoneticiAtaBtn.TabIndex = 2;
@@ -62,7 +62,7 @@
             this.Controls.Add(this.YoneticiAtaBtn);
             this.Controls.Add(this.PersonellerDGV);
             this.Name = "YoneticiAtama";
-            this.Size = new System.Drawing.Size(1600, 864);
+            this.Size = new System.Drawing.Size(1800, 972);
             ((System.ComponentModel.ISupportInitialize)(this.PersonellerDGV)).EndInit();
             this.ResumeLayout(false);
 

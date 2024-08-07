@@ -13,24 +13,18 @@ namespace EmployeeTrackingSystem
 {
     public partial class UserInterface : System.Windows.Forms.Form
     {
-        NavigationControl navigationControl;
-        int index;
-        string id;
-        public UserInterface(int index, string id)
+        public UserInterface(UserControl uc)
         {
             InitializeComponent();
-            this.index = index;
-            this.id = id;
-            InitializeNavigationControl(index, id);
+            InitializeNavigationControl(uc);
         }
-
-        private void InitializeNavigationControl(int index, string id)
+        // navimenüde her bir if'in içine yeni obje aç uygun user control için sonra onu userinterface'e at parametreyle
+        // burada onu panele ekle panel1.Controls.Add(obje_adı), dock ayarla, bringtofront yap
+        private void InitializeNavigationControl(UserControl uc)
         {
-            List<UserControl> userControls = new List<UserControl>()
-            { new PersonelTanımlama(id), new YoneticiAtama(), new DepartmanTanımlama(), new IzinTipiTanımlama(), new IzinTalebiOlustur(id), new IzinTalebiTakip(id), new OnayTalepleri(id) };
-
-            navigationControl = new NavigationControl(userControls, panel1);
-            navigationControl.Display(index);
+            uc.Dock = DockStyle.Fill;
+            panel1.Controls.Add(uc);
+            uc.BringToFront();
         }
 
         private void exit_Click(object sender, EventArgs e)

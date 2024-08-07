@@ -38,7 +38,7 @@
             this.dgv.AllowUserToAddRows = false;
             this.dgv.AllowUserToDeleteRows = false;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(400, 130);
+            this.dgv.Location = new System.Drawing.Point(497, 164);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.Size = new System.Drawing.Size(800, 464);
@@ -48,7 +48,7 @@
             // 
             this.tlp_grntl_btn.BackColor = System.Drawing.Color.MidnightBlue;
             this.tlp_grntl_btn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tlp_grntl_btn.Location = new System.Drawing.Point(712, 655);
+            this.tlp_grntl_btn.Location = new System.Drawing.Point(809, 689);
             this.tlp_grntl_btn.Name = "tlp_grntl_btn";
             this.tlp_grntl_btn.Size = new System.Drawing.Size(175, 64);
             this.tlp_grntl_btn.TabIndex = 4;
@@ -64,7 +64,7 @@
             this.Controls.Add(this.tlp_grntl_btn);
             this.Controls.Add(this.dgv);
             this.Name = "IzinTalebiTakip";
-            this.Size = new System.Drawing.Size(1600, 864);
+            this.Size = new System.Drawing.Size(1800, 972);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 

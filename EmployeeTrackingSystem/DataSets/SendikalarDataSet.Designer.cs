@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace EmployeeTrackingSystem {
+namespace EmployeeTrackingSystem.DataSets {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace EmployeeTrackingSystem {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("LokasyonlarDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("SendikalarDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class LokasyonlarDataSet : global::System.Data.DataSet {
+    public partial class SendikalarDataSet : global::System.Data.DataSet {
         
-        private LokasyonlarDataTable tableLokasyonlar;
+        private SendikalarDataTable tableSendikalar;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public LokasyonlarDataSet() {
+        public SendikalarDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace EmployeeTrackingSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected LokasyonlarDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected SendikalarDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace EmployeeTrackingSystem {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Lokasyonlar"] != null)) {
-                    base.Tables.Add(new LokasyonlarDataTable(ds.Tables["Lokasyonlar"]));
+                if ((ds.Tables["Sendikalar"] != null)) {
+                    base.Tables.Add(new SendikalarDataTable(ds.Tables["Sendikalar"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace EmployeeTrackingSystem {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public LokasyonlarDataTable Lokasyonlar {
+        public SendikalarDataTable Sendikalar {
             get {
-                return this.tableLokasyonlar;
+                return this.tableSendikalar;
             }
         }
         
@@ -127,7 +127,7 @@ namespace EmployeeTrackingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            LokasyonlarDataSet cln = ((LokasyonlarDataSet)(base.Clone()));
+            SendikalarDataSet cln = ((SendikalarDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace EmployeeTrackingSystem {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Lokasyonlar"] != null)) {
-                    base.Tables.Add(new LokasyonlarDataTable(ds.Tables["Lokasyonlar"]));
+                if ((ds.Tables["Sendikalar"] != null)) {
+                    base.Tables.Add(new SendikalarDataTable(ds.Tables["Sendikalar"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace EmployeeTrackingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableLokasyonlar = ((LokasyonlarDataTable)(base.Tables["Lokasyonlar"]));
+            this.tableSendikalar = ((SendikalarDataTable)(base.Tables["Sendikalar"]));
             if ((initTable == true)) {
-                if ((this.tableLokasyonlar != null)) {
-                    this.tableLokasyonlar.InitVars();
+                if ((this.tableSendikalar != null)) {
+                    this.tableSendikalar.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace EmployeeTrackingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "LokasyonlarDataSet";
+            this.DataSetName = "SendikalarDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/LokasyonlarDataSet.xsd";
+            this.Namespace = "http://tempuri.org/SendikalarDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableLokasyonlar = new LokasyonlarDataTable();
-            base.Tables.Add(this.tableLokasyonlar);
+            this.tableSendikalar = new SendikalarDataTable();
+            base.Tables.Add(this.tableSendikalar);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeLokasyonlar() {
+        private bool ShouldSerializeSendikalar() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace EmployeeTrackingSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            LokasyonlarDataSet ds = new LokasyonlarDataSet();
+            SendikalarDataSet ds = new SendikalarDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,25 +270,25 @@ namespace EmployeeTrackingSystem {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void LokasyonlarRowChangeEventHandler(object sender, LokasyonlarRowChangeEvent e);
+        public delegate void SendikalarRowChangeEventHandler(object sender, SendikalarRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class LokasyonlarDataTable : global::System.Data.TypedTableBase<LokasyonlarRow> {
+        public partial class SendikalarDataTable : global::System.Data.TypedTableBase<SendikalarRow> {
             
             private global::System.Data.DataColumn columnID;
             
-            private global::System.Data.DataColumn columnLokasyonID;
+            private global::System.Data.DataColumn columnSendikaID;
             
-            private global::System.Data.DataColumn columnLokasyon_Adı;
+            private global::System.Data.DataColumn columnSendika_Bilgisi;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LokasyonlarDataTable() {
-                this.TableName = "Lokasyonlar";
+            public SendikalarDataTable() {
+                this.TableName = "Sendikalar";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -296,7 +296,7 @@ namespace EmployeeTrackingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal LokasyonlarDataTable(global::System.Data.DataTable table) {
+            internal SendikalarDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -313,7 +313,7 @@ namespace EmployeeTrackingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected LokasyonlarDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected SendikalarDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -328,17 +328,17 @@ namespace EmployeeTrackingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn LokasyonIDColumn {
+            public global::System.Data.DataColumn SendikaIDColumn {
                 get {
-                    return this.columnLokasyonID;
+                    return this.columnSendikaID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Lokasyon_AdıColumn {
+            public global::System.Data.DataColumn Sendika_BilgisiColumn {
                 get {
-                    return this.columnLokasyon_Adı;
+                    return this.columnSendika_Bilgisi;
                 }
             }
             
@@ -353,54 +353,54 @@ namespace EmployeeTrackingSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LokasyonlarRow this[int index] {
+            public SendikalarRow this[int index] {
                 get {
-                    return ((LokasyonlarRow)(this.Rows[index]));
+                    return ((SendikalarRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event LokasyonlarRowChangeEventHandler LokasyonlarRowChanging;
+            public event SendikalarRowChangeEventHandler SendikalarRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event LokasyonlarRowChangeEventHandler LokasyonlarRowChanged;
+            public event SendikalarRowChangeEventHandler SendikalarRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event LokasyonlarRowChangeEventHandler LokasyonlarRowDeleting;
+            public event SendikalarRowChangeEventHandler SendikalarRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event LokasyonlarRowChangeEventHandler LokasyonlarRowDeleted;
+            public event SendikalarRowChangeEventHandler SendikalarRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddLokasyonlarRow(LokasyonlarRow row) {
+            public void AddSendikalarRow(SendikalarRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LokasyonlarRow AddLokasyonlarRow(string LokasyonID, string Lokasyon_Adı) {
-                LokasyonlarRow rowLokasyonlarRow = ((LokasyonlarRow)(this.NewRow()));
+            public SendikalarRow AddSendikalarRow(string SendikaID, string Sendika_Bilgisi) {
+                SendikalarRow rowSendikalarRow = ((SendikalarRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        LokasyonID,
-                        Lokasyon_Adı};
-                rowLokasyonlarRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowLokasyonlarRow);
-                return rowLokasyonlarRow;
+                        SendikaID,
+                        Sendika_Bilgisi};
+                rowSendikalarRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSendikalarRow);
+                return rowSendikalarRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LokasyonlarRow FindByID(int ID) {
-                return ((LokasyonlarRow)(this.Rows.Find(new object[] {
+            public SendikalarRow FindByID(int ID) {
+                return ((SendikalarRow)(this.Rows.Find(new object[] {
                             ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                LokasyonlarDataTable cln = ((LokasyonlarDataTable)(base.Clone()));
+                SendikalarDataTable cln = ((SendikalarDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -408,15 +408,15 @@ namespace EmployeeTrackingSystem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new LokasyonlarDataTable();
+                return new SendikalarDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnID = base.Columns["ID"];
-                this.columnLokasyonID = base.Columns["LokasyonID"];
-                this.columnLokasyon_Adı = base.Columns["Lokasyon_Adı"];
+                this.columnSendikaID = base.Columns["SendikaID"];
+                this.columnSendika_Bilgisi = base.Columns["Sendika_Bilgisi"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -424,10 +424,10 @@ namespace EmployeeTrackingSystem {
             private void InitClass() {
                 this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID);
-                this.columnLokasyonID = new global::System.Data.DataColumn("LokasyonID", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLokasyonID);
-                this.columnLokasyon_Adı = new global::System.Data.DataColumn("Lokasyon_Adı", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLokasyon_Adı);
+                this.columnSendikaID = new global::System.Data.DataColumn("SendikaID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSendikaID);
+                this.columnSendika_Bilgisi = new global::System.Data.DataColumn("Sendika_Bilgisi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSendika_Bilgisi);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -436,36 +436,36 @@ namespace EmployeeTrackingSystem {
                 this.columnID.AllowDBNull = false;
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
-                this.columnLokasyonID.ReadOnly = true;
-                this.columnLokasyonID.MaxLength = 10;
-                this.columnLokasyon_Adı.AllowDBNull = false;
-                this.columnLokasyon_Adı.MaxLength = 100;
+                this.columnSendikaID.ReadOnly = true;
+                this.columnSendikaID.MaxLength = 10;
+                this.columnSendika_Bilgisi.AllowDBNull = false;
+                this.columnSendika_Bilgisi.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LokasyonlarRow NewLokasyonlarRow() {
-                return ((LokasyonlarRow)(this.NewRow()));
+            public SendikalarRow NewSendikalarRow() {
+                return ((SendikalarRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new LokasyonlarRow(builder);
+                return new SendikalarRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(LokasyonlarRow);
+                return typeof(SendikalarRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.LokasyonlarRowChanged != null)) {
-                    this.LokasyonlarRowChanged(this, new LokasyonlarRowChangeEvent(((LokasyonlarRow)(e.Row)), e.Action));
+                if ((this.SendikalarRowChanged != null)) {
+                    this.SendikalarRowChanged(this, new SendikalarRowChangeEvent(((SendikalarRow)(e.Row)), e.Action));
                 }
             }
             
@@ -473,8 +473,8 @@ namespace EmployeeTrackingSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.LokasyonlarRowChanging != null)) {
-                    this.LokasyonlarRowChanging(this, new LokasyonlarRowChangeEvent(((LokasyonlarRow)(e.Row)), e.Action));
+                if ((this.SendikalarRowChanging != null)) {
+                    this.SendikalarRowChanging(this, new SendikalarRowChangeEvent(((SendikalarRow)(e.Row)), e.Action));
                 }
             }
             
@@ -482,8 +482,8 @@ namespace EmployeeTrackingSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.LokasyonlarRowDeleted != null)) {
-                    this.LokasyonlarRowDeleted(this, new LokasyonlarRowChangeEvent(((LokasyonlarRow)(e.Row)), e.Action));
+                if ((this.SendikalarRowDeleted != null)) {
+                    this.SendikalarRowDeleted(this, new SendikalarRowChangeEvent(((SendikalarRow)(e.Row)), e.Action));
                 }
             }
             
@@ -491,14 +491,14 @@ namespace EmployeeTrackingSystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.LokasyonlarRowDeleting != null)) {
-                    this.LokasyonlarRowDeleting(this, new LokasyonlarRowChangeEvent(((LokasyonlarRow)(e.Row)), e.Action));
+                if ((this.SendikalarRowDeleting != null)) {
+                    this.SendikalarRowDeleting(this, new SendikalarRowChangeEvent(((SendikalarRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveLokasyonlarRow(LokasyonlarRow row) {
+            public void RemoveSendikalarRow(SendikalarRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -507,7 +507,7 @@ namespace EmployeeTrackingSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                LokasyonlarDataSet ds = new LokasyonlarDataSet();
+                SendikalarDataSet ds = new SendikalarDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -525,7 +525,7 @@ namespace EmployeeTrackingSystem {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "LokasyonlarDataTable";
+                attribute2.FixedValue = "SendikalarDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -569,65 +569,65 @@ namespace EmployeeTrackingSystem {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class LokasyonlarRow : global::System.Data.DataRow {
+        public partial class SendikalarRow : global::System.Data.DataRow {
             
-            private LokasyonlarDataTable tableLokasyonlar;
+            private SendikalarDataTable tableSendikalar;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal LokasyonlarRow(global::System.Data.DataRowBuilder rb) : 
+            internal SendikalarRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableLokasyonlar = ((LokasyonlarDataTable)(this.Table));
+                this.tableSendikalar = ((SendikalarDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tableLokasyonlar.IDColumn]));
+                    return ((int)(this[this.tableSendikalar.IDColumn]));
                 }
                 set {
-                    this[this.tableLokasyonlar.IDColumn] = value;
+                    this[this.tableSendikalar.IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string LokasyonID {
+            public string SendikaID {
                 get {
                     try {
-                        return ((string)(this[this.tableLokasyonlar.LokasyonIDColumn]));
+                        return ((string)(this[this.tableSendikalar.SendikaIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LokasyonID\' in table \'Lokasyonlar\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'SendikaID\' in table \'Sendikalar\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableLokasyonlar.LokasyonIDColumn] = value;
+                    this[this.tableSendikalar.SendikaIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Lokasyon_Adı {
+            public string Sendika_Bilgisi {
                 get {
-                    return ((string)(this[this.tableLokasyonlar.Lokasyon_AdıColumn]));
+                    return ((string)(this[this.tableSendikalar.Sendika_BilgisiColumn]));
                 }
                 set {
-                    this[this.tableLokasyonlar.Lokasyon_AdıColumn] = value;
+                    this[this.tableSendikalar.Sendika_BilgisiColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsLokasyonIDNull() {
-                return this.IsNull(this.tableLokasyonlar.LokasyonIDColumn);
+            public bool IsSendikaIDNull() {
+                return this.IsNull(this.tableSendikalar.SendikaIDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetLokasyonIDNull() {
-                this[this.tableLokasyonlar.LokasyonIDColumn] = global::System.Convert.DBNull;
+            public void SetSendikaIDNull() {
+                this[this.tableSendikalar.SendikaIDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -635,22 +635,22 @@ namespace EmployeeTrackingSystem {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class LokasyonlarRowChangeEvent : global::System.EventArgs {
+        public class SendikalarRowChangeEvent : global::System.EventArgs {
             
-            private LokasyonlarRow eventRow;
+            private SendikalarRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LokasyonlarRowChangeEvent(LokasyonlarRow row, global::System.Data.DataRowAction action) {
+            public SendikalarRowChangeEvent(SendikalarRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LokasyonlarRow Row {
+            public SendikalarRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -666,7 +666,7 @@ namespace EmployeeTrackingSystem {
         }
     }
 }
-namespace EmployeeTrackingSystem.LokasyonlarDataSetTableAdapters {
+namespace EmployeeTrackingSystem.DataSets.SendikalarDataSetTableAdapters {
     
     
     /// <summary>
@@ -678,7 +678,7 @@ namespace EmployeeTrackingSystem.LokasyonlarDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class LokasyonlarTableAdapter : global::System.ComponentModel.Component {
+    public partial class SendikalarTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -692,7 +692,7 @@ namespace EmployeeTrackingSystem.LokasyonlarDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public LokasyonlarTableAdapter() {
+        public SendikalarTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -789,37 +789,38 @@ namespace EmployeeTrackingSystem.LokasyonlarDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Lokasyonlar";
+            tableMapping.DataSetTable = "Sendikalar";
             tableMapping.ColumnMappings.Add("ID", "ID");
-            tableMapping.ColumnMappings.Add("LokasyonID", "LokasyonID");
-            tableMapping.ColumnMappings.Add("Lokasyon_Adı", "Lokasyon_Adı");
+            tableMapping.ColumnMappings.Add("SendikaID", "SendikaID");
+            tableMapping.ColumnMappings.Add("Sendika_Bilgisi", "Sendika_Bilgisi");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Lokasyonlar] WHERE (([ID] = @Original_ID) AND ((@IsNull_Lokasy" +
-                "onID = 1 AND [LokasyonID] IS NULL) OR ([LokasyonID] = @Original_LokasyonID)) AND" +
-                " ([Lokasyon_Adı] = @Original_Lokasyon_Adı))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Sendikalar] WHERE (([ID] = @Original_ID) AND ((@IsNull_Sendika" +
+                "ID = 1 AND [SendikaID] IS NULL) OR ([SendikaID] = @Original_SendikaID)) AND ([Se" +
+                "ndika_Bilgisi] = @Original_Sendika_Bilgisi))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LokasyonID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LokasyonID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LokasyonID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LokasyonID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Lokasyon_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lokasyon_Adı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SendikaID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SendikaID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SendikaID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SendikaID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sendika_Bilgisi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sendika_Bilgisi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Lokasyonlar] ([Lokasyon_Adı]) VALUES (@Lokasyon_Adı);\r\nSELECT " +
-                "ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Sendikalar] ([Sendika_Bilgisi]) VALUES (@Sendika_Bilgisi);\r\nSE" +
+                "LECT ID, SendikaID, Sendika_Bilgisi FROM Sendikalar WHERE (ID = SCOPE_IDENTITY()" +
+                ")";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lokasyon_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lokasyon_Adı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sendika_Bilgisi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sendika_Bilgisi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Lokasyonlar] SET [Lokasyon_Adı] = @Lokasyon_Adı WHERE (([ID] = @Original_ID) AND ((@IsNull_LokasyonID = 1 AND [LokasyonID] IS NULL) OR ([LokasyonID] = @Original_LokasyonID)) AND ([Lokasyon_Adı] = @Original_Lokasyon_Adı));
-SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Sendikalar] SET [Sendika_Bilgisi] = @Sendika_Bilgisi WHERE (([ID] = @Original_ID) AND ((@IsNull_SendikaID = 1 AND [SendikaID] IS NULL) OR ([SendikaID] = @Original_SendikaID)) AND ([Sendika_Bilgisi] = @Original_Sendika_Bilgisi));
+SELECT ID, SendikaID, Sendika_Bilgisi FROM Sendikalar WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Lokasyon_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lokasyon_Adı", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sendika_Bilgisi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sendika_Bilgisi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LokasyonID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LokasyonID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LokasyonID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LokasyonID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Lokasyon_Adı", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Lokasyon_Adı", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SendikaID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SendikaID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SendikaID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SendikaID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sendika_Bilgisi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sendika_Bilgisi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -836,7 +837,7 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, LokasyonID, Lokasyon_Adı FROM dbo.Lokasyonlar";
+            this._commandCollection[0].CommandText = "SELECT ID, SendikaID, Sendika_Bilgisi FROM dbo.Sendikalar";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -844,7 +845,7 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(LokasyonlarDataSet.LokasyonlarDataTable dataTable) {
+        public virtual int Fill(SendikalarDataSet.SendikalarDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -857,9 +858,9 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual LokasyonlarDataSet.LokasyonlarDataTable GetData() {
+        public virtual SendikalarDataSet.SendikalarDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            LokasyonlarDataSet.LokasyonlarDataTable dataTable = new LokasyonlarDataSet.LokasyonlarDataTable();
+            SendikalarDataSet.SendikalarDataTable dataTable = new SendikalarDataSet.SendikalarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -867,15 +868,15 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(LokasyonlarDataSet.LokasyonlarDataTable dataTable) {
+        public virtual int Update(SendikalarDataSet.SendikalarDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(LokasyonlarDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Lokasyonlar");
+        public virtual int Update(SendikalarDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Sendikalar");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -897,21 +898,21 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_LokasyonID, string Original_Lokasyon_Adı) {
+        public virtual int Delete(int Original_ID, string Original_SendikaID, string Original_Sendika_Bilgisi) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            if ((Original_LokasyonID == null)) {
+            if ((Original_SendikaID == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_LokasyonID));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_SendikaID));
             }
-            if ((Original_Lokasyon_Adı == null)) {
-                throw new global::System.ArgumentNullException("Original_Lokasyon_Adı");
+            if ((Original_Sendika_Bilgisi == null)) {
+                throw new global::System.ArgumentNullException("Original_Sendika_Bilgisi");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Lokasyon_Adı));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Sendika_Bilgisi));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -933,12 +934,12 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Lokasyon_Adı) {
-            if ((Lokasyon_Adı == null)) {
-                throw new global::System.ArgumentNullException("Lokasyon_Adı");
+        public virtual int Insert(string Sendika_Bilgisi) {
+            if ((Sendika_Bilgisi == null)) {
+                throw new global::System.ArgumentNullException("Sendika_Bilgisi");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Lokasyon_Adı));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Sendika_Bilgisi));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -960,27 +961,27 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Lokasyon_Adı, int Original_ID, string Original_LokasyonID, string Original_Lokasyon_Adı, int ID) {
-            if ((Lokasyon_Adı == null)) {
-                throw new global::System.ArgumentNullException("Lokasyon_Adı");
+        public virtual int Update(string Sendika_Bilgisi, int Original_ID, string Original_SendikaID, string Original_Sendika_Bilgisi, int ID) {
+            if ((Sendika_Bilgisi == null)) {
+                throw new global::System.ArgumentNullException("Sendika_Bilgisi");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Lokasyon_Adı));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Sendika_Bilgisi));
             }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_ID));
-            if ((Original_LokasyonID == null)) {
+            if ((Original_SendikaID == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_LokasyonID));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_SendikaID));
             }
-            if ((Original_Lokasyon_Adı == null)) {
-                throw new global::System.ArgumentNullException("Original_Lokasyon_Adı");
+            if ((Original_Sendika_Bilgisi == null)) {
+                throw new global::System.ArgumentNullException("Original_Sendika_Bilgisi");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Lokasyon_Adı));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Sendika_Bilgisi));
             }
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
@@ -1003,8 +1004,8 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Lokasyon_Adı, int Original_ID, string Original_LokasyonID, string Original_Lokasyon_Adı) {
-            return this.Update(Lokasyon_Adı, Original_ID, Original_LokasyonID, Original_Lokasyon_Adı, Original_ID);
+        public virtual int Update(string Sendika_Bilgisi, int Original_ID, string Original_SendikaID, string Original_Sendika_Bilgisi) {
+            return this.Update(Sendika_Bilgisi, Original_ID, Original_SendikaID, Original_Sendika_Bilgisi, Original_ID);
         }
     }
     
@@ -1020,7 +1021,7 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
         
         private UpdateOrderOption _updateOrder;
         
-        private LokasyonlarTableAdapter _lokasyonlarTableAdapter;
+        private SendikalarTableAdapter _sendikalarTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1042,12 +1043,12 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public LokasyonlarTableAdapter LokasyonlarTableAdapter {
+        public SendikalarTableAdapter SendikalarTableAdapter {
             get {
-                return this._lokasyonlarTableAdapter;
+                return this._sendikalarTableAdapter;
             }
             set {
-                this._lokasyonlarTableAdapter = value;
+                this._sendikalarTableAdapter = value;
             }
         }
         
@@ -1070,9 +1071,9 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._lokasyonlarTableAdapter != null) 
-                            && (this._lokasyonlarTableAdapter.Connection != null))) {
-                    return this._lokasyonlarTableAdapter.Connection;
+                if (((this._sendikalarTableAdapter != null) 
+                            && (this._sendikalarTableAdapter.Connection != null))) {
+                    return this._sendikalarTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1087,7 +1088,7 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._lokasyonlarTableAdapter != null)) {
+                if ((this._sendikalarTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1099,14 +1100,14 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(LokasyonlarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(SendikalarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._lokasyonlarTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Lokasyonlar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._sendikalarTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Sendikalar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._lokasyonlarTableAdapter.Update(updatedRows));
+                    result = (result + this._sendikalarTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1118,13 +1119,13 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(LokasyonlarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(SendikalarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._lokasyonlarTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Lokasyonlar.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._sendikalarTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Sendikalar.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._lokasyonlarTableAdapter.Update(addedRows));
+                    result = (result + this._sendikalarTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1136,13 +1137,13 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(LokasyonlarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(SendikalarDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._lokasyonlarTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Lokasyonlar.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._sendikalarTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Sendikalar.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._lokasyonlarTableAdapter.Update(deletedRows));
+                    result = (result + this._sendikalarTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1178,15 +1179,15 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(LokasyonlarDataSet dataSet) {
+        public virtual int UpdateAll(SendikalarDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._lokasyonlarTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._lokasyonlarTableAdapter.Connection) == false))) {
+            if (((this._sendikalarTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._sendikalarTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1222,13 +1223,13 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._lokasyonlarTableAdapter != null)) {
-                    revertConnections.Add(this._lokasyonlarTableAdapter, this._lokasyonlarTableAdapter.Connection);
-                    this._lokasyonlarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._lokasyonlarTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._lokasyonlarTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._lokasyonlarTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._lokasyonlarTableAdapter.Adapter);
+                if ((this._sendikalarTableAdapter != null)) {
+                    revertConnections.Add(this._sendikalarTableAdapter, this._sendikalarTableAdapter.Connection);
+                    this._sendikalarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._sendikalarTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._sendikalarTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._sendikalarTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._sendikalarTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1289,9 +1290,9 @@ SELECT ID, LokasyonID, Lokasyon_Adı FROM Lokasyonlar WHERE (ID = @ID)";
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._lokasyonlarTableAdapter != null)) {
-                    this._lokasyonlarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._lokasyonlarTableAdapter]));
-                    this._lokasyonlarTableAdapter.Transaction = null;
+                if ((this._sendikalarTableAdapter != null)) {
+                    this._sendikalarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._sendikalarTableAdapter]));
+                    this._sendikalarTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

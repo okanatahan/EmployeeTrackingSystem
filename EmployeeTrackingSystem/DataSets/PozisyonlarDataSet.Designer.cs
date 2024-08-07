@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace EmployeeTrackingSystem {
+namespace EmployeeTrackingSystem.DataSets {
     
     
     /// <summary>
@@ -666,7 +666,7 @@ namespace EmployeeTrackingSystem {
         }
     }
 }
-namespace EmployeeTrackingSystem.PozisyonlarDataSetTableAdapters {
+namespace EmployeeTrackingSystem.DataSets.PozisyonlarDataSetTableAdapters {
     
     
     /// <summary>

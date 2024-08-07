@@ -43,14 +43,14 @@
             this.dgv.Location = new System.Drawing.Point(3, 3);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
-            this.dgv.Size = new System.Drawing.Size(800, 858);
+            this.dgv.Size = new System.Drawing.Size(926, 966);
             this.dgv.TabIndex = 0;
             // 
             // OnayBtn
             // 
             this.OnayBtn.BackColor = System.Drawing.Color.Lime;
             this.OnayBtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OnayBtn.Location = new System.Drawing.Point(950, 400);
+            this.OnayBtn.Location = new System.Drawing.Point(1130, 465);
             this.OnayBtn.Name = "OnayBtn";
             this.OnayBtn.Size = new System.Drawing.Size(175, 64);
             this.OnayBtn.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             this.RedBtn.BackColor = System.Drawing.Color.Red;
             this.RedBtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RedBtn.Location = new System.Drawing.Point(1275, 400);
+            this.RedBtn.Location = new System.Drawing.Point(1455, 465);
             this.RedBtn.Name = "RedBtn";
             this.RedBtn.Size = new System.Drawing.Size(175, 64);
             this.RedBtn.TabIndex = 2;
@@ -74,7 +74,7 @@
             // 
             this.TalepGorBtn.BackColor = System.Drawing.Color.Magenta;
             this.TalepGorBtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TalepGorBtn.Location = new System.Drawing.Point(1108, 275);
+            this.TalepGorBtn.Location = new System.Drawing.Point(1288, 340);
             this.TalepGorBtn.Name = "TalepGorBtn";
             this.TalepGorBtn.Size = new System.Drawing.Size(175, 64);
             this.TalepGorBtn.TabIndex = 3;
@@ -92,7 +92,7 @@
             this.Controls.Add(this.OnayBtn);
             this.Controls.Add(this.dgv);
             this.Name = "OnayTalepleri";
-            this.Size = new System.Drawing.Size(1600, 864);
+            this.Size = new System.Drawing.Size(1800, 972);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 

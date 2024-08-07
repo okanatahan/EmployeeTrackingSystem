@@ -39,7 +39,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(348, 310);
+            this.label1.Location = new System.Drawing.Point(435, 366);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 19);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(852, 310);
+            this.label2.Location = new System.Drawing.Point(939, 366);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 19);
             this.label2.TabIndex = 1;
@@ -60,7 +60,7 @@
             this.IzinBaslangicTar.CalendarFont = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IzinBaslangicTar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IzinBaslangicTar.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.IzinBaslangicTar.Location = new System.Drawing.Point(555, 304);
+            this.IzinBaslangicTar.Location = new System.Drawing.Point(642, 360);
             this.IzinBaslangicTar.Name = "IzinBaslangicTar";
             this.IzinBaslangicTar.Size = new System.Drawing.Size(200, 25);
             this.IzinBaslangicTar.TabIndex = 2;
@@ -71,7 +71,7 @@
             this.IzinBitisTar.CalendarFont = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IzinBitisTar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IzinBitisTar.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.IzinBitisTar.Location = new System.Drawing.Point(1059, 304);
+            this.IzinBitisTar.Location = new System.Drawing.Point(1146, 360);
             this.IzinBitisTar.Name = "IzinBitisTar";
             this.IzinBitisTar.Size = new System.Drawing.Size(200, 25);
             this.IzinBitisTar.TabIndex = 3;
@@ -80,7 +80,7 @@
             // IzinTalepBtn
             // 
             this.IzinTalepBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IzinTalepBtn.Location = new System.Drawing.Point(742, 433);
+            this.IzinTalepBtn.Location = new System.Drawing.Point(829, 489);
             this.IzinTalepBtn.Name = "IzinTalepBtn";
             this.IzinTalepBtn.Size = new System.Drawing.Size(130, 49);
             this.IzinTalepBtn.TabIndex = 4;
@@ -99,7 +99,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "IzinTalebiOlustur";
-            this.Size = new System.Drawing.Size(1600, 864);
+            this.Size = new System.Drawing.Size(1800, 972);
             this.ResumeLayout(false);
             this.PerformLayout();
 

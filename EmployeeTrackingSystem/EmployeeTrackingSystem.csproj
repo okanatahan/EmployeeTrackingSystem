@@ -46,20 +46,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AltDepartmanlarDataSet.Designer.cs">
+    <Compile Include="DataSets\AltDepartmanlarDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AltDepartmanlarDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DepartmanlarDataSet.Designer.cs">
+    <Compile Include="DataSets\DepartmanlarDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DepartmanlarDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="IsletmelerDataSet.Designer.cs">
+    <Compile Include="DataSets\GecislerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GecislerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\IsletmelerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>IsletmelerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\MasraflarDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MasraflarDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\PersonelDataSet.cs">
+      <DependentUpon>PersonelDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\SendikalarDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SendikalarDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\TaseronlarDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaseronlarDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\YoneticilerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YoneticilerDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
@@ -67,24 +95,23 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="LokasyonlarDataSet.Designer.cs">
+    <Compile Include="DataSets\LokasyonlarDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LokasyonlarDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="NavigationControl.cs" />
     <Compile Include="NavigationMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NavigationMenu.Designer.cs">
       <DependentUpon>NavigationMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersonelDataSet.Designer.cs">
+    <Compile Include="DataSets\PersonelDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PersonelDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PozisyonlarDataSet.Designer.cs">
+    <Compile Include="DataSets\PozisyonlarDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PozisyonlarDataSet.xsd</DependentUpon>
@@ -180,71 +207,126 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="AltDepartmanlarDataSet.xsc">
+    <None Include="DataSets\AltDepartmanlarDataSet.xsc">
       <DependentUpon>AltDepartmanlarDataSet.xsd</DependentUpon>
     </None>
-    <None Include="AltDepartmanlarDataSet.xsd">
+    <None Include="DataSets\AltDepartmanlarDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>AltDepartmanlarDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="AltDepartmanlarDataSet.xss">
+    <None Include="DataSets\AltDepartmanlarDataSet.xss">
       <DependentUpon>AltDepartmanlarDataSet.xsd</DependentUpon>
     </None>
-    <None Include="DepartmanlarDataSet.xsc">
+    <None Include="DataSets\DepartmanlarDataSet.xsc">
       <DependentUpon>DepartmanlarDataSet.xsd</DependentUpon>
     </None>
-    <None Include="DepartmanlarDataSet.xsd">
+    <None Include="DataSets\DepartmanlarDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DepartmanlarDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DepartmanlarDataSet.xss">
+    <None Include="DataSets\DepartmanlarDataSet.xss">
       <DependentUpon>DepartmanlarDataSet.xsd</DependentUpon>
     </None>
-    <None Include="IsletmelerDataSet.xsc">
+    <None Include="DataSets\GecislerDataSet.xsc">
+      <DependentUpon>GecislerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\GecislerDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GecislerDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\GecislerDataSet.xss">
+      <DependentUpon>GecislerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\IsletmelerDataSet.xsc">
       <DependentUpon>IsletmelerDataSet.xsd</DependentUpon>
     </None>
-    <None Include="IsletmelerDataSet.xsd">
+    <None Include="DataSets\IsletmelerDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>IsletmelerDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="IsletmelerDataSet.xss">
+    <None Include="DataSets\IsletmelerDataSet.xss">
       <DependentUpon>IsletmelerDataSet.xsd</DependentUpon>
     </None>
-    <None Include="LokasyonlarDataSet.xsc">
+    <None Include="DataSets\LokasyonlarDataSet.xsc">
       <DependentUpon>LokasyonlarDataSet.xsd</DependentUpon>
     </None>
-    <None Include="LokasyonlarDataSet.xsd">
+    <None Include="DataSets\LokasyonlarDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>LokasyonlarDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="LokasyonlarDataSet.xss">
+    <None Include="DataSets\LokasyonlarDataSet.xss">
       <DependentUpon>LokasyonlarDataSet.xsd</DependentUpon>
     </None>
-    <None Include="PersonelDataSet.xsc">
+    <None Include="DataSets\MasraflarDataSet.xsc">
+      <DependentUpon>MasraflarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\MasraflarDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MasraflarDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\MasraflarDataSet.xss">
+      <DependentUpon>MasraflarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\PersonelDataSet.xsc">
       <DependentUpon>PersonelDataSet.xsd</DependentUpon>
     </None>
-    <None Include="PersonelDataSet.xsd">
+    <None Include="DataSets\PersonelDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>PersonelDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="PersonelDataSet.xss">
+    <None Include="DataSets\PersonelDataSet.xss">
       <DependentUpon>PersonelDataSet.xsd</DependentUpon>
     </None>
-    <None Include="PozisyonlarDataSet.xsc">
+    <None Include="DataSets\PozisyonlarDataSet.xsc">
       <DependentUpon>PozisyonlarDataSet.xsd</DependentUpon>
     </None>
-    <None Include="PozisyonlarDataSet.xsd">
+    <None Include="DataSets\PozisyonlarDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>PozisyonlarDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="PozisyonlarDataSet.xss">
+    <None Include="DataSets\PozisyonlarDataSet.xss">
       <DependentUpon>PozisyonlarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\SendikalarDataSet.xsc">
+      <DependentUpon>SendikalarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\SendikalarDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SendikalarDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\SendikalarDataSet.xss">
+      <DependentUpon>SendikalarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\TaseronlarDataSet.xsc">
+      <DependentUpon>TaseronlarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\TaseronlarDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaseronlarDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\TaseronlarDataSet.xss">
+      <DependentUpon>TaseronlarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\YoneticilerDataSet.xsc">
+      <DependentUpon>YoneticilerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\YoneticilerDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YoneticilerDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\YoneticilerDataSet.xss">
+      <DependentUpon>YoneticilerDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -280,5 +362,6 @@
   <ItemGroup>
     <None Include="Resources\search.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

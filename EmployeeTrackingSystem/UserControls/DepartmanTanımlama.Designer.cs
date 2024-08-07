@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.Name = "DepartmanTanımlama";
-            this.Size = new System.Drawing.Size(1600, 864);
+            this.Size = new System.Drawing.Size(1800, 972);
             this.ResumeLayout(false);
 
         }

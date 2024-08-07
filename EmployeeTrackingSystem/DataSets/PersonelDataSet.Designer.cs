@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace EmployeeTrackingSystem {
+namespace EmployeeTrackingSystem.DataSets {
     
     
     /// <summary>
@@ -1735,7 +1735,7 @@ namespace EmployeeTrackingSystem {
         }
     }
 }
-namespace EmployeeTrackingSystem.PersonelDataSetTableAdapters {
+namespace EmployeeTrackingSystem.DataSets.PersonelDataSetTableAdapters {
     
     
     /// <summary>
@@ -3184,7 +3184,7 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertQuery(
+        public virtual int PersonelInsert(
                     string SICIL, 
                     string AD, 
                     string SOYAD, 

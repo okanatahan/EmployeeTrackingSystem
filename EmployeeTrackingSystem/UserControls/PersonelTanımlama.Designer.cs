@@ -29,38 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PersonelEkleBtn = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.PersonellerDGV = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.personelDataSet = new EmployeeTrackingSystem.DataSets.PersonelDataSet();
             this.UnvanInput = new System.Windows.Forms.ComboBox();
             this.CalismaKonumuInput = new System.Windows.Forms.ComboBox();
             this.CalismaSekliInput = new System.Windows.Forms.ComboBox();
@@ -113,14 +85,43 @@
             this.Gecisler = new System.Windows.Forms.ComboBox();
             this.Yoneticiler = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.personelTableAdapter = new EmployeeTrackingSystem.DataSets.PersonelDataSetTableAdapters.PersonelTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.SenkronEvet = new System.Windows.Forms.RadioButton();
             this.SenkronHayir = new System.Windows.Forms.RadioButton();
+            this.SenkronEvet = new System.Windows.Forms.RadioButton();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personelDataSet = new EmployeeTrackingSystem.DataSets.PersonelDataSet();
+            this.personelTableAdapter = new EmployeeTrackingSystem.DataSets.PersonelDataSetTableAdapters.PersonelTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.PersonellerDGV)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.personelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personelDataSet)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PersonelEkleBtn
@@ -145,6 +146,14 @@
             this.PersonellerDGV.AllowUserToDeleteRows = false;
             this.PersonellerDGV.AutoGenerateColumns = false;
             this.PersonellerDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PersonellerDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.PersonellerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PersonellerDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -178,234 +187,9 @@
             this.PersonellerDGV.Location = new System.Drawing.Point(6, 3);
             this.PersonellerDGV.Name = "PersonellerDGV";
             this.PersonellerDGV.ReadOnly = true;
+            this.PersonellerDGV.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PersonellerDGV.Size = new System.Drawing.Size(1791, 422);
             this.PersonellerDGV.TabIndex = 60;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "PersonelID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "PersonelID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 84;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "SICIL";
-            this.dataGridViewTextBoxColumn2.HeaderText = "SICIL";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 58;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "AD";
-            this.dataGridViewTextBoxColumn3.HeaderText = "AD";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 47;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "SOYAD";
-            this.dataGridViewTextBoxColumn4.HeaderText = "SOYAD";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 69;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "AD_SOYAD";
-            this.dataGridViewTextBoxColumn5.HeaderText = "AD_SOYAD";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 90;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "CINSIYET";
-            this.dataGridViewTextBoxColumn6.HeaderText = "CINSIYET";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 81;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "DOGUM_TAR";
-            this.dataGridViewTextBoxColumn7.HeaderText = "DOGUM_TAR";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 101;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "GIRIS_TAR";
-            this.dataGridViewTextBoxColumn8.HeaderText = "GIRIS_TAR";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 89;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "CIKIS_TAR";
-            this.dataGridViewTextBoxColumn9.HeaderText = "CIKIS_TAR";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 87;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "UNVAN";
-            this.dataGridViewTextBoxColumn10.HeaderText = "UNVAN";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "YAKA";
-            this.dataGridViewTextBoxColumn11.HeaderText = "YAKA";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "ISLETME_KOD";
-            this.dataGridViewTextBoxColumn12.HeaderText = "ISLETME_KOD";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 107;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "DEPARTMAN_KOD";
-            this.dataGridViewTextBoxColumn13.HeaderText = "DEPARTMAN_KOD";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 129;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "DEPARTMAN_ALT_KOD";
-            this.dataGridViewTextBoxColumn14.HeaderText = "DEPARTMAN_ALT_KOD";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            this.dataGridViewTextBoxColumn14.Width = 155;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "POZISYON_KOD";
-            this.dataGridViewTextBoxColumn15.HeaderText = "POZISYON_KOD";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
-            this.dataGridViewTextBoxColumn15.Width = 116;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "LOKASYON_KOD";
-            this.dataGridViewTextBoxColumn16.HeaderText = "LOKASYON_KOD";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            this.dataGridViewTextBoxColumn16.Width = 119;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "GECIS_KOD";
-            this.dataGridViewTextBoxColumn17.HeaderText = "GECIS_KOD";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            this.dataGridViewTextBoxColumn17.Width = 93;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "SENKRON";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "SENKRON";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
-            this.dataGridViewCheckBoxColumn1.Width = 66;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "SENDIKA_KOD";
-            this.dataGridViewTextBoxColumn18.HeaderText = "SENDIKA_KOD";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            this.dataGridViewTextBoxColumn18.Width = 108;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "TASERON_KOD";
-            this.dataGridViewTextBoxColumn19.HeaderText = "TASERON_KOD";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            this.dataGridViewTextBoxColumn19.Width = 113;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "CALISMA_SEKLI";
-            this.dataGridViewTextBoxColumn20.HeaderText = "CALISMA_SEKLI";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.ReadOnly = true;
-            this.dataGridViewTextBoxColumn20.Width = 114;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "CALISMA_KONUMU";
-            this.dataGridViewTextBoxColumn21.HeaderText = "CALISMA_KONUMU";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.ReadOnly = true;
-            this.dataGridViewTextBoxColumn21.Width = 132;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "DURUM";
-            this.dataGridViewTextBoxColumn22.HeaderText = "DURUM";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
-            this.dataGridViewTextBoxColumn22.Width = 73;
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "SICIL_EK";
-            this.dataGridViewTextBoxColumn23.HeaderText = "SICIL_EK";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
-            this.dataGridViewTextBoxColumn23.Width = 78;
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "SGK_NO";
-            this.dataGridViewTextBoxColumn24.HeaderText = "SGK_NO";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.ReadOnly = true;
-            this.dataGridViewTextBoxColumn24.Width = 76;
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "MASRAF_KODU";
-            this.dataGridViewTextBoxColumn25.HeaderText = "MASRAF_KODU";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.ReadOnly = true;
-            this.dataGridViewTextBoxColumn25.Width = 113;
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "YoneticiID";
-            this.dataGridViewTextBoxColumn26.HeaderText = "YoneticiID";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.ReadOnly = true;
-            this.dataGridViewTextBoxColumn26.Width = 81;
-            // 
-            // personelBindingSource
-            // 
-            this.personelBindingSource.DataMember = "Personel";
-            this.personelBindingSource.DataSource = this.personelDataSet;
-            // 
-            // personelDataSet
-            // 
-            this.personelDataSet.DataSetName = "PersonelDataSet";
-            this.personelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // UnvanInput
             // 
@@ -869,8 +653,9 @@
             this.PersonelCikartBtn.Name = "PersonelCikartBtn";
             this.PersonelCikartBtn.Size = new System.Drawing.Size(137, 50);
             this.PersonelCikartBtn.TabIndex = 118;
-            this.PersonelCikartBtn.Text = "Personel Çıkart";
+            this.PersonelCikartBtn.Text = "Seçili Personeli Çıkart";
             this.PersonelCikartBtn.UseVisualStyleBackColor = true;
+            this.PersonelCikartBtn.Click += new System.EventHandler(this.PersonelCikartBtn_Click);
             // 
             // PersonelGncBtn
             // 
@@ -881,6 +666,7 @@
             this.PersonelGncBtn.TabIndex = 119;
             this.PersonelGncBtn.Text = "Personeli Güncelle";
             this.PersonelGncBtn.UseVisualStyleBackColor = true;
+            this.PersonelGncBtn.Click += new System.EventHandler(this.PersonelGncBtn_Click);
             // 
             // Isletmeler
             // 
@@ -921,10 +707,6 @@
             this.label25.TabIndex = 124;
             this.label25.Text = "YÖNETİCİ KODU:";
             // 
-            // personelTableAdapter
-            // 
-            this.personelTableAdapter.ClearBeforeFill = true;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.SenkronHayir);
@@ -933,6 +715,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 36);
             this.panel1.TabIndex = 126;
+            // 
+            // SenkronHayir
+            // 
+            this.SenkronHayir.AutoSize = true;
+            this.SenkronHayir.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SenkronHayir.Location = new System.Drawing.Point(100, 10);
+            this.SenkronHayir.Name = "SenkronHayir";
+            this.SenkronHayir.Size = new System.Drawing.Size(62, 22);
+            this.SenkronHayir.TabIndex = 128;
+            this.SenkronHayir.TabStop = true;
+            this.SenkronHayir.Text = "Hayır";
+            this.SenkronHayir.UseVisualStyleBackColor = true;
             // 
             // SenkronEvet
             // 
@@ -946,17 +740,262 @@
             this.SenkronEvet.Text = "Evet";
             this.SenkronEvet.UseVisualStyleBackColor = true;
             // 
-            // SenkronHayir
+            // dataGridViewTextBoxColumn1
             // 
-            this.SenkronHayir.AutoSize = true;
-            this.SenkronHayir.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SenkronHayir.Location = new System.Drawing.Point(100, 10);
-            this.SenkronHayir.Name = "SenkronHayir";
-            this.SenkronHayir.Size = new System.Drawing.Size(62, 22);
-            this.SenkronHayir.TabIndex = 128;
-            this.SenkronHayir.TabStop = true;
-            this.SenkronHayir.Text = "Hayır";
-            this.SenkronHayir.UseVisualStyleBackColor = true;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "PersonelID";
+            this.dataGridViewTextBoxColumn1.FillWeight = 145.1945F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "PersonelID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 94;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "SICIL";
+            this.dataGridViewTextBoxColumn2.FillWeight = 92.41341F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "SICIL";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 62;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "AD";
+            this.dataGridViewTextBoxColumn3.FillWeight = 69.93327F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "AD";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 48;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "SOYAD";
+            this.dataGridViewTextBoxColumn4.FillWeight = 101.7016F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "SOYAD";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 71;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "AD_SOYAD";
+            this.dataGridViewTextBoxColumn5.FillWeight = 131.2782F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "AD_SOYAD";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 94;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "CINSIYET";
+            this.dataGridViewTextBoxColumn6.FillWeight = 116.1273F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "CINSIYET";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 86;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "DOGUM_TAR";
+            this.dataGridViewTextBoxColumn7.FillWeight = 138.7438F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "DOGUM_TAR";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 106;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "GIRIS_TAR";
+            this.dataGridViewTextBoxColumn8.FillWeight = 117.1466F;
+            this.dataGridViewTextBoxColumn8.HeaderText = "GIRIS_TAR";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 93;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "CIKIS_TAR";
+            this.dataGridViewTextBoxColumn9.FillWeight = 112.0796F;
+            this.dataGridViewTextBoxColumn9.HeaderText = "CIKIS_TAR";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 92;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "UNVAN";
+            this.dataGridViewTextBoxColumn10.FillWeight = 84.84237F;
+            this.dataGridViewTextBoxColumn10.HeaderText = "UNVAN";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 72;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "YAKA";
+            this.dataGridViewTextBoxColumn11.FillWeight = 68.91531F;
+            this.dataGridViewTextBoxColumn11.HeaderText = "YAKA";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "ISLETME_KOD";
+            this.dataGridViewTextBoxColumn12.FillWeight = 129.399F;
+            this.dataGridViewTextBoxColumn12.HeaderText = "ISLETME_KOD";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 115;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "DEPARTMAN_KOD";
+            this.dataGridViewTextBoxColumn13.FillWeight = 147.84F;
+            this.dataGridViewTextBoxColumn13.HeaderText = "DEPARTMAN_KOD";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Width = 137;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "DEPARTMAN_ALT_KOD";
+            this.dataGridViewTextBoxColumn14.FillWeight = 168.4661F;
+            this.dataGridViewTextBoxColumn14.HeaderText = "DEPARTMAN_ALT_KOD";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Width = 164;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "POZISYON_KOD";
+            this.dataGridViewTextBoxColumn15.FillWeight = 120.9899F;
+            this.dataGridViewTextBoxColumn15.HeaderText = "POZISYON_KOD";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.dataGridViewTextBoxColumn15.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "LOKASYON_KOD";
+            this.dataGridViewTextBoxColumn16.FillWeight = 119.2584F;
+            this.dataGridViewTextBoxColumn16.HeaderText = "LOKASYON_KOD";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.Width = 129;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "GECIS_KOD";
+            this.dataGridViewTextBoxColumn17.FillWeight = 89.96336F;
+            this.dataGridViewTextBoxColumn17.HeaderText = "GECIS_KOD";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.Width = 102;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "SENKRON";
+            this.dataGridViewCheckBoxColumn1.FillWeight = 62.00971F;
+            this.dataGridViewCheckBoxColumn1.HeaderText = "SENKRON";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.Width = 73;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "SENDIKA_KOD";
+            this.dataGridViewTextBoxColumn18.FillWeight = 96.77465F;
+            this.dataGridViewTextBoxColumn18.HeaderText = "SENDIKA_KOD";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.Width = 117;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "TASERON_KOD";
+            this.dataGridViewTextBoxColumn19.FillWeight = 95.99665F;
+            this.dataGridViewTextBoxColumn19.HeaderText = "TASERON_KOD";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            this.dataGridViewTextBoxColumn19.Width = 121;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "CALISMA_SEKLI";
+            this.dataGridViewTextBoxColumn20.FillWeight = 93.48404F;
+            this.dataGridViewTextBoxColumn20.HeaderText = "CALISMA_SEKLI";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            this.dataGridViewTextBoxColumn20.Width = 123;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "CALISMA_KONUMU";
+            this.dataGridViewTextBoxColumn21.FillWeight = 103.3495F;
+            this.dataGridViewTextBoxColumn21.HeaderText = "CALISMA_KONUMU";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            this.dataGridViewTextBoxColumn21.Width = 142;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "DURUM";
+            this.dataGridViewTextBoxColumn22.FillWeight = 53.30922F;
+            this.dataGridViewTextBoxColumn22.HeaderText = "DURUM";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            this.dataGridViewTextBoxColumn22.Width = 77;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "SICIL_EK";
+            this.dataGridViewTextBoxColumn23.FillWeight = 57.31854F;
+            this.dataGridViewTextBoxColumn23.HeaderText = "SICIL_EK";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            this.dataGridViewTextBoxColumn23.Width = 85;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "SGK_NO";
+            this.dataGridViewTextBoxColumn24.FillWeight = 53.71648F;
+            this.dataGridViewTextBoxColumn24.HeaderText = "SGK_NO";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            this.dataGridViewTextBoxColumn24.Width = 82;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "MASRAF_KODU";
+            this.dataGridViewTextBoxColumn25.FillWeight = 77.10398F;
+            this.dataGridViewTextBoxColumn25.HeaderText = "MASRAF_KODU";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.ReadOnly = true;
+            this.dataGridViewTextBoxColumn25.Width = 121;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "YoneticiID";
+            this.dataGridViewTextBoxColumn26.FillWeight = 52.64394F;
+            this.dataGridViewTextBoxColumn26.HeaderText = "YoneticiID";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.ReadOnly = true;
+            this.dataGridViewTextBoxColumn26.Width = 86;
+            // 
+            // personelBindingSource
+            // 
+            this.personelBindingSource.DataMember = "Personel";
+            this.personelBindingSource.DataSource = this.personelDataSet;
+            // 
+            // personelDataSet
+            // 
+            this.personelDataSet.DataSetName = "PersonelDataSet";
+            this.personelDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // personelTableAdapter
+            // 
+            this.personelTableAdapter.ClearBeforeFill = true;
             // 
             // PersonelTanımlama
             // 
@@ -1021,10 +1060,10 @@
             this.Name = "PersonelTanımlama";
             this.Size = new System.Drawing.Size(1800, 972);
             ((System.ComponentModel.ISupportInitialize)(this.PersonellerDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personelBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.personelDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.personelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personelDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

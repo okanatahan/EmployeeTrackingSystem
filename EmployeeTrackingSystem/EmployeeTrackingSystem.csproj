@@ -61,6 +61,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GecislerDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSets\IsletmelerDataSet.cs">
+      <DependentUpon>IsletmelerDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSets\IsletmelerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,6 +91,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>YoneticilerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\IzinTipleriDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IzinTipleriDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
@@ -327,6 +335,17 @@
     </None>
     <None Include="DataSets\YoneticilerDataSet.xss">
       <DependentUpon>YoneticilerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\IzinTipleriDataSet.xsc">
+      <DependentUpon>IzinTipleriDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\IzinTipleriDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IzinTipleriDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\IzinTipleriDataSet.xss">
+      <DependentUpon>IzinTipleriDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

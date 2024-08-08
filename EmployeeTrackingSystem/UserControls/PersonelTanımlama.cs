@@ -186,9 +186,22 @@ namespace EmployeeTrackingSystem.UserControls
                 SgkInput.Text = "";  Masraflar.Text = ""; Yoneticiler.Text = "";
 
                 UpdateList();
-                MessageBox.Show("Personel Başarıyla Eklendi");
+                MessageBox.Show("Personel Başarıyla Eklendi", "İşlem Başarılı");
             }
         }
 
+        private void PersonelCikartBtn_Click(object sender, EventArgs e)
+        {
+            int id = (int)PersonellerDGV.Rows[PersonellerDGV.CurrentRow.Index].Cells[0].Value;
+            dt.DeleteQuery(id);
+            UpdateList();
+            MessageBox.Show("Personel Başarıyla Silindi", "İşlem Başarılı");
+        }
+
+        private void PersonelGncBtn_Click(object sender, EventArgs e)
+        {
+            int id = (int)PersonellerDGV.Rows[PersonellerDGV.CurrentRow.Index].Cells[0].Value;
+            
+        }
     }
 }

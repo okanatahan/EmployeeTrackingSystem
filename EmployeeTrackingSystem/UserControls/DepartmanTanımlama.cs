@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmployeeTrackingSystem.DataSets.DepartmanlarDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,25 @@ namespace EmployeeTrackingSystem.UserControls
 {
     public partial class DepartmanTanımlama : UserControl
     {
+        DepartmanlarTableAdapter ta = new DepartmanlarTableAdapter();
+        
         public DepartmanTanımlama()
         {
             InitializeComponent();
+            UpdateList();
         }
 
-        private void exit_Click(object sender, EventArgs e)
+        private void UpdateList()
         {
+            DepartmanlarDGV.DataSource = ta.GetData();
+        }
 
+        private void DepartmanEkleBtn_Click(object sender, EventArgs e)
+        {
+            string d = DepartmanAdı.Text;
+            ta.InsertQuery(d);
+            UpdateList();
+            MessageBox.Show("Departman Başarıyla Eklendi", "İşlem Başarılı!");
         }
     }
 }

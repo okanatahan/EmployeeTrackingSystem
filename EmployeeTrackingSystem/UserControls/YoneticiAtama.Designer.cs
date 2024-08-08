@@ -35,10 +35,13 @@
             // 
             // PersonellerDGV
             // 
+            this.PersonellerDGV.AllowUserToAddRows = false;
+            this.PersonellerDGV.AllowUserToDeleteRows = false;
             this.PersonellerDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.PersonellerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PersonellerDGV.Location = new System.Drawing.Point(3, 3);
             this.PersonellerDGV.Name = "PersonellerDGV";
+            this.PersonellerDGV.ReadOnly = true;
             this.PersonellerDGV.Size = new System.Drawing.Size(1794, 607);
             this.PersonellerDGV.TabIndex = 0;
             // 

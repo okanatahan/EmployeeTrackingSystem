@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EmployeeTrackingSystem.DataSets;
+using EmployeeTrackingSystem.DataSets.IzinTipleriDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,13 +17,23 @@ namespace EmployeeTrackingSystem.UserControls
     {
         string id;
         string YoneticiID;
+        IzinTipleriTableAdapter ta = new IzinTipleriTableAdapter();
         SqlConnection conn = new SqlConnection(@"Data Source=OKAN\SQLEXPRESS;Initial Catalog=Company;Integrated Security=True;Encrypt=False;TrustServerCertificate=True");
         public IzinTalebiOlustur(string id)
         {
             InitializeComponent();
+            SetComboBox();
             IzinBaslangicTar.MinDate = DateTime.Now;
             IzinBitisTar.MinDate = DateTime.Now;
             this.id = id;
+        }
+
+        private void SetComboBox()
+        {
+            IzinTipleriDataSet.IzinTipleriDataTable dt = ta.GetData();
+            IzinTipleri.DataSource = dt;
+            IzinTipleri.DisplayMember = "IZIN_TIPI";
+            IzinTipleri.ValueMember = "IZIN_TIPI";
         }
 
         private void IzinBaslangicTar_ValueChanged(object sender, EventArgs e)
@@ -42,7 +54,7 @@ namespace EmployeeTrackingSystem.UserControls
             {
                 conn.Open();
                 String GetYoneticiID = "SELECT YoneticiID FROM Personel WHERE PersonelID = @id";
-                String InsertQuery = "INSERT INTO IzinTalepleri (FK_PersonelID, Ad_Soyad, IzinBaslangicTar, IzinBitisTar, FK_YoneticiID, Yonetici) VALUES (@PersonelID, @Ad_Soyad, @IzinBasTar, @IzinBitTar, @YoneticiID, @Yonetici)";
+                String InsertQuery = "INSERT INTO IzinTalepleri (FK_PersonelID, Ad_Soyad, IzinBaslangicTar, IzinBitisTar, FK_IzinTipi, FK_YoneticiID, Yonetici) VALUES (@PersonelID, @Ad_Soyad, @IzinBasTar, @IzinBitTar, @IzinTipi, @YoneticiID, @Yonetici)";
                 
                 using (SqlCommand cmd = new SqlCommand(GetYoneticiID, conn))
                 {
@@ -68,6 +80,7 @@ namespace EmployeeTrackingSystem.UserControls
                     cmd.Parameters.AddWithValue("@Ad_Soyad", PersonelAd_Soyad);
                     cmd.Parameters.AddWithValue("@IzinBasTar", IzinBaslangicTar.Value.Date);
                     cmd.Parameters.AddWithValue("@IzinBitTar", IzinBitisTar.Value.Date);
+                    cmd.Parameters.AddWithValue("@IzinTipi", IzinTipleri.SelectedValue);
                     cmd.Parameters.AddWithValue("@YoneticiID", YoneticiID);
                     cmd.Parameters.AddWithValue("@Yonetici", YoneticiAD_SOYAD);
 

@@ -2186,7 +2186,7 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = @"UPDATE [dbo].[Personel] SET [SICIL] = @SICIL, [AD] = @AD, [SOYAD] = @SOYAD, [CINSIYET] = @CINSIYET, [DOGUM_TAR] = @DOGUM_TAR, [GIRIS_TAR] = @GIRIS_TAR, [CIKIS_TAR] = @CIKIS_TAR, [UNVAN] = @UNVAN, [YAKA] = @YAKA, [ISLETME_KOD] = @ISLETME_KOD, [DEPARTMAN_KOD] = @DEPARTMAN_KOD, [DEPARTMAN_ALT_KOD] = @DEPARTMAN_ALT_KOD, [POZISYON_KOD] = @POZISYON_KOD, [LOKASYON_KOD] = @LOKASYON_KOD, [GECIS_KOD] = @GECIS_KOD, [SENKRON] = @SENKRON, [SENDIKA_KOD] = @SENDIKA_KOD, [TASERON_KOD] = @TASERON_KOD, [CALISMA_SEKLI] = @CALISMA_SEKLI, [CALISMA_KONUMU] = @CALISMA_KONUMU, [DURUM] = @DURUM, [SICIL_EK] = @SICIL_EK, [SGK_NO] = @SGK_NO, [MASRAF_KODU] = @MASRAF_KODU, [YoneticiID] = @YoneticiID WHERE [PersonelID] = @Original_PersonelID;
-SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, CIKIS_TAR, UNVAN, YAKA, ISLETME_KOD, DEPARTMAN_KOD, DEPARTMAN_ALT_KOD, POZISYON_KOD, LOKASYON_KOD, GECIS_KOD, SENKRON, SENDIKA_KOD, TASERON_KOD, CALISMA_SEKLI, CALISMA_KONUMU, DURUM, SICIL_EK, SGK_NO, MASRAF_KODU, YoneticiID FROM Personel WHERE (PersonelID = @PersonelID)";
+SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, CIKIS_TAR, UNVAN, YAKA, ISLETME_KOD, DEPARTMAN_KOD, DEPARTMAN_ALT_KOD, POZISYON_KOD, LOKASYON_KOD, GECIS_KOD, SENKRON, SENDIKA_KOD, TASERON_KOD, CALISMA_SEKLI, CALISMA_KONUMU, DURUM, SICIL_EK, SGK_NO, MASRAF_KODU, YoneticiID FROM Personel WHERE  (ID = SCOPE_IDENTITY())";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SICIL", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "SICIL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AD", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "AD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2214,7 +2214,6 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MASRAF_KODU", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "MASRAF_KODU", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@YoneticiID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "YoneticiID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PersonelID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PersonelID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PersonelID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PersonelID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3469,8 +3468,7 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
                     string SGK_NO, 
                     string MASRAF_KODU, 
                     global::System.Nullable<int> YoneticiID, 
-                    int Original_PersonelID, 
-                    int PersonelID) {
+                    int Original_PersonelID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((SICIL == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -3623,7 +3621,6 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
                 command.Parameters[24].Value = global::System.DBNull.Value;
             }
             command.Parameters[25].Value = ((int)(Original_PersonelID));
-            command.Parameters[26].Value = ((int)(PersonelID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

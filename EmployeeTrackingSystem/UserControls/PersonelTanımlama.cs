@@ -201,7 +201,73 @@ namespace EmployeeTrackingSystem.UserControls
         private void PersonelGncBtn_Click(object sender, EventArgs e)
         {
             int id = (int)PersonellerDGV.Rows[PersonellerDGV.CurrentRow.Index].Cells[0].Value;
-            
+            string Cins = erkek.Checked ? "Erkek" : "Kadın";
+            bool Senkron = SenkronEvet.Checked ? true : false;
+
+            dt.UpdateQuery(SicilInput.Text, AdInput.Text, SoyadInput.Text, Cins, dob.Value.Date.ToString(),
+                    girisTar.Value.Date.ToString(), cikisTar.Value.Date.ToString(), UnvanInput.Text, YakaInput.Text,
+                    Isletmeler.SelectedValue.ToString(), Departmanlar.SelectedValue.ToString(), AltDepartmanlar.SelectedValue.ToString(),
+                    Pozisyonlar.SelectedValue.ToString(), Lokasyonlar.SelectedValue.ToString(), Gecisler.SelectedValue.ToString(),
+                    Senkron, Sendikalar.SelectedValue.ToString(), Taseronlar.SelectedValue.ToString(), CalismaSekliInput.Text,
+                    CalismaKonumuInput.Text, DurumInput.Text, SicilEkInput.Text, SgkInput.Text, Masraflar.SelectedValue.ToString(),
+                    (int)Yoneticiler.SelectedValue, id);
+            UpdateList();
+            MessageBox.Show("Personel Bilgileri Başarıyla Güncellendi", "İşlem Başarılı");
+        }
+
+        private void PersonellerDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = PersonellerDGV.Rows[e.RowIndex];
+                SicilInput.Text = row.Cells[1].Value.ToString();
+                AdInput.Text = row.Cells[2].Value.ToString();
+                SoyadInput.Text = row.Cells[3].Value.ToString();
+
+                if (row.Cells[5].Value.ToString() == "Erkek")
+                {
+                    kadın.Checked = false;
+                    erkek.Checked = true;
+                }
+                else
+                {
+                    erkek.Checked = false;
+                    kadın.Checked = true;
+                }
+
+                dob.Text = row.Cells[6].Value.ToString();
+                girisTar.Text = row.Cells[7].Value.ToString();
+                cikisTar.Text = row.Cells[8].Value.ToString();
+                UnvanInput.SelectedValue = row.Cells[9].Value.ToString();
+                YakaInput.Text = row.Cells[10].Value.ToString();
+                Isletmeler.SelectedValue = row.Cells[11].Value;
+                Departmanlar.SelectedValue = row.Cells[12].Value;
+                AltDepartmanlar.SelectedValue = row.Cells[13].Value;
+                Pozisyonlar.SelectedValue = row.Cells[14].Value;
+                Lokasyonlar.SelectedValue = row.Cells[15].Value;
+                Gecisler.SelectedValue = row.Cells[16].Value;
+
+                if (row.Cells[17].Value.ToString() == "0")
+                {
+                    SenkronEvet.Checked = false;
+                    SenkronHayir.Checked = true;
+                }
+                else
+                {
+                    SenkronHayir.Checked = false;
+                    SenkronEvet.Checked = true;
+                }
+
+                Sendikalar.SelectedValue = row.Cells[18].Value;
+                Taseronlar.SelectedValue = row.Cells[19].Value;
+                CalismaSekliInput.SelectedValue = row.Cells[20].Value.ToString();
+                CalismaKonumuInput.SelectedValue = row.Cells[21].Value.ToString();
+                DurumInput.Text = row.Cells[22].Value.ToString();
+                SicilEkInput.Text = row.Cells[23].Value.ToString();
+                SgkInput.Text = row.Cells[24].Value.ToString();
+                Masraflar.SelectedValue = row.Cells[25].Value;
+                Yoneticiler.SelectedValue = row.Cells[26].Value;
+            }
         }
     }
 }

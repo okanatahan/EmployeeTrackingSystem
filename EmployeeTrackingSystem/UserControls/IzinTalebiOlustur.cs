@@ -53,7 +53,7 @@ namespace EmployeeTrackingSystem.UserControls
             try
             {
                 conn.Open();
-                String GetYoneticiID = "SELECT YoneticiID FROM Personel WHERE PersonelID = @id";
+                String GetYoneticiID = "SELECT FK_YoneticiID FROM Personel WHERE PersonelID = @id";
                 String InsertQuery = "INSERT INTO IzinTalepleri (FK_PersonelID, Ad_Soyad, IzinBaslangicTar, IzinBitisTar, FK_IzinTipi, FK_YoneticiID, Yonetici) VALUES (@PersonelID, @Ad_Soyad, @IzinBasTar, @IzinBitTar, @IzinTipi, @YoneticiID, @Yonetici)";
                 
                 using (SqlCommand cmd = new SqlCommand(GetYoneticiID, conn))

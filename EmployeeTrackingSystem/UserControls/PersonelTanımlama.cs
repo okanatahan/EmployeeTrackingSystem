@@ -193,6 +193,10 @@ namespace EmployeeTrackingSystem.UserControls
         private void PersonelCikartBtn_Click(object sender, EventArgs e)
         {
             int id = (int)PersonellerDGV.Rows[PersonellerDGV.CurrentRow.Index].Cells[0].Value;
+            if (y.GetRowCount(id) > 0)
+            {
+                y.DeleteQuery(id);
+            }
             dt.DeleteQuery(id);
             UpdateList();
             MessageBox.Show("Personel Başarıyla Silindi", "İşlem Başarılı");
@@ -266,7 +270,7 @@ namespace EmployeeTrackingSystem.UserControls
                 SicilEkInput.Text = row.Cells[23].Value.ToString();
                 SgkInput.Text = row.Cells[24].Value.ToString();
                 Masraflar.SelectedValue = row.Cells[25].Value;
-                Yoneticiler.SelectedValue = row.Cells[26].Value;
+                Yoneticiler.SelectedValue = row.Cells[26].Value; // Null Object Error!
             }
         }
     }

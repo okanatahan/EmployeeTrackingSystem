@@ -74,9 +74,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MasraflarDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DataSets\PersonelDataSet.cs">
-      <DependentUpon>PersonelDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DataSets\SendikalarDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -114,15 +111,15 @@
     <Compile Include="NavigationMenu.Designer.cs">
       <DependentUpon>NavigationMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataSets\PersonelDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PersonelDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DataSets\PozisyonlarDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PozisyonlarDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\PersonelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonelDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -281,17 +278,6 @@
     <None Include="DataSets\MasraflarDataSet.xss">
       <DependentUpon>MasraflarDataSet.xsd</DependentUpon>
     </None>
-    <None Include="DataSets\PersonelDataSet.xsc">
-      <DependentUpon>PersonelDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DataSets\PersonelDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>PersonelDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DataSets\PersonelDataSet.xss">
-      <DependentUpon>PersonelDataSet.xsd</DependentUpon>
-    </None>
     <None Include="DataSets\PozisyonlarDataSet.xsc">
       <DependentUpon>PozisyonlarDataSet.xsd</DependentUpon>
     </None>
@@ -346,6 +332,17 @@
     </None>
     <None Include="DataSets\IzinTipleriDataSet.xss">
       <DependentUpon>IzinTipleriDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\PersonelDataSet.xsc">
+      <DependentUpon>PersonelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\PersonelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PersonelDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSets\PersonelDataSet.xss">
+      <DependentUpon>PersonelDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

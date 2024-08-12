@@ -331,7 +331,7 @@ namespace EmployeeTrackingSystem.DataSets {
             
             private global::System.Data.DataColumn columnMASRAF_KODU;
             
-            private global::System.Data.DataColumn columnYoneticiID;
+            private global::System.Data.DataColumn columnFK_YoneticiID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -576,9 +576,9 @@ namespace EmployeeTrackingSystem.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn YoneticiIDColumn {
+            public global::System.Data.DataColumn FK_YoneticiIDColumn {
                 get {
-                    return this.columnYoneticiID;
+                    return this.columnFK_YoneticiID;
                 }
             }
             
@@ -645,7 +645,7 @@ namespace EmployeeTrackingSystem.DataSets {
                         string SICIL_EK, 
                         string SGK_NO, 
                         string MASRAF_KODU, 
-                        int YoneticiID) {
+                        int FK_YoneticiID) {
                 PersonelRow rowPersonelRow = ((PersonelRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -674,7 +674,7 @@ namespace EmployeeTrackingSystem.DataSets {
                         SICIL_EK,
                         SGK_NO,
                         MASRAF_KODU,
-                        YoneticiID};
+                        FK_YoneticiID};
                 rowPersonelRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPersonelRow);
                 return rowPersonelRow;
@@ -730,7 +730,7 @@ namespace EmployeeTrackingSystem.DataSets {
                 this.columnSICIL_EK = base.Columns["SICIL_EK"];
                 this.columnSGK_NO = base.Columns["SGK_NO"];
                 this.columnMASRAF_KODU = base.Columns["MASRAF_KODU"];
-                this.columnYoneticiID = base.Columns["YoneticiID"];
+                this.columnFK_YoneticiID = base.Columns["FK_YoneticiID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -788,8 +788,8 @@ namespace EmployeeTrackingSystem.DataSets {
                 base.Columns.Add(this.columnSGK_NO);
                 this.columnMASRAF_KODU = new global::System.Data.DataColumn("MASRAF_KODU", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMASRAF_KODU);
-                this.columnYoneticiID = new global::System.Data.DataColumn("YoneticiID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnYoneticiID);
+                this.columnFK_YoneticiID = new global::System.Data.DataColumn("FK_YoneticiID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFK_YoneticiID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnPersonelID}, true));
                 this.columnPersonelID.AutoIncrement = true;
@@ -1373,17 +1373,17 @@ namespace EmployeeTrackingSystem.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int YoneticiID {
+            public int FK_YoneticiID {
                 get {
                     try {
-                        return ((int)(this[this.tablePersonel.YoneticiIDColumn]));
+                        return ((int)(this[this.tablePersonel.FK_YoneticiIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'YoneticiID\' in table \'Personel\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'FK_YoneticiID\' in table \'Personel\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePersonel.YoneticiIDColumn] = value;
+                    this[this.tablePersonel.FK_YoneticiIDColumn] = value;
                 }
             }
             
@@ -1689,14 +1689,14 @@ namespace EmployeeTrackingSystem.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsYoneticiIDNull() {
-                return this.IsNull(this.tablePersonel.YoneticiIDColumn);
+            public bool IsFK_YoneticiIDNull() {
+                return this.IsNull(this.tablePersonel.FK_YoneticiIDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetYoneticiIDNull() {
-                this[this.tablePersonel.YoneticiIDColumn] = global::System.Convert.DBNull;
+            public void SetFK_YoneticiIDNull() {
+                this[this.tablePersonel.FK_YoneticiIDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1885,7 +1885,7 @@ namespace EmployeeTrackingSystem.DataSets.PersonelDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("SICIL_EK", "SICIL_EK");
             tableMapping.ColumnMappings.Add("SGK_NO", "SGK_NO");
             tableMapping.ColumnMappings.Add("MASRAF_KODU", "MASRAF_KODU");
-            tableMapping.ColumnMappings.Add("YoneticiID", "YoneticiID");
+            tableMapping.ColumnMappings.Add("FK_YoneticiID", "FK_YoneticiID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -1919,8 +1919,8 @@ namespace EmployeeTrackingSystem.DataSets.PersonelDataSetTableAdapters {
                 "_EK] IS NULL) OR ([SICIL_EK] = @Original_SICIL_EK)) AND ((@IsNull_SGK_NO = 1 AND" +
                 " [SGK_NO] IS NULL) OR ([SGK_NO] = @Original_SGK_NO)) AND ((@IsNull_MASRAF_KODU =" +
                 " 1 AND [MASRAF_KODU] IS NULL) OR ([MASRAF_KODU] = @Original_MASRAF_KODU)) AND ((" +
-                "@IsNull_YoneticiID = 1 AND [YoneticiID] IS NULL) OR ([YoneticiID] = @Original_Yo" +
-                "neticiID)))";
+                "@IsNull_FK_YoneticiID = 1 AND [FK_YoneticiID] IS NULL) OR ([FK_YoneticiID] = @Or" +
+                "iginal_FK_YoneticiID)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PersonelID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonelID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SICIL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SICIL", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1973,12 +1973,12 @@ namespace EmployeeTrackingSystem.DataSets.PersonelDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SGK_NO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SGK_NO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MASRAF_KODU", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MASRAF_KODU", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MASRAF_KODU", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MASRAF_KODU", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_YoneticiID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YoneticiID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_YoneticiID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YoneticiID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FK_YoneticiID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_YoneticiID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_YoneticiID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_YoneticiID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Personel] ([SICIL], [AD], [SOYAD], [CINSIYET], [DOGUM_TAR], [GIRIS_TAR], [CIKIS_TAR], [UNVAN], [YAKA], [ISLETME_KOD], [DEPARTMAN_KOD], [DEPARTMAN_ALT_KOD], [POZISYON_KOD], [LOKASYON_KOD], [GECIS_KOD], [SENKRON], [SENDIKA_KOD], [TASERON_KOD], [CALISMA_SEKLI], [CALISMA_KONUMU], [DURUM], [SICIL_EK], [SGK_NO], [MASRAF_KODU], [YoneticiID]) VALUES (@SICIL, @AD, @SOYAD, @CINSIYET, @DOGUM_TAR, @GIRIS_TAR, @CIKIS_TAR, @UNVAN, @YAKA, @ISLETME_KOD, @DEPARTMAN_KOD, @DEPARTMAN_ALT_KOD, @POZISYON_KOD, @LOKASYON_KOD, @GECIS_KOD, @SENKRON, @SENDIKA_KOD, @TASERON_KOD, @CALISMA_SEKLI, @CALISMA_KONUMU, @DURUM, @SICIL_EK, @SGK_NO, @MASRAF_KODU, @YoneticiID);
-SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, CIKIS_TAR, UNVAN, YAKA, ISLETME_KOD, DEPARTMAN_KOD, DEPARTMAN_ALT_KOD, POZISYON_KOD, LOKASYON_KOD, GECIS_KOD, SENKRON, SENDIKA_KOD, TASERON_KOD, CALISMA_SEKLI, CALISMA_KONUMU, DURUM, SICIL_EK, SGK_NO, MASRAF_KODU, YoneticiID FROM Personel WHERE (PersonelID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Personel] ([SICIL], [AD], [SOYAD], [CINSIYET], [DOGUM_TAR], [GIRIS_TAR], [CIKIS_TAR], [UNVAN], [YAKA], [ISLETME_KOD], [DEPARTMAN_KOD], [DEPARTMAN_ALT_KOD], [POZISYON_KOD], [LOKASYON_KOD], [GECIS_KOD], [SENKRON], [SENDIKA_KOD], [TASERON_KOD], [CALISMA_SEKLI], [CALISMA_KONUMU], [DURUM], [SICIL_EK], [SGK_NO], [MASRAF_KODU], [FK_YoneticiID]) VALUES (@SICIL, @AD, @SOYAD, @CINSIYET, @DOGUM_TAR, @GIRIS_TAR, @CIKIS_TAR, @UNVAN, @YAKA, @ISLETME_KOD, @DEPARTMAN_KOD, @DEPARTMAN_ALT_KOD, @POZISYON_KOD, @LOKASYON_KOD, @GECIS_KOD, @SENKRON, @SENDIKA_KOD, @TASERON_KOD, @CALISMA_SEKLI, @CALISMA_KONUMU, @DURUM, @SICIL_EK, @SGK_NO, @MASRAF_KODU, @FK_YoneticiID);
+SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, CIKIS_TAR, UNVAN, YAKA, ISLETME_KOD, DEPARTMAN_KOD, DEPARTMAN_ALT_KOD, POZISYON_KOD, LOKASYON_KOD, GECIS_KOD, SENKRON, SENDIKA_KOD, TASERON_KOD, CALISMA_SEKLI, CALISMA_KONUMU, DURUM, SICIL_EK, SGK_NO, MASRAF_KODU, FK_YoneticiID FROM Personel WHERE (PersonelID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SICIL", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SICIL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AD", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2004,7 +2004,7 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SICIL_EK", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SICIL_EK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SGK_NO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SGK_NO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MASRAF_KODU", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MASRAF_KODU", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@YoneticiID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YoneticiID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_YoneticiID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_YoneticiID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Personel] SET [SICIL] = @SICIL, [AD] = @AD, [SOYAD] = @SOYAD, [CINS" +
@@ -2015,42 +2015,42 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
                 "S_KOD, [SENKRON] = @SENKRON, [SENDIKA_KOD] = @SENDIKA_KOD, [TASERON_KOD] = @TASE" +
                 "RON_KOD, [CALISMA_SEKLI] = @CALISMA_SEKLI, [CALISMA_KONUMU] = @CALISMA_KONUMU, [" +
                 "DURUM] = @DURUM, [SICIL_EK] = @SICIL_EK, [SGK_NO] = @SGK_NO, [MASRAF_KODU] = @MA" +
-                "SRAF_KODU, [YoneticiID] = @YoneticiID WHERE (([PersonelID] = @Original_PersonelI" +
-                "D) AND ((@IsNull_SICIL = 1 AND [SICIL] IS NULL) OR ([SICIL] = @Original_SICIL)) " +
-                "AND ((@IsNull_AD = 1 AND [AD] IS NULL) OR ([AD] = @Original_AD)) AND ((@IsNull_S" +
-                "OYAD = 1 AND [SOYAD] IS NULL) OR ([SOYAD] = @Original_SOYAD)) AND ((@IsNull_AD_S" +
-                "OYAD = 1 AND [AD_SOYAD] IS NULL) OR ([AD_SOYAD] = @Original_AD_SOYAD)) AND ((@Is" +
-                "Null_CINSIYET = 1 AND [CINSIYET] IS NULL) OR ([CINSIYET] = @Original_CINSIYET)) " +
-                "AND ((@IsNull_DOGUM_TAR = 1 AND [DOGUM_TAR] IS NULL) OR ([DOGUM_TAR] = @Original" +
-                "_DOGUM_TAR)) AND ((@IsNull_GIRIS_TAR = 1 AND [GIRIS_TAR] IS NULL) OR ([GIRIS_TAR" +
-                "] = @Original_GIRIS_TAR)) AND ((@IsNull_CIKIS_TAR = 1 AND [CIKIS_TAR] IS NULL) O" +
-                "R ([CIKIS_TAR] = @Original_CIKIS_TAR)) AND ((@IsNull_UNVAN = 1 AND [UNVAN] IS NU" +
-                "LL) OR ([UNVAN] = @Original_UNVAN)) AND ((@IsNull_YAKA = 1 AND [YAKA] IS NULL) O" +
-                "R ([YAKA] = @Original_YAKA)) AND ((@IsNull_ISLETME_KOD = 1 AND [ISLETME_KOD] IS " +
-                "NULL) OR ([ISLETME_KOD] = @Original_ISLETME_KOD)) AND ((@IsNull_DEPARTMAN_KOD = " +
-                "1 AND [DEPARTMAN_KOD] IS NULL) OR ([DEPARTMAN_KOD] = @Original_DEPARTMAN_KOD)) A" +
-                "ND ((@IsNull_DEPARTMAN_ALT_KOD = 1 AND [DEPARTMAN_ALT_KOD] IS NULL) OR ([DEPARTM" +
-                "AN_ALT_KOD] = @Original_DEPARTMAN_ALT_KOD)) AND ((@IsNull_POZISYON_KOD = 1 AND [" +
-                "POZISYON_KOD] IS NULL) OR ([POZISYON_KOD] = @Original_POZISYON_KOD)) AND ((@IsNu" +
-                "ll_LOKASYON_KOD = 1 AND [LOKASYON_KOD] IS NULL) OR ([LOKASYON_KOD] = @Original_L" +
-                "OKASYON_KOD)) AND ((@IsNull_GECIS_KOD = 1 AND [GECIS_KOD] IS NULL) OR ([GECIS_KO" +
-                "D] = @Original_GECIS_KOD)) AND ((@IsNull_SENKRON = 1 AND [SENKRON] IS NULL) OR (" +
-                "[SENKRON] = @Original_SENKRON)) AND ((@IsNull_SENDIKA_KOD = 1 AND [SENDIKA_KOD] " +
-                "IS NULL) OR ([SENDIKA_KOD] = @Original_SENDIKA_KOD)) AND ((@IsNull_TASERON_KOD =" +
-                " 1 AND [TASERON_KOD] IS NULL) OR ([TASERON_KOD] = @Original_TASERON_KOD)) AND ((" +
-                "@IsNull_CALISMA_SEKLI = 1 AND [CALISMA_SEKLI] IS NULL) OR ([CALISMA_SEKLI] = @Or" +
-                "iginal_CALISMA_SEKLI)) AND ((@IsNull_CALISMA_KONUMU = 1 AND [CALISMA_KONUMU] IS " +
-                "NULL) OR ([CALISMA_KONUMU] = @Original_CALISMA_KONUMU)) AND ((@IsNull_DURUM = 1 " +
-                "AND [DURUM] IS NULL) OR ([DURUM] = @Original_DURUM)) AND ((@IsNull_SICIL_EK = 1 " +
-                "AND [SICIL_EK] IS NULL) OR ([SICIL_EK] = @Original_SICIL_EK)) AND ((@IsNull_SGK_" +
-                "NO = 1 AND [SGK_NO] IS NULL) OR ([SGK_NO] = @Original_SGK_NO)) AND ((@IsNull_MAS" +
-                "RAF_KODU = 1 AND [MASRAF_KODU] IS NULL) OR ([MASRAF_KODU] = @Original_MASRAF_KOD" +
-                "U)) AND ((@IsNull_YoneticiID = 1 AND [YoneticiID] IS NULL) OR ([YoneticiID] = @O" +
-                "riginal_YoneticiID)));\r\nSELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET," +
-                " DOGUM_TAR, GIRIS_TAR, CIKIS_TAR, UNVAN, YAKA, ISLETME_KOD, DEPARTMAN_KOD, DEPAR" +
-                "TMAN_ALT_KOD, POZISYON_KOD, LOKASYON_KOD, GECIS_KOD, SENKRON, SENDIKA_KOD, TASER" +
-                "ON_KOD, CALISMA_SEKLI, CALISMA_KONUMU, DURUM, SICIL_EK, SGK_NO, MASRAF_KODU, Yon" +
-                "eticiID FROM Personel WHERE (PersonelID = @PersonelID)";
+                "SRAF_KODU, [FK_YoneticiID] = @FK_YoneticiID WHERE (([PersonelID] = @Original_Per" +
+                "sonelID) AND ((@IsNull_SICIL = 1 AND [SICIL] IS NULL) OR ([SICIL] = @Original_SI" +
+                "CIL)) AND ((@IsNull_AD = 1 AND [AD] IS NULL) OR ([AD] = @Original_AD)) AND ((@Is" +
+                "Null_SOYAD = 1 AND [SOYAD] IS NULL) OR ([SOYAD] = @Original_SOYAD)) AND ((@IsNul" +
+                "l_AD_SOYAD = 1 AND [AD_SOYAD] IS NULL) OR ([AD_SOYAD] = @Original_AD_SOYAD)) AND" +
+                " ((@IsNull_CINSIYET = 1 AND [CINSIYET] IS NULL) OR ([CINSIYET] = @Original_CINSI" +
+                "YET)) AND ((@IsNull_DOGUM_TAR = 1 AND [DOGUM_TAR] IS NULL) OR ([DOGUM_TAR] = @Or" +
+                "iginal_DOGUM_TAR)) AND ((@IsNull_GIRIS_TAR = 1 AND [GIRIS_TAR] IS NULL) OR ([GIR" +
+                "IS_TAR] = @Original_GIRIS_TAR)) AND ((@IsNull_CIKIS_TAR = 1 AND [CIKIS_TAR] IS N" +
+                "ULL) OR ([CIKIS_TAR] = @Original_CIKIS_TAR)) AND ((@IsNull_UNVAN = 1 AND [UNVAN]" +
+                " IS NULL) OR ([UNVAN] = @Original_UNVAN)) AND ((@IsNull_YAKA = 1 AND [YAKA] IS N" +
+                "ULL) OR ([YAKA] = @Original_YAKA)) AND ((@IsNull_ISLETME_KOD = 1 AND [ISLETME_KO" +
+                "D] IS NULL) OR ([ISLETME_KOD] = @Original_ISLETME_KOD)) AND ((@IsNull_DEPARTMAN_" +
+                "KOD = 1 AND [DEPARTMAN_KOD] IS NULL) OR ([DEPARTMAN_KOD] = @Original_DEPARTMAN_K" +
+                "OD)) AND ((@IsNull_DEPARTMAN_ALT_KOD = 1 AND [DEPARTMAN_ALT_KOD] IS NULL) OR ([D" +
+                "EPARTMAN_ALT_KOD] = @Original_DEPARTMAN_ALT_KOD)) AND ((@IsNull_POZISYON_KOD = 1" +
+                " AND [POZISYON_KOD] IS NULL) OR ([POZISYON_KOD] = @Original_POZISYON_KOD)) AND (" +
+                "(@IsNull_LOKASYON_KOD = 1 AND [LOKASYON_KOD] IS NULL) OR ([LOKASYON_KOD] = @Orig" +
+                "inal_LOKASYON_KOD)) AND ((@IsNull_GECIS_KOD = 1 AND [GECIS_KOD] IS NULL) OR ([GE" +
+                "CIS_KOD] = @Original_GECIS_KOD)) AND ((@IsNull_SENKRON = 1 AND [SENKRON] IS NULL" +
+                ") OR ([SENKRON] = @Original_SENKRON)) AND ((@IsNull_SENDIKA_KOD = 1 AND [SENDIKA" +
+                "_KOD] IS NULL) OR ([SENDIKA_KOD] = @Original_SENDIKA_KOD)) AND ((@IsNull_TASERON" +
+                "_KOD = 1 AND [TASERON_KOD] IS NULL) OR ([TASERON_KOD] = @Original_TASERON_KOD)) " +
+                "AND ((@IsNull_CALISMA_SEKLI = 1 AND [CALISMA_SEKLI] IS NULL) OR ([CALISMA_SEKLI]" +
+                " = @Original_CALISMA_SEKLI)) AND ((@IsNull_CALISMA_KONUMU = 1 AND [CALISMA_KONUM" +
+                "U] IS NULL) OR ([CALISMA_KONUMU] = @Original_CALISMA_KONUMU)) AND ((@IsNull_DURU" +
+                "M = 1 AND [DURUM] IS NULL) OR ([DURUM] = @Original_DURUM)) AND ((@IsNull_SICIL_E" +
+                "K = 1 AND [SICIL_EK] IS NULL) OR ([SICIL_EK] = @Original_SICIL_EK)) AND ((@IsNul" +
+                "l_SGK_NO = 1 AND [SGK_NO] IS NULL) OR ([SGK_NO] = @Original_SGK_NO)) AND ((@IsNu" +
+                "ll_MASRAF_KODU = 1 AND [MASRAF_KODU] IS NULL) OR ([MASRAF_KODU] = @Original_MASR" +
+                "AF_KODU)) AND ((@IsNull_FK_YoneticiID = 1 AND [FK_YoneticiID] IS NULL) OR ([FK_Y" +
+                "oneticiID] = @Original_FK_YoneticiID)));\r\nSELECT PersonelID, SICIL, AD, SOYAD, A" +
+                "D_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, CIKIS_TAR, UNVAN, YAKA, ISLETME_KOD, DE" +
+                "PARTMAN_KOD, DEPARTMAN_ALT_KOD, POZISYON_KOD, LOKASYON_KOD, GECIS_KOD, SENKRON, " +
+                "SENDIKA_KOD, TASERON_KOD, CALISMA_SEKLI, CALISMA_KONUMU, DURUM, SICIL_EK, SGK_NO" +
+                ", MASRAF_KODU, FK_YoneticiID FROM Personel WHERE (PersonelID = @PersonelID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SICIL", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SICIL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AD", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2076,7 +2076,7 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SICIL_EK", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SICIL_EK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SGK_NO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SGK_NO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MASRAF_KODU", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MASRAF_KODU", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@YoneticiID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YoneticiID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_YoneticiID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_YoneticiID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PersonelID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonelID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SICIL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SICIL", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SICIL", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SICIL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -2128,8 +2128,8 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SGK_NO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SGK_NO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MASRAF_KODU", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MASRAF_KODU", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MASRAF_KODU", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MASRAF_KODU", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_YoneticiID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YoneticiID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_YoneticiID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "YoneticiID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FK_YoneticiID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_YoneticiID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FK_YoneticiID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FK_YoneticiID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PersonelID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PersonelID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -2146,7 +2146,7 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, CIKIS_TAR, UNVAN, YAKA, ISLETME_KOD, DEPARTMAN_KOD, DEPARTMAN_ALT_KOD, POZISYON_KOD, LOKASYON_KOD, GECIS_KOD, SENKRON, SENDIKA_KOD, TASERON_KOD, CALISMA_SEKLI, CALISMA_KONUMU, DURUM, SICIL_EK, SGK_NO, MASRAF_KODU, YoneticiID FROM dbo.Personel";
+            this._commandCollection[0].CommandText = @"SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, CIKIS_TAR, UNVAN, YAKA, ISLETME_KOD, DEPARTMAN_KOD, DEPARTMAN_ALT_KOD, POZISYON_KOD, LOKASYON_KOD, GECIS_KOD, SENKRON, SENDIKA_KOD, TASERON_KOD, CALISMA_SEKLI, CALISMA_KONUMU, DURUM, SICIL_EK, SGK_NO, MASRAF_KODU, FK_YoneticiID FROM dbo.Personel";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -2155,8 +2155,8 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PersonelID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PersonelID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = @"INSERT INTO [dbo].[Personel] ([SICIL], [AD], [SOYAD], [CINSIYET], [DOGUM_TAR], [GIRIS_TAR], [CIKIS_TAR], [UNVAN], [YAKA], [ISLETME_KOD], [DEPARTMAN_KOD], [DEPARTMAN_ALT_KOD], [POZISYON_KOD], [LOKASYON_KOD], [GECIS_KOD], [SENKRON], [SENDIKA_KOD], [TASERON_KOD], [CALISMA_SEKLI], [CALISMA_KONUMU], [DURUM], [SICIL_EK], [SGK_NO], [MASRAF_KODU], [YoneticiID]) VALUES (@SICIL, @AD, @SOYAD, @CINSIYET, @DOGUM_TAR, @GIRIS_TAR, @CIKIS_TAR, @UNVAN, @YAKA, @ISLETME_KOD, @DEPARTMAN_KOD, @DEPARTMAN_ALT_KOD, @POZISYON_KOD, @LOKASYON_KOD, @GECIS_KOD, @SENKRON, @SENDIKA_KOD, @TASERON_KOD, @CALISMA_SEKLI, @CALISMA_KONUMU, @DURUM, @SICIL_EK, @SGK_NO, @MASRAF_KODU, @YoneticiID);
-SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, CIKIS_TAR, UNVAN, YAKA, ISLETME_KOD, DEPARTMAN_KOD, DEPARTMAN_ALT_KOD, POZISYON_KOD, LOKASYON_KOD, GECIS_KOD, SENKRON, SENDIKA_KOD, TASERON_KOD, CALISMA_SEKLI, CALISMA_KONUMU, DURUM, SICIL_EK, SGK_NO, MASRAF_KODU, YoneticiID FROM Personel WHERE (PersonelID = SCOPE_IDENTITY())";
+            this._commandCollection[2].CommandText = @"INSERT INTO [dbo].[Personel] ([SICIL], [AD], [SOYAD], [CINSIYET], [DOGUM_TAR], [GIRIS_TAR], [CIKIS_TAR], [UNVAN], [YAKA], [ISLETME_KOD], [DEPARTMAN_KOD], [DEPARTMAN_ALT_KOD], [POZISYON_KOD], [LOKASYON_KOD], [GECIS_KOD], [SENKRON], [SENDIKA_KOD], [TASERON_KOD], [CALISMA_SEKLI], [CALISMA_KONUMU], [DURUM], [SICIL_EK], [SGK_NO], [MASRAF_KODU], [FK_YoneticiID]) VALUES (@SICIL, @AD, @SOYAD, @CINSIYET, @DOGUM_TAR, @GIRIS_TAR, @CIKIS_TAR, @UNVAN, @YAKA, @ISLETME_KOD, @DEPARTMAN_KOD, @DEPARTMAN_ALT_KOD, @POZISYON_KOD, @LOKASYON_KOD, @GECIS_KOD, @SENKRON, @SENDIKA_KOD, @TASERON_KOD, @CALISMA_SEKLI, @CALISMA_KONUMU, @DURUM, @SICIL_EK, @SGK_NO, @MASRAF_KODU, @FK_YoneticiID);
+SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, CIKIS_TAR, UNVAN, YAKA, ISLETME_KOD, DEPARTMAN_KOD, DEPARTMAN_ALT_KOD, POZISYON_KOD, LOKASYON_KOD, GECIS_KOD, SENKRON, SENDIKA_KOD, TASERON_KOD, CALISMA_SEKLI, CALISMA_KONUMU, DURUM, SICIL_EK, SGK_NO, MASRAF_KODU, FK_YoneticiID FROM Personel WHERE (PersonelID = SCOPE_IDENTITY())";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SICIL", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "SICIL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AD", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "AD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2182,11 +2182,10 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SICIL_EK", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "SICIL_EK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SGK_NO", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "SGK_NO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MASRAF_KODU", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "MASRAF_KODU", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@YoneticiID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "YoneticiID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_YoneticiID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "FK_YoneticiID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = @"UPDATE [dbo].[Personel] SET [SICIL] = @SICIL, [AD] = @AD, [SOYAD] = @SOYAD, [CINSIYET] = @CINSIYET, [DOGUM_TAR] = @DOGUM_TAR, [GIRIS_TAR] = @GIRIS_TAR, [CIKIS_TAR] = @CIKIS_TAR, [UNVAN] = @UNVAN, [YAKA] = @YAKA, [ISLETME_KOD] = @ISLETME_KOD, [DEPARTMAN_KOD] = @DEPARTMAN_KOD, [DEPARTMAN_ALT_KOD] = @DEPARTMAN_ALT_KOD, [POZISYON_KOD] = @POZISYON_KOD, [LOKASYON_KOD] = @LOKASYON_KOD, [GECIS_KOD] = @GECIS_KOD, [SENKRON] = @SENKRON, [SENDIKA_KOD] = @SENDIKA_KOD, [TASERON_KOD] = @TASERON_KOD, [CALISMA_SEKLI] = @CALISMA_SEKLI, [CALISMA_KONUMU] = @CALISMA_KONUMU, [DURUM] = @DURUM, [SICIL_EK] = @SICIL_EK, [SGK_NO] = @SGK_NO, [MASRAF_KODU] = @MASRAF_KODU, [YoneticiID] = @YoneticiID WHERE [PersonelID] = @Original_PersonelID;
-SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, CIKIS_TAR, UNVAN, YAKA, ISLETME_KOD, DEPARTMAN_KOD, DEPARTMAN_ALT_KOD, POZISYON_KOD, LOKASYON_KOD, GECIS_KOD, SENKRON, SENDIKA_KOD, TASERON_KOD, CALISMA_SEKLI, CALISMA_KONUMU, DURUM, SICIL_EK, SGK_NO, MASRAF_KODU, YoneticiID FROM Personel WHERE  (ID = SCOPE_IDENTITY())";
+            this._commandCollection[3].CommandText = @"UPDATE [dbo].[Personel] SET [SICIL] = @SICIL, [AD] = @AD, [SOYAD] = @SOYAD, [CINSIYET] = @CINSIYET, [DOGUM_TAR] = @DOGUM_TAR, [GIRIS_TAR] = @GIRIS_TAR, [CIKIS_TAR] = @CIKIS_TAR, [UNVAN] = @UNVAN, [YAKA] = @YAKA, [ISLETME_KOD] = @ISLETME_KOD, [DEPARTMAN_KOD] = @DEPARTMAN_KOD, [DEPARTMAN_ALT_KOD] = @DEPARTMAN_ALT_KOD, [POZISYON_KOD] = @POZISYON_KOD, [LOKASYON_KOD] = @LOKASYON_KOD, [GECIS_KOD] = @GECIS_KOD, [SENKRON] = @SENKRON, [SENDIKA_KOD] = @SENDIKA_KOD, [TASERON_KOD] = @TASERON_KOD, [CALISMA_SEKLI] = @CALISMA_SEKLI, [CALISMA_KONUMU] = @CALISMA_KONUMU, [DURUM] = @DURUM, [SICIL_EK] = @SICIL_EK, [SGK_NO] = @SGK_NO, [MASRAF_KODU] = @MASRAF_KODU, [FK_YoneticiID] = @FK_YoneticiID WHERE [PersonelID] = @Original_PersonelID;";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SICIL", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "SICIL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AD", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "AD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2212,7 +2211,7 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SICIL_EK", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "SICIL_EK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SGK_NO", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "SGK_NO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MASRAF_KODU", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "MASRAF_KODU", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@YoneticiID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "YoneticiID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FK_YoneticiID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "FK_YoneticiID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PersonelID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "PersonelID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -2300,7 +2299,7 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
                     string Original_SICIL_EK, 
                     string Original_SGK_NO, 
                     string Original_MASRAF_KODU, 
-                    global::System.Nullable<int> Original_YoneticiID) {
+                    global::System.Nullable<int> Original_FK_YoneticiID) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_PersonelID));
             if ((Original_SICIL == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -2502,9 +2501,9 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
                 this.Adapter.DeleteCommand.Parameters[49].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[50].Value = ((string)(Original_MASRAF_KODU));
             }
-            if ((Original_YoneticiID.HasValue == true)) {
+            if ((Original_FK_YoneticiID.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[51].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[52].Value = ((int)(Original_YoneticiID.Value));
+                this.Adapter.DeleteCommand.Parameters[52].Value = ((int)(Original_FK_YoneticiID.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[51].Value = ((object)(1));
@@ -2555,7 +2554,7 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
                     string SICIL_EK, 
                     string SGK_NO, 
                     string MASRAF_KODU, 
-                    global::System.Nullable<int> YoneticiID) {
+                    global::System.Nullable<int> FK_YoneticiID) {
             if ((SICIL == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -2700,8 +2699,8 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
             else {
                 this.Adapter.InsertCommand.Parameters[23].Value = ((string)(MASRAF_KODU));
             }
-            if ((YoneticiID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[24].Value = ((int)(YoneticiID.Value));
+            if ((FK_YoneticiID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[24].Value = ((int)(FK_YoneticiID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
@@ -2751,7 +2750,7 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
                     string SICIL_EK, 
                     string SGK_NO, 
                     string MASRAF_KODU, 
-                    global::System.Nullable<int> YoneticiID, 
+                    global::System.Nullable<int> FK_YoneticiID, 
                     int Original_PersonelID, 
                     string Original_SICIL, 
                     string Original_AD, 
@@ -2778,7 +2777,7 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
                     string Original_SICIL_EK, 
                     string Original_SGK_NO, 
                     string Original_MASRAF_KODU, 
-                    global::System.Nullable<int> Original_YoneticiID, 
+                    global::System.Nullable<int> Original_FK_YoneticiID, 
                     int PersonelID) {
             if ((SICIL == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -2924,8 +2923,8 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
             else {
                 this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(MASRAF_KODU));
             }
-            if ((YoneticiID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(YoneticiID.Value));
+            if ((FK_YoneticiID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(FK_YoneticiID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
@@ -3131,9 +3130,9 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
                 this.Adapter.UpdateCommand.Parameters[74].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[75].Value = ((string)(Original_MASRAF_KODU));
             }
-            if ((Original_YoneticiID.HasValue == true)) {
+            if ((Original_FK_YoneticiID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[76].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[77].Value = ((int)(Original_YoneticiID.Value));
+                this.Adapter.UpdateCommand.Parameters[77].Value = ((int)(Original_FK_YoneticiID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[76].Value = ((object)(1));
@@ -3185,7 +3184,7 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
                     string SICIL_EK, 
                     string SGK_NO, 
                     string MASRAF_KODU, 
-                    global::System.Nullable<int> YoneticiID, 
+                    global::System.Nullable<int> FK_YoneticiID, 
                     int Original_PersonelID, 
                     string Original_SICIL, 
                     string Original_AD, 
@@ -3212,8 +3211,8 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
                     string Original_SICIL_EK, 
                     string Original_SGK_NO, 
                     string Original_MASRAF_KODU, 
-                    global::System.Nullable<int> Original_YoneticiID) {
-            return this.Update(SICIL, AD, SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, CIKIS_TAR, UNVAN, YAKA, ISLETME_KOD, DEPARTMAN_KOD, DEPARTMAN_ALT_KOD, POZISYON_KOD, LOKASYON_KOD, GECIS_KOD, SENKRON, SENDIKA_KOD, TASERON_KOD, CALISMA_SEKLI, CALISMA_KONUMU, DURUM, SICIL_EK, SGK_NO, MASRAF_KODU, YoneticiID, Original_PersonelID, Original_SICIL, Original_AD, Original_SOYAD, Original_AD_SOYAD, Original_CINSIYET, Original_DOGUM_TAR, Original_GIRIS_TAR, Original_CIKIS_TAR, Original_UNVAN, Original_YAKA, Original_ISLETME_KOD, Original_DEPARTMAN_KOD, Original_DEPARTMAN_ALT_KOD, Original_POZISYON_KOD, Original_LOKASYON_KOD, Original_GECIS_KOD, Original_SENKRON, Original_SENDIKA_KOD, Original_TASERON_KOD, Original_CALISMA_SEKLI, Original_CALISMA_KONUMU, Original_DURUM, Original_SICIL_EK, Original_SGK_NO, Original_MASRAF_KODU, Original_YoneticiID, Original_PersonelID);
+                    global::System.Nullable<int> Original_FK_YoneticiID) {
+            return this.Update(SICIL, AD, SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, CIKIS_TAR, UNVAN, YAKA, ISLETME_KOD, DEPARTMAN_KOD, DEPARTMAN_ALT_KOD, POZISYON_KOD, LOKASYON_KOD, GECIS_KOD, SENKRON, SENDIKA_KOD, TASERON_KOD, CALISMA_SEKLI, CALISMA_KONUMU, DURUM, SICIL_EK, SGK_NO, MASRAF_KODU, FK_YoneticiID, Original_PersonelID, Original_SICIL, Original_AD, Original_SOYAD, Original_AD_SOYAD, Original_CINSIYET, Original_DOGUM_TAR, Original_GIRIS_TAR, Original_CIKIS_TAR, Original_UNVAN, Original_YAKA, Original_ISLETME_KOD, Original_DEPARTMAN_KOD, Original_DEPARTMAN_ALT_KOD, Original_POZISYON_KOD, Original_LOKASYON_KOD, Original_GECIS_KOD, Original_SENKRON, Original_SENDIKA_KOD, Original_TASERON_KOD, Original_CALISMA_SEKLI, Original_CALISMA_KONUMU, Original_DURUM, Original_SICIL_EK, Original_SGK_NO, Original_MASRAF_KODU, Original_FK_YoneticiID, Original_PersonelID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3269,7 +3268,7 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
                     string SICIL_EK, 
                     string SGK_NO, 
                     string MASRAF_KODU, 
-                    global::System.Nullable<int> YoneticiID) {
+                    global::System.Nullable<int> FK_YoneticiID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((SICIL == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -3415,8 +3414,8 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
             else {
                 command.Parameters[23].Value = ((string)(MASRAF_KODU));
             }
-            if ((YoneticiID.HasValue == true)) {
-                command.Parameters[24].Value = ((int)(YoneticiID.Value));
+            if ((FK_YoneticiID.HasValue == true)) {
+                command.Parameters[24].Value = ((int)(FK_YoneticiID.Value));
             }
             else {
                 command.Parameters[24].Value = global::System.DBNull.Value;
@@ -3467,7 +3466,7 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
                     string SICIL_EK, 
                     string SGK_NO, 
                     string MASRAF_KODU, 
-                    global::System.Nullable<int> YoneticiID, 
+                    global::System.Nullable<int> FK_YoneticiID, 
                     int Original_PersonelID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((SICIL == null)) {
@@ -3614,8 +3613,8 @@ SELECT PersonelID, SICIL, AD, SOYAD, AD_SOYAD, CINSIYET, DOGUM_TAR, GIRIS_TAR, C
             else {
                 command.Parameters[23].Value = ((string)(MASRAF_KODU));
             }
-            if ((YoneticiID.HasValue == true)) {
-                command.Parameters[24].Value = ((int)(YoneticiID.Value));
+            if ((FK_YoneticiID.HasValue == true)) {
+                command.Parameters[24].Value = ((int)(FK_YoneticiID.Value));
             }
             else {
                 command.Parameters[24].Value = global::System.DBNull.Value;

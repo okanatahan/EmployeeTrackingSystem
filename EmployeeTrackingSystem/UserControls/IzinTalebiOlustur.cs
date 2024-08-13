@@ -50,6 +50,10 @@ namespace EmployeeTrackingSystem.UserControls
 
         private void IzinTalepBtn_Click(object sender, EventArgs e)
         {
+            if (IzinTipleri.Text == "")
+            {
+                MessageBox.Show("Lütfen Bir İzin Tipi Seçiniz", "HATA!");
+            }
             try
             {
                 conn.Open();

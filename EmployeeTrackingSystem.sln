@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeTrackingSystem", "EmployeeTrackingSystem\EmployeeTrackingSystem.csproj", "{8760B879-50C0-41E4-9F15-AD5470E054BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{A3DA836B-75F5-4A7B-96E3-2F82FB76AA29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8760B879-50C0-41E4-9F15-AD5470E054BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8760B879-50C0-41E4-9F15-AD5470E054BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8760B879-50C0-41E4-9F15-AD5470E054BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3DA836B-75F5-4A7B-96E3-2F82FB76AA29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3DA836B-75F5-4A7B-96E3-2F82FB76AA29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3DA836B-75F5-4A7B-96E3-2F82FB76AA29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3DA836B-75F5-4A7B-96E3-2F82FB76AA29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

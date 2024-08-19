@@ -32,14 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DepartmanlarDGV = new System.Windows.Forms.DataGridView();
+            this.departmanlarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.departmanlarDataSet = new EmployeeTrackingSystem.DataSets.DepartmanlarDataSet();
             this.DepartmanEkleBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.DepartmanAdı = new System.Windows.Forms.TextBox();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departmanIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departmanAdıDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departmanlarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.departmanlarDataSet = new EmployeeTrackingSystem.DataSets.DepartmanlarDataSet();
             this.departmanlarTableAdapter = new EmployeeTrackingSystem.DataSets.DepartmanlarDataSetTableAdapters.DepartmanlarTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.DepartmanlarDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departmanlarBindingSource)).BeginInit();
@@ -50,7 +47,6 @@
             // 
             this.DepartmanlarDGV.AllowUserToAddRows = false;
             this.DepartmanlarDGV.AllowUserToDeleteRows = false;
-            this.DepartmanlarDGV.AutoGenerateColumns = false;
             this.DepartmanlarDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -61,11 +57,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DepartmanlarDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DepartmanlarDGV.ColumnHeadersHeight = 25;
-            this.DepartmanlarDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.departmanIDDataGridViewTextBoxColumn,
-            this.departmanAdıDataGridViewTextBoxColumn});
-            this.DepartmanlarDGV.DataSource = this.departmanlarBindingSource;
             this.DepartmanlarDGV.Location = new System.Drawing.Point(3, 3);
             this.DepartmanlarDGV.Name = "DepartmanlarDGV";
             this.DepartmanlarDGV.ReadOnly = true;
@@ -76,6 +67,16 @@
             this.DepartmanlarDGV.RowTemplate.Height = 25;
             this.DepartmanlarDGV.Size = new System.Drawing.Size(531, 966);
             this.DepartmanlarDGV.TabIndex = 0;
+            // 
+            // departmanlarBindingSource
+            // 
+            this.departmanlarBindingSource.DataMember = "Departmanlar";
+            this.departmanlarBindingSource.DataSource = this.departmanlarDataSet;
+            // 
+            // departmanlarDataSet
+            // 
+            this.departmanlarDataSet.DataSetName = "DepartmanlarDataSet";
+            this.departmanlarDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // DepartmanEkleBtn
             // 
@@ -106,40 +107,6 @@
             this.DepartmanAdı.Size = new System.Drawing.Size(180, 25);
             this.DepartmanAdı.TabIndex = 3;
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.FillWeight = 97.32893F;
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // departmanIDDataGridViewTextBoxColumn
-            // 
-            this.departmanIDDataGridViewTextBoxColumn.DataPropertyName = "DepartmanID";
-            this.departmanIDDataGridViewTextBoxColumn.FillWeight = 102.671F;
-            this.departmanIDDataGridViewTextBoxColumn.HeaderText = "DepartmanID";
-            this.departmanIDDataGridViewTextBoxColumn.Name = "departmanIDDataGridViewTextBoxColumn";
-            this.departmanIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // departmanAdıDataGridViewTextBoxColumn
-            // 
-            this.departmanAdıDataGridViewTextBoxColumn.DataPropertyName = "Departman_Adı";
-            this.departmanAdıDataGridViewTextBoxColumn.FillWeight = 99.99998F;
-            this.departmanAdıDataGridViewTextBoxColumn.HeaderText = "Departman_Adı";
-            this.departmanAdıDataGridViewTextBoxColumn.Name = "departmanAdıDataGridViewTextBoxColumn";
-            this.departmanAdıDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // departmanlarBindingSource
-            // 
-            this.departmanlarBindingSource.DataMember = "Departmanlar";
-            this.departmanlarBindingSource.DataSource = this.departmanlarDataSet;
-            // 
-            // departmanlarDataSet
-            // 
-            this.departmanlarDataSet.DataSetName = "DepartmanlarDataSet";
-            this.departmanlarDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // departmanlarTableAdapter
             // 
             this.departmanlarTableAdapter.ClearBeforeFill = true;
@@ -169,9 +136,6 @@
         private System.Windows.Forms.Button DepartmanEkleBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox DepartmanAdı;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn departmanIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn departmanAdıDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource departmanlarBindingSource;
         private DataSets.DepartmanlarDataSet departmanlarDataSet;
         private DataSets.DepartmanlarDataSetTableAdapters.DepartmanlarTableAdapter departmanlarTableAdapter;

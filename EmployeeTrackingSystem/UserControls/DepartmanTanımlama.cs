@@ -29,18 +29,56 @@ namespace EmployeeTrackingSystem.UserControls
 
         private async void UpdateListAsync()
         {
-            var response = await _httpClient.GetStringAsync($"Departman");
+            var response = await _httpClient.GetStringAsync("Departman");
             var personel = JsonSerializer.Deserialize<List<DepartmanModel>>(response);
             DepartmanlarDGV.DataSource = personel;
             //DepartmanlarDGV.DataSource = ta.GetData();
         }
 
-        private void DepartmanEkleBtn_Click(object sender, EventArgs e)
+        private async void DepartmanEkleBtn_Click(object sender, EventArgs e)
         {
-            string d = DepartmanAdı.Text;
-            ta.InsertQuery(d);
+            try
+            {
+                var departmanModel = new DepartmanModel
+                {
+                    DEPARTMAN_ADI = DepartmanAdı.Text
+                };
+
+                var json = JsonSerializer.Serialize(departmanModel);
+                HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await _httpClient.PostAsync("Departman", content);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseData = await response.Content.ReadAsStringAsync();
+
+                    UpdateListAsync();
+                    MessageBox.Show("Departman Başarıyla Eklendi", "İşlem Başarılı!");
+                }
+                else
+                {
+                    MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}", "İşlem Başarısız!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Exception: {ex.Message}", "Error");
+            }
+            //ta.InsertQuery(d);
+        }
+
+        private async void DepartmanSilBtn_Click(object sender, EventArgs e)
+        {
+            int id = (int)DepartmanlarDGV.Rows[DepartmanlarDGV.CurrentRow.Index].Cells[0].Value;
+            await _httpClient.DeleteAsync($"Departman/{id}");
             UpdateListAsync();
-            MessageBox.Show("Departman Başarıyla Eklendi", "İşlem Başarılı!");
+            MessageBox.Show("Departman Başarıyla Silindi", "İşlem Başarılı!");
+        }
+
+        private void DepartmanDznBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

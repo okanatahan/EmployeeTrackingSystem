@@ -65,7 +65,7 @@ namespace EmployeeTrackingSystem.UserControls
                 var PersonelAdSoyad = PersonelResponse.AD_SOYAD;
                 var IzinTipi = IzinTipleri.SelectedValue;
                 var YoneticiID = PersonelResponse.FK_YoneticiID;
-                var YoneticiInfo = await _httpClient.GetStringAsync($"Yoneticiler/{id}");
+                var YoneticiInfo = await _httpClient.GetStringAsync($"Yoneticiler/{YoneticiID}");
                 var YoneticiResponse = JsonSerializer.Deserialize<YoneticiModel>(YoneticiInfo);
                 var YoneticiAdSoyad = YoneticiResponse.AD_SOYAD;
 

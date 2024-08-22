@@ -15,7 +15,6 @@ namespace EmployeeTrackingSystem.UserControls
 {
     public partial class DepartmanTanımlama : UserControl
     {
-        DepartmanlarTableAdapter ta = new DepartmanlarTableAdapter();
         private readonly HttpClient _httpClient;
         public DepartmanTanımlama()
         {
@@ -32,7 +31,6 @@ namespace EmployeeTrackingSystem.UserControls
             var response = await _httpClient.GetStringAsync("Departman");
             var personel = JsonSerializer.Deserialize<List<DepartmanModel>>(response);
             DepartmanlarDGV.DataSource = personel;
-            //DepartmanlarDGV.DataSource = ta.GetData();
         }
 
         private async void DepartmanEkleBtn_Click(object sender, EventArgs e)
@@ -51,34 +49,62 @@ namespace EmployeeTrackingSystem.UserControls
 
                 if (response.IsSuccessStatusCode)
                 {
-                    var responseData = await response.Content.ReadAsStringAsync();
+                    //var responseData = await response.Content.ReadAsStringAsync();
 
                     UpdateListAsync();
                     MessageBox.Show("Departman Başarıyla Eklendi", "İşlem Başarılı!");
                 }
                 else
                 {
-                    MessageBox.Show($"Error: {response.StatusCode} - {response.ReasonPhrase}", "İşlem Başarısız!");
+                    MessageBox.Show($"Hata: {response.StatusCode} - {response.ReasonPhrase}", "İşlem Başarısız!");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Exception: {ex.Message}", "Error");
+                MessageBox.Show($"Exception: {ex.Message}", "Hata");
             }
-            //ta.InsertQuery(d);
         }
 
         private async void DepartmanSilBtn_Click(object sender, EventArgs e)
         {
             int id = (int)DepartmanlarDGV.Rows[DepartmanlarDGV.CurrentRow.Index].Cells[0].Value;
-            await _httpClient.DeleteAsync($"Departman/{id}");
-            UpdateListAsync();
-            MessageBox.Show("Departman Başarıyla Silindi", "İşlem Başarılı!");
+            var response = await _httpClient.DeleteAsync($"Departman/{id}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                UpdateListAsync();
+                MessageBox.Show("Departman Başarıyla Silindi", "İşlem Başarılı!");
+            }
+            else
+            {
+                MessageBox.Show($"Hata: {response.StatusCode} - {response.ReasonPhrase}", "İşlem Başarısız!");
+            }
         }
 
-        private void DepartmanDznBtn_Click(object sender, EventArgs e)
+        private async void DepartmanDznBtn_Click(object sender, EventArgs e)
         {
+            int id = (int)DepartmanlarDGV.Rows[DepartmanlarDGV.CurrentRow.Index].Cells[0].Value;
 
+            var departmanModel = new DepartmanModel
+            {
+                ID = id,
+                DEPARTMAN_ADI = YeniDepartmanAd.Text
+            };
+
+            var json = JsonSerializer.Serialize(departmanModel);
+            HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await _httpClient.PutAsync($"Departman/{id}", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                UpdateListAsync();
+                MessageBox.Show("Seçili Departman Başarıyla Güncellendi", "İşlem Başarılı");
+            }
+            else
+            {
+                MessageBox.Show($"Hata: {response.StatusCode} - {response.ReasonPhrase}", "İşlem Başarısız!");
+            }
         }
     }
 

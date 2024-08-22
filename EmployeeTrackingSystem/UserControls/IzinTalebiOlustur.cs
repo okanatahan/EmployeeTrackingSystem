@@ -1,13 +1,11 @@
-﻿using EmployeeTrackingSystem.DataSets;
-using EmployeeTrackingSystem.DataSets.IzinTipleriDataSetTableAdapters;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,22 +14,27 @@ namespace EmployeeTrackingSystem.UserControls
     public partial class IzinTalebiOlustur : UserControl
     {
         string id;
-        string YoneticiID;
-        IzinTipleriTableAdapter ta = new IzinTipleriTableAdapter();
-        SqlConnection conn = new SqlConnection(@"Data Source=OKAN\SQLEXPRESS;Initial Catalog=Company;Integrated Security=True;Encrypt=False;TrustServerCertificate=True");
+        HttpClient _httpClient;
         public IzinTalebiOlustur(string id)
         {
             InitializeComponent();
+            _httpClient = new HttpClient
+            {
+                BaseAddress = new Uri("http://localhost:5000/api/")
+            };
+            this.id = id;
             SetComboBox();
             IzinBaslangicTar.MinDate = DateTime.Now;
             IzinBitisTar.MinDate = DateTime.Now;
-            this.id = id;
         }
 
-        private void SetComboBox()
+        private async void SetComboBox()
         {
-            IzinTipleriDataSet.IzinTipleriDataTable dt = ta.GetData();
-            IzinTipleri.DataSource = dt;
+            var json = await _httpClient.GetStringAsync("IzinTipleri");
+            var response = JsonSerializer.Deserialize<List<IzinTipModel>>(json);
+            var Sorted = response.OrderBy(d => d.ID).ToList();
+
+            IzinTipleri.DataSource = Sorted;
             IzinTipleri.DisplayMember = "IZIN_TIPI";
             IzinTipleri.ValueMember = "IZIN_TIPI";
         }
@@ -48,59 +51,107 @@ namespace EmployeeTrackingSystem.UserControls
             IzinBitisTar.MinDate = IzinBaslangicTar.Value;
         }
 
-        private void IzinTalepBtn_Click(object sender, EventArgs e)
+        private async void IzinTalepBtn_Click(object sender, EventArgs e)
         {
             if (IzinTipleri.Text == "")
             {
                 MessageBox.Show("Lütfen Bir İzin Tipi Seçiniz", "HATA!");
+                return;
             }
             try
             {
-                conn.Open();
-                String GetYoneticiID = "SELECT FK_YoneticiID FROM Personel WHERE PersonelID = @id";
-                String InsertQuery = "INSERT INTO IzinTalepleri (FK_PersonelID, Ad_Soyad, IzinBaslangicTar, IzinBitisTar, FK_IzinTipi, FK_YoneticiID, Yonetici) VALUES (@PersonelID, @Ad_Soyad, @IzinBasTar, @IzinBitTar, @IzinTipi, @YoneticiID, @Yonetici)";
-                
-                using (SqlCommand cmd = new SqlCommand(GetYoneticiID, conn))
+                var PersonelInfo = await _httpClient.GetStringAsync($"Personeller/{id}");
+                var PersonelResponse = JsonSerializer.Deserialize<PersonelModel>(PersonelInfo);
+                var PersonelAdSoyad = PersonelResponse.AD_SOYAD;
+                var IzinTipi = IzinTipleri.SelectedValue;
+                var YoneticiID = PersonelResponse.FK_YoneticiID;
+                var YoneticiInfo = await _httpClient.GetStringAsync($"Yoneticiler/{id}");
+                var YoneticiResponse = JsonSerializer.Deserialize<YoneticiModel>(YoneticiInfo);
+                var YoneticiAdSoyad = YoneticiResponse.AD_SOYAD;
+
+                var izinTalep = new IzinTalepModel
                 {
-                    cmd.Parameters.AddWithValue("@id", id);
-                    object result = cmd.ExecuteScalar();
-                    this.YoneticiID = result.ToString();
+                    FK_PersonelID = int.Parse(id),
+                    Ad_Soyad = PersonelAdSoyad,
+                    IzinBaslangicTar = IzinBaslangicTar.Value,
+                    IzinBitisTar = IzinBitisTar.Value,
+                    FK_IzinTipi = IzinTipleri.SelectedValue.ToString(),
+                    FK_YoneticiID = YoneticiID,
+                    Yonetici = YoneticiAdSoyad
+                };
 
-                    String GetYonetici = "SELECT AD_SOYAD FROM Yoneticiler WHERE YoneticiID = @YoneticiID";
-                    cmd.Parameters.Clear();
-                    cmd.CommandText = GetYonetici;
-                    cmd.Parameters.AddWithValue("@YoneticiID", YoneticiID);
-                    string YoneticiAD_SOYAD = cmd.ExecuteScalar().ToString();
+                var json = JsonSerializer.Serialize(izinTalep);
+                HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                    String GetAd_Soyad = "SELECT AD_SOYAD FROM Personel WHERE PersonelID = @id";
-                    cmd.Parameters.Clear();
-                    cmd.CommandText = GetAd_Soyad;
-                    cmd.Parameters.AddWithValue("@id", id);
-                    string PersonelAd_Soyad = cmd.ExecuteScalar().ToString();
+                var response = await _httpClient.PostAsync("izintalepleri", content);
 
-                    cmd.Parameters.Clear();
-                    cmd.CommandText = InsertQuery;
-                    cmd.Parameters.AddWithValue("@PersonelID", id);
-                    cmd.Parameters.AddWithValue("@Ad_Soyad", PersonelAd_Soyad);
-                    cmd.Parameters.AddWithValue("@IzinBasTar", IzinBaslangicTar.Value.Date);
-                    cmd.Parameters.AddWithValue("@IzinBitTar", IzinBitisTar.Value.Date);
-                    cmd.Parameters.AddWithValue("@IzinTipi", IzinTipleri.SelectedValue);
-                    cmd.Parameters.AddWithValue("@YoneticiID", YoneticiID);
-                    cmd.Parameters.AddWithValue("@Yonetici", YoneticiAD_SOYAD);
-
-                    cmd.ExecuteScalar();
-
-                    MessageBox.Show("Talebiniz Başarıyla Oluşturuldu.", "Talep Başarılı!");
+                if (response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("İzin Talebiniz Başarıyla Oluşturuldu", "Talep Başarılı!");
+                }
+                else
+                {
+                    MessageBox.Show($"Hata: {response.StatusCode} - {response.ReasonPhrase}", "İşlem Başarısız!");
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Hata: " + ex, "Hata Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                conn.Close();
-            }
         }
+    }
+    public class PersonelModel
+    {
+        public int PersonelID { get; set; }
+        public string SICIL { get; set; }
+        public string AD { get; set; }
+        public string SOYAD { get; set; }
+        public string AD_SOYAD => $"{AD} {SOYAD}";
+        public string CINSIYET { get; set; }
+        public DateTime? DOGUM_TAR { get; set; }
+        public DateTime? GIRIS_TAR { get; set; }
+        public DateTime? CIKIS_TAR { get; set; }
+        public string UNVAN { get; set; }
+        public string YAKA { get; set; }
+        public string ISLETME_KOD { get; set; }
+        public string DEPARTMAN_KOD { get; set; }
+        public string DEPARTMAN_ALT_KOD { get; set; }
+        public string POZISYON_KOD { get; set; }
+        public string LOKASYON_KOD { get; set; }
+        public string GECIS_KOD { get; set; }
+        public bool? SENKRON { get; set; }
+        public string SENDIKA_KOD { get; set; }
+        public string TASERON_KOD { get; set; }
+        public string CALISMA_SEKLI { get; set; }
+        public string CALISMA_KONUMU { get; set; }
+        public string DURUM { get; set; }
+        public string SICIL_EK { get; set; }
+        public string SGK_NO { get; set; }
+        public string MASRAF_KODU { get; set; }
+        public int FK_YoneticiID { get; set; }
+    }
+    public class YoneticiModel
+    {
+        public int YoneticiID { get; set; }
+        public int FK_PersonelID { get; set; }
+        public string AD { get; set; }
+        public string SOYAD { get; set; }
+        public string AD_SOYAD => $"{AD} {SOYAD}";
+    }
+    public class IzinTalepModel
+    {
+        public int FK_PersonelID { get; set; }
+        public string Ad_Soyad { get; set; }
+        public DateTime IzinBaslangicTar { get; set; }
+        public DateTime IzinBitisTar { get; set; }
+        public string FK_IzinTipi { get; set; }
+        public int FK_YoneticiID { get; set; }
+        public string Yonetici { get; set; }
+        public string OnayDurumu { get; set; }
+    }
+    public class IzinTipModel
+    {
+        public int ID { get; set; }
+        public string IZIN_TIPI { get; set; }
     }
 }

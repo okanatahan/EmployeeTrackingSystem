@@ -12,11 +12,11 @@ namespace Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DepartmanController : ControllerBase
+    public class DepartmanlarController : ControllerBase
     {
         private readonly ApiContext _context;
 
-        public DepartmanController(ApiContext context)
+        public DepartmanlarController(ApiContext context)
         {
             _context = context;
         }

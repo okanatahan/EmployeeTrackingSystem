@@ -10,7 +10,10 @@ namespace Api.Data
         {
 
         }
-        public DbSet<PersonelModel> Personel { get; set; }
+        public DbSet<PersonelModel> Personeller { get; set; } = default!;
         public DbSet<DepartmanModel> Departmanlar { get; set; } = default!;
+        public DbSet<YoneticiModel> Yoneticiler { get; set; } = default!;
+        public DbSet<IzinTalepModel> IzinTalepleri { get; set; } = default!;
+        public DbSet<IzinTipModel> IzinTipleri { get; set; } = default!;
     }
 }

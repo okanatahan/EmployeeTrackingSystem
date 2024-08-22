@@ -1,5 +1,4 @@
-﻿using EmployeeTrackingSystem.DataSets.DepartmanlarDataSetTableAdapters;
-using System.Text.Json;
+﻿using System.Text.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,9 +27,9 @@ namespace EmployeeTrackingSystem.UserControls
 
         private async void UpdateListAsync()
         {
-            var response = await _httpClient.GetStringAsync("Departman");
-            var personel = JsonSerializer.Deserialize<List<DepartmanModel>>(response);
-            DepartmanlarDGV.DataSource = personel;
+            var response = await _httpClient.GetStringAsync("Departmanlar");
+            var departman = JsonSerializer.Deserialize<List<DepartmanModel>>(response);
+            DepartmanlarDGV.DataSource = departman;
         }
 
         private async void DepartmanEkleBtn_Click(object sender, EventArgs e)
@@ -45,7 +44,7 @@ namespace EmployeeTrackingSystem.UserControls
                 var json = JsonSerializer.Serialize(departmanModel);
                 HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                var response = await _httpClient.PostAsync("Departman", content);
+                var response = await _httpClient.PostAsync("Departmanlar", content);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -68,7 +67,7 @@ namespace EmployeeTrackingSystem.UserControls
         private async void DepartmanSilBtn_Click(object sender, EventArgs e)
         {
             int id = (int)DepartmanlarDGV.Rows[DepartmanlarDGV.CurrentRow.Index].Cells[0].Value;
-            var response = await _httpClient.DeleteAsync($"Departman/{id}");
+            var response = await _httpClient.DeleteAsync($"Departmanlar/{id}");
 
             if (response.IsSuccessStatusCode)
             {
@@ -94,7 +93,7 @@ namespace EmployeeTrackingSystem.UserControls
             var json = JsonSerializer.Serialize(departmanModel);
             HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var response = await _httpClient.PutAsync($"Departman/{id}", content);
+            var response = await _httpClient.PutAsync($"Departmanlar/{id}", content);
 
             if (response.IsSuccessStatusCode)
             {

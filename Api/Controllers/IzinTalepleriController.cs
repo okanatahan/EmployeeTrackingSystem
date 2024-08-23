@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Api.Data;
 using Api.Models;
-using Microsoft.AspNetCore.JsonPatch;
 
 namespace Api.Controllers
 {
@@ -104,21 +103,6 @@ namespace Api.Controllers
         private bool IzinTalepleriModelExists(int id)
         {
             return _context.IzinTalepleri.Any(e => e.TalepID == id);
-        }
-
-        [HttpPatch("{id}")]
-        public async Task<IActionResult> PatchIzinTalepleriModel(int id, [FromBody] JsonPatchDocument<IzinTalepModel> patchDoc)
-        {
-            var entity = await _context.IzinTalepleri.FindAsync(id);
-            if (entity == null)
-            {
-                return NotFound();
-            }
-
-            patchDoc.ApplyTo(entity);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
         }
     }
 }

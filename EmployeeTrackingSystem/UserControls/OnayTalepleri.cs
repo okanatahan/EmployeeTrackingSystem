@@ -64,15 +64,26 @@ namespace EmployeeTrackingSystem.UserControls
         {
             int TalepID = (int)OnayTalepleriDGV.Rows[OnayTalepleriDGV.CurrentRow.Index].Cells[0].Value;
 
+            var PersonelJson = await _httpClient.GetStringAsync($"izintalepleri/{TalepID}");
+            var PersonelResponse= JsonSerializer.Deserialize<IzinTalepModel>(PersonelJson);
+
             var izinTalepModel = new IzinTalepModel
             {
+                TalepID = TalepID,
+                FK_PersonelID = PersonelResponse.FK_PersonelID,
+                Ad_Soyad = PersonelResponse.Ad_Soyad,
+                IzinBaslangicTar = PersonelResponse.IzinBaslangicTar,
+                IzinBitisTar = PersonelResponse.IzinBitisTar,
+                FK_IzinTipi = PersonelResponse.FK_IzinTipi,
+                FK_YoneticiID = PersonelResponse.FK_YoneticiID,
+                Yonetici = PersonelResponse.Yonetici,
                 OnayDurumu = "ONAYLANDI"
             };
 
             var json = JsonSerializer.Serialize(izinTalepModel);
             HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var response = await _httpClient.PatchAsync($"izintalepleri/{TalepID}", content);
+            var response = await _httpClient.PutAsync($"izintalepleri/{TalepID}", content);
 
             if (response.IsSuccessStatusCode)
             {
@@ -89,15 +100,26 @@ namespace EmployeeTrackingSystem.UserControls
         {
             int TalepID = (int)OnayTalepleriDGV.Rows[OnayTalepleriDGV.CurrentRow.Index].Cells[0].Value;
 
+            var PersonelJson = await _httpClient.GetStringAsync($"izintalepleri/{TalepID}");
+            var PersonelResponse = JsonSerializer.Deserialize<IzinTalepModel>(PersonelJson);
+
             var izinTalepModel = new IzinTalepModel
             {
+                TalepID = TalepID,
+                FK_PersonelID = PersonelResponse.FK_PersonelID,
+                Ad_Soyad = PersonelResponse.Ad_Soyad,
+                IzinBaslangicTar = PersonelResponse.IzinBaslangicTar,
+                IzinBitisTar = PersonelResponse.IzinBitisTar,
+                FK_IzinTipi = PersonelResponse.FK_IzinTipi,
+                FK_YoneticiID = PersonelResponse.FK_YoneticiID,
+                Yonetici = PersonelResponse.Yonetici,
                 OnayDurumu = "REDDEDİLDİ"
             };
 
             var json = JsonSerializer.Serialize(izinTalepModel);
             HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var response = await _httpClient.PatchAsync($"izintalepleri/{TalepID}", content);
+            var response = await _httpClient.PutAsync($"izintalepleri/{TalepID}", content);
 
             if (response.IsSuccessStatusCode)
             {

@@ -34,18 +34,11 @@
             this.IzinAdı = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.IzinTipleriDGV = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iZINTIPIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.izinTipleriBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.izinTipleriDataSet = new EmployeeTrackingSystem.DataSets.IzinTipleriDataSet();
             this.IzinSilBtn = new System.Windows.Forms.Button();
-            this.izinTipleriTableAdapter = new EmployeeTrackingSystem.DataSets.IzinTipleriDataSetTableAdapters.IzinTipleriTableAdapter();
             this.IzniDznBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.YeniİzinAdı = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.IzinTipleriDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.izinTipleriBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.izinTipleriDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // IzinEkleBtn
@@ -81,7 +74,6 @@
             // 
             this.IzinTipleriDGV.AllowUserToAddRows = false;
             this.IzinTipleriDGV.AllowUserToDeleteRows = false;
-            this.IzinTipleriDGV.AutoGenerateColumns = false;
             this.IzinTipleriDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -92,10 +84,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.IzinTipleriDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.IzinTipleriDGV.ColumnHeadersHeight = 25;
-            this.IzinTipleriDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.iZINTIPIDataGridViewTextBoxColumn});
-            this.IzinTipleriDGV.DataSource = this.izinTipleriBindingSource;
             this.IzinTipleriDGV.Location = new System.Drawing.Point(3, 3);
             this.IzinTipleriDGV.Name = "IzinTipleriDGV";
             this.IzinTipleriDGV.ReadOnly = true;
@@ -103,30 +91,6 @@
             this.IzinTipleriDGV.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IzinTipleriDGV.Size = new System.Drawing.Size(374, 966);
             this.IzinTipleriDGV.TabIndex = 0;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // iZINTIPIDataGridViewTextBoxColumn
-            // 
-            this.iZINTIPIDataGridViewTextBoxColumn.DataPropertyName = "IZIN_TIPI";
-            this.iZINTIPIDataGridViewTextBoxColumn.HeaderText = "IZIN_TIPI";
-            this.iZINTIPIDataGridViewTextBoxColumn.Name = "iZINTIPIDataGridViewTextBoxColumn";
-            this.iZINTIPIDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // izinTipleriBindingSource
-            // 
-            this.izinTipleriBindingSource.DataMember = "IzinTipleri";
-            this.izinTipleriBindingSource.DataSource = this.izinTipleriDataSet;
-            // 
-            // izinTipleriDataSet
-            // 
-            this.izinTipleriDataSet.DataSetName = "IzinTipleriDataSet";
-            this.izinTipleriDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // IzinSilBtn
             // 
@@ -138,10 +102,6 @@
             this.IzinSilBtn.Text = "SEÇİLİ İZİNİ SİL";
             this.IzinSilBtn.UseVisualStyleBackColor = true;
             this.IzinSilBtn.Click += new System.EventHandler(this.IzinSilBtn_Click);
-            // 
-            // izinTipleriTableAdapter
-            // 
-            this.izinTipleriTableAdapter.ClearBeforeFill = true;
             // 
             // IzniDznBtn
             // 
@@ -188,8 +148,6 @@
             this.Name = "IzinTipiTanımlama";
             this.Size = new System.Drawing.Size(1800, 972);
             ((System.ComponentModel.ISupportInitialize)(this.IzinTipleriDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.izinTipleriBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.izinTipleriDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,11 +159,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView IzinTipleriDGV;
         private System.Windows.Forms.Button IzinSilBtn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iZINTIPIDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource izinTipleriBindingSource;
-        private DataSets.IzinTipleriDataSet izinTipleriDataSet;
-        private DataSets.IzinTipleriDataSetTableAdapters.IzinTipleriTableAdapter izinTipleriTableAdapter;
         private System.Windows.Forms.Button IzniDznBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox YeniİzinAdı;

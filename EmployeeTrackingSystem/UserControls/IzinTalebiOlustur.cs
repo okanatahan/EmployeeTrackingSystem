@@ -97,7 +97,7 @@ namespace EmployeeTrackingSystem.UserControls
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hata: " + ex, "Hata Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Exception: {ex.Message}", "Hata");
             }
         }
     }

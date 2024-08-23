@@ -42,7 +42,7 @@ namespace EmployeeTrackingSystem.UserControls
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show($"Exception: {ex.Message}", "Hata");
             }
         }
     }

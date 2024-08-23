@@ -15,7 +15,7 @@ namespace EmployeeTrackingSystem.UserControls
 {
     public partial class IzinTalebiTakip : UserControl
     {
-        HttpClient _httpClient;
+        private readonly HttpClient _httpClient;
         public IzinTalebiTakip(string id)
         {
             InitializeComponent();

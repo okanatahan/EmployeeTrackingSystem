@@ -15,7 +15,7 @@ namespace EmployeeTrackingSystem.UserControls
     public partial class IzinTalebiOlustur : UserControl
     {
         string id;
-        HttpClient _httpClient;
+        private readonly HttpClient _httpClient;
         public IzinTalebiOlustur(string id)
         {
             InitializeComponent();
@@ -54,6 +54,11 @@ namespace EmployeeTrackingSystem.UserControls
 
         private async void IzinTalepBtn_Click(object sender, EventArgs e)
         {
+            // check the izintalepleri table by personelid where OnayDurumu is null, and if the count of rows is > 0,
+            // then return; so that the user cannot create another annual leave request
+            // then make FK_PersonelID in izintalepleri table Key again and add get by id method back to its controller
+            // but change it so that it only retrieves data where onaydurumu is null. so, there will be 1 row.
+            // then make changes to related user controls
             if (IzinTipleri.Text == "")
             {
                 MessageBox.Show("Lütfen Bir İzin Tipi Seçiniz", "HATA!");

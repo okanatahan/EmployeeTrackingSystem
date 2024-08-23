@@ -28,23 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgv = new System.Windows.Forms.DataGridView();
+            this.OnayTalepleriDGV = new System.Windows.Forms.DataGridView();
             this.OnayBtn = new System.Windows.Forms.Button();
             this.RedBtn = new System.Windows.Forms.Button();
-            this.TalepGorBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OnayTalepleriDGV)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgv
+            // OnayTalepleriDGV
             // 
-            this.dgv.AllowUserToAddRows = false;
-            this.dgv.AllowUserToDeleteRows = false;
-            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(3, 3);
-            this.dgv.Name = "dgv";
-            this.dgv.ReadOnly = true;
-            this.dgv.Size = new System.Drawing.Size(926, 966);
-            this.dgv.TabIndex = 0;
+            this.OnayTalepleriDGV.AllowUserToAddRows = false;
+            this.OnayTalepleriDGV.AllowUserToDeleteRows = false;
+            this.OnayTalepleriDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OnayTalepleriDGV.Location = new System.Drawing.Point(3, 3);
+            this.OnayTalepleriDGV.Name = "OnayTalepleriDGV";
+            this.OnayTalepleriDGV.ReadOnly = true;
+            this.OnayTalepleriDGV.Size = new System.Drawing.Size(926, 966);
+            this.OnayTalepleriDGV.TabIndex = 0;
             // 
             // OnayBtn
             // 
@@ -70,39 +69,25 @@
             this.RedBtn.UseVisualStyleBackColor = false;
             this.RedBtn.Click += new System.EventHandler(this.RedBtn_Click);
             // 
-            // TalepGorBtn
-            // 
-            this.TalepGorBtn.BackColor = System.Drawing.Color.Magenta;
-            this.TalepGorBtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TalepGorBtn.Location = new System.Drawing.Point(1288, 340);
-            this.TalepGorBtn.Name = "TalepGorBtn";
-            this.TalepGorBtn.Size = new System.Drawing.Size(175, 64);
-            this.TalepGorBtn.TabIndex = 3;
-            this.TalepGorBtn.Text = "TALEPLERİ GÖRÜNTÜLE";
-            this.TalepGorBtn.UseVisualStyleBackColor = false;
-            this.TalepGorBtn.Click += new System.EventHandler(this.TalepGorBtn_Click);
-            // 
             // OnayTalepleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.Controls.Add(this.TalepGorBtn);
             this.Controls.Add(this.RedBtn);
             this.Controls.Add(this.OnayBtn);
-            this.Controls.Add(this.dgv);
+            this.Controls.Add(this.OnayTalepleriDGV);
             this.Name = "OnayTalepleri";
             this.Size = new System.Drawing.Size(1800, 972);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OnayTalepleriDGV)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.DataGridView OnayTalepleriDGV;
         private System.Windows.Forms.Button OnayBtn;
         private System.Windows.Forms.Button RedBtn;
-        private System.Windows.Forms.Button TalepGorBtn;
     }
 }

@@ -1,5 +1,5 @@
-﻿using System.Text.Json;
-using System;
+﻿using System;
+using System.Text.Json;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EmployeeTrackingSystem.Models;
 
 namespace EmployeeTrackingSystem.UserControls
 {
@@ -105,12 +106,5 @@ namespace EmployeeTrackingSystem.UserControls
                 MessageBox.Show($"Hata: {response.StatusCode} - {response.ReasonPhrase}", "İşlem Başarısız!");
             }
         }
-    }
-
-    public class DepartmanModel
-    {
-        public int ID { get; set; }
-        public string DepartmanID => $"DEP{ID}";
-        public string DEPARTMAN_ADI { get; set; }
     }
 }

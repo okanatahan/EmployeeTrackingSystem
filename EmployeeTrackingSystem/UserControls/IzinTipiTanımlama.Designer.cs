@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.IzinEkleBtn = new System.Windows.Forms.Button();
             this.IzinAdı = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
             this.izinTipleriDataSet = new EmployeeTrackingSystem.DataSets.IzinTipleriDataSet();
             this.IzinSilBtn = new System.Windows.Forms.Button();
             this.izinTipleriTableAdapter = new EmployeeTrackingSystem.DataSets.IzinTipleriDataSetTableAdapters.IzinTipleriTableAdapter();
-            this.IzniGuncelleBtn = new System.Windows.Forms.Button();
+            this.IzniDznBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.YeniİzinAdı = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.IzinTipleriDGV)).BeginInit();
@@ -83,14 +83,14 @@
             this.IzinTipleriDGV.AllowUserToDeleteRows = false;
             this.IzinTipleriDGV.AutoGenerateColumns = false;
             this.IzinTipleriDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.IzinTipleriDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.IzinTipleriDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.IzinTipleriDGV.ColumnHeadersHeight = 25;
             this.IzinTipleriDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
@@ -143,16 +143,16 @@
             // 
             this.izinTipleriTableAdapter.ClearBeforeFill = true;
             // 
-            // IzniGuncelleBtn
+            // IzniDznBtn
             // 
-            this.IzniGuncelleBtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IzniGuncelleBtn.Location = new System.Drawing.Point(1250, 462);
-            this.IzniGuncelleBtn.Name = "IzniGuncelleBtn";
-            this.IzniGuncelleBtn.Size = new System.Drawing.Size(210, 48);
-            this.IzniGuncelleBtn.TabIndex = 7;
-            this.IzniGuncelleBtn.Text = "SEÇİLİ İZNİ GÜNCELLE";
-            this.IzniGuncelleBtn.UseVisualStyleBackColor = true;
-            this.IzniGuncelleBtn.Click += new System.EventHandler(this.IzniGuncelleBtn_Click);
+            this.IzniDznBtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IzniDznBtn.Location = new System.Drawing.Point(1250, 462);
+            this.IzniDznBtn.Name = "IzniDznBtn";
+            this.IzniDznBtn.Size = new System.Drawing.Size(210, 48);
+            this.IzniDznBtn.TabIndex = 7;
+            this.IzniDznBtn.Text = "SEÇİLİ İZNİ DÜZENLE";
+            this.IzniDznBtn.UseVisualStyleBackColor = true;
+            this.IzniDznBtn.Click += new System.EventHandler(this.IzniDznBtn_Click);
             // 
             // label2
             // 
@@ -177,7 +177,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.Controls.Add(this.IzniGuncelleBtn);
+            this.Controls.Add(this.IzniDznBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.YeniİzinAdı);
             this.Controls.Add(this.IzinSilBtn);
@@ -206,7 +206,7 @@
         private System.Windows.Forms.BindingSource izinTipleriBindingSource;
         private DataSets.IzinTipleriDataSet izinTipleriDataSet;
         private DataSets.IzinTipleriDataSetTableAdapters.IzinTipleriTableAdapter izinTipleriTableAdapter;
-        private System.Windows.Forms.Button IzniGuncelleBtn;
+        private System.Windows.Forms.Button IzniDznBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox YeniİzinAdı;
     }

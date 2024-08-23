@@ -138,6 +138,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LokasyonlarDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Models\DepartmanModel.cs" />
     <Compile Include="Models\IzinTalepModel.cs" />
     <Compile Include="Models\IzinTipModel.cs" />
     <Compile Include="Models\PersonelModel.cs" />

@@ -72,17 +72,17 @@ namespace EmployeeTrackingSystem.UserControls
             var json = JsonSerializer.Serialize(izinTalepModel);
             HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            //var response = await _httpClient.PatchAsync($"izintalepleri/{TalepID}", content);
+            var response = await _httpClient.PatchAsync($"izintalepleri/{TalepID}", content);
 
-            //if (response.IsSuccessStatusCode)
-            //{
-            //    DisplayTable();
-            //    MessageBox.Show("Seçili İzin Talebi Başarıyla Onaylandı", "İşlem Başarılı!");
-            //}
-            //else
-            //{
-            //    MessageBox.Show($"Hata: {response.StatusCode} - {response.ReasonPhrase}", "İşlem Başarısız!");
-            //}
+            if (response.IsSuccessStatusCode)
+            {
+                DisplayTable();
+                MessageBox.Show("Seçili İzin Talebi Başarıyla Onaylandı", "İşlem Başarılı!");
+            }
+            else
+            {
+                MessageBox.Show($"Hata: {response.StatusCode} - {response.ReasonPhrase}", "İşlem Başarısız!");
+            }
         }
 
         private async void RedBtn_Click(object sender, EventArgs e)
@@ -97,17 +97,17 @@ namespace EmployeeTrackingSystem.UserControls
             var json = JsonSerializer.Serialize(izinTalepModel);
             HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            //var response = await _httpClient.PatchAsync($"izintalepleri/{TalepID}", content);
+            var response = await _httpClient.PatchAsync($"izintalepleri/{TalepID}", content);
 
-            //if (response.IsSuccessStatusCode)
-            //{
-            //    DisplayTable();
-            //    MessageBox.Show("Seçili İzin Talebi Reddedildi", "İşlem Başarılı!");
-            //}
-            //else
-            //{
-            //    MessageBox.Show($"Hata: {response.StatusCode} - {response.ReasonPhrase}", "İşlem Başarısız!");
-            //}
+            if (response.IsSuccessStatusCode)
+            {
+                DisplayTable();
+                MessageBox.Show("Seçili İzin Talebi Reddedildi", "İşlem Başarılı!");
+            }
+            else
+            {
+                MessageBox.Show($"Hata: {response.StatusCode} - {response.ReasonPhrase}", "İşlem Başarısız!");
+            }
         }
     }
 }

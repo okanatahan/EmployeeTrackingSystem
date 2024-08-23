@@ -32,19 +32,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DepartmanlarDGV = new System.Windows.Forms.DataGridView();
-            this.departmanlarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.departmanlarDataSet = new EmployeeTrackingSystem.DataSets.DepartmanlarDataSet();
             this.DepartmanEkleBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.DepartmanAdı = new System.Windows.Forms.TextBox();
-            this.departmanlarTableAdapter = new EmployeeTrackingSystem.DataSets.DepartmanlarDataSetTableAdapters.DepartmanlarTableAdapter();
             this.YeniDepartmanAd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.DepartmanDznBtn = new System.Windows.Forms.Button();
             this.DepartmanSilBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DepartmanlarDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmanlarBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmanlarDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // DepartmanlarDGV
@@ -71,16 +66,6 @@
             this.DepartmanlarDGV.RowTemplate.Height = 25;
             this.DepartmanlarDGV.Size = new System.Drawing.Size(531, 966);
             this.DepartmanlarDGV.TabIndex = 0;
-            // 
-            // departmanlarBindingSource
-            // 
-            this.departmanlarBindingSource.DataMember = "Departmanlar";
-            this.departmanlarBindingSource.DataSource = this.departmanlarDataSet;
-            // 
-            // departmanlarDataSet
-            // 
-            this.departmanlarDataSet.DataSetName = "DepartmanlarDataSet";
-            this.departmanlarDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // DepartmanEkleBtn
             // 
@@ -110,10 +95,6 @@
             this.DepartmanAdı.Name = "DepartmanAdı";
             this.DepartmanAdı.Size = new System.Drawing.Size(180, 25);
             this.DepartmanAdı.TabIndex = 3;
-            // 
-            // departmanlarTableAdapter
-            // 
-            this.departmanlarTableAdapter.ClearBeforeFill = true;
             // 
             // YeniDepartmanAd
             // 
@@ -171,8 +152,6 @@
             this.Name = "DepartmanTanımlama";
             this.Size = new System.Drawing.Size(1800, 972);
             ((System.ComponentModel.ISupportInitialize)(this.DepartmanlarDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmanlarBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmanlarDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,9 +163,6 @@
         private System.Windows.Forms.Button DepartmanEkleBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox DepartmanAdı;
-        private System.Windows.Forms.BindingSource departmanlarBindingSource;
-        private DataSets.DepartmanlarDataSet departmanlarDataSet;
-        private DataSets.DepartmanlarDataSetTableAdapters.DepartmanlarTableAdapter departmanlarTableAdapter;
         private System.Windows.Forms.TextBox YeniDepartmanAd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button DepartmanDznBtn;

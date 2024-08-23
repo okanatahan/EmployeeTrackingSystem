@@ -64,6 +64,19 @@ namespace EmployeeTrackingSystem.UserControls
                 MessageBox.Show("Lütfen Bir İzin Tipi Seçiniz", "HATA!");
                 return;
             }
+            var talepJson = await _httpClient.GetStringAsync("izintalepleri");
+            var talepResponse = JsonSerializer.Deserialize<List<IzinTalepModel>>(talepJson);
+            var talepler = talepResponse.FindAll(
+                delegate (IzinTalepModel it)
+                {
+                    return (it.FK_PersonelID == int.Parse(id)) && (it.OnayDurumu == null);
+                }
+                );
+            if (talepler.Count > 0)
+            {
+                MessageBox.Show("Zaten Onay Bekleyen 1 İzin Talebiniz Var!", "HATA!");
+                return;
+            }
             try
             {
                 var PersonelInfo = await _httpClient.GetStringAsync($"Personeller/{id}");

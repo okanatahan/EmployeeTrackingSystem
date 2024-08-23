@@ -17,6 +17,7 @@ namespace EmployeeTrackingSystem.UserControls
     public partial class OnayTalepleri : UserControl
     {
         private readonly HttpClient _httpClient;
+        string id;
         public OnayTalepleri(string id)
         {
             InitializeComponent();
@@ -24,10 +25,11 @@ namespace EmployeeTrackingSystem.UserControls
             {
                 BaseAddress = new Uri("http://localhost:5000/api/")
             };
-            DisplayTable(id);
+            this.id = id;
+            DisplayTable();
         }
 
-        private async void DisplayTable(string id)
+        private async void DisplayTable()
         {
             try
             {
@@ -35,7 +37,7 @@ namespace EmployeeTrackingSystem.UserControls
                 var izintalepleri = JsonSerializer.Deserialize<List<IzinTalepModel>>(json);
 
                 var YoneticilerInfo = await _httpClient.GetStringAsync("yoneticiler");
-                var YoneticilerResponse = JsonSerializer.Deserialize<List<YoneticiModel>>(json);
+                var YoneticilerResponse = JsonSerializer.Deserialize<List<YoneticiModel>>(YoneticilerInfo);
 
                 var yonetici = YoneticilerResponse.Find(
                     delegate (YoneticiModel ym)
@@ -58,26 +60,54 @@ namespace EmployeeTrackingSystem.UserControls
             }
         }
 
-        private void OnayBtn_Click(object sender, EventArgs e)
+        private async void OnayBtn_Click(object sender, EventArgs e)
         {
-            int TempId = (int)OnayTalepleriDGV.Rows[OnayTalepleriDGV.CurrentRow.Index].Cells[0].Value;
+            int TalepID = (int)OnayTalepleriDGV.Rows[OnayTalepleriDGV.CurrentRow.Index].Cells[0].Value;
 
             var izinTalepModel = new IzinTalepModel
             {
                 OnayDurumu = "ONAYLANDI"
             };
+
+            var json = JsonSerializer.Serialize(izinTalepModel);
+            HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            //var response = await _httpClient.PatchAsync($"izintalepleri/{TalepID}", content);
+
+            //if (response.IsSuccessStatusCode)
+            //{
+            //    DisplayTable();
+            //    MessageBox.Show("Seçili İzin Talebi Başarıyla Onaylandı", "İşlem Başarılı!");
+            //}
+            //else
+            //{
+            //    MessageBox.Show($"Hata: {response.StatusCode} - {response.ReasonPhrase}", "İşlem Başarısız!");
+            //}
         }
 
-        private void RedBtn_Click(object sender, EventArgs e)
+        private async void RedBtn_Click(object sender, EventArgs e)
         {
-            try
-            {
+            int TalepID = (int)OnayTalepleriDGV.Rows[OnayTalepleriDGV.CurrentRow.Index].Cells[0].Value;
 
-            }
-            catch (Exception ex)
+            var izinTalepModel = new IzinTalepModel
             {
+                OnayDurumu = "REDDEDİLDİ"
+            };
 
-            }
+            var json = JsonSerializer.Serialize(izinTalepModel);
+            HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            //var response = await _httpClient.PatchAsync($"izintalepleri/{TalepID}", content);
+
+            //if (response.IsSuccessStatusCode)
+            //{
+            //    DisplayTable();
+            //    MessageBox.Show("Seçili İzin Talebi Reddedildi", "İşlem Başarılı!");
+            //}
+            //else
+            //{
+            //    MessageBox.Show($"Hata: {response.StatusCode} - {response.ReasonPhrase}", "İşlem Başarısız!");
+            //}
         }
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Api.Data;
 using Api.Models;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace Api.Controllers
 {
@@ -28,12 +29,26 @@ namespace Api.Controllers
             return await _context.IzinTalepleri.ToListAsync();
         }
 
+        // GET: api/IzinTalepleri/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<IzinTalepModel>> GetIzinTalepleriModel(int id)
+        {
+            var izinTalepleriModel = await _context.IzinTalepleri.FindAsync(id);
+
+            if (izinTalepleriModel == null)
+            {
+                return NotFound();
+            }
+
+            return izinTalepleriModel;
+        }
+
         // PUT: api/IzinTalepleri/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutIzinTalepleriModel(int id, IzinTalepModel izinTalepleriModel)
         {
-            if (id != izinTalepleriModel.FK_PersonelID)
+            if (id != izinTalepleriModel.TalepID)
             {
                 return BadRequest();
             }
@@ -67,7 +82,7 @@ namespace Api.Controllers
             _context.IzinTalepleri.Add(izinTalepleriModel);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetIzinTalepleriModel", new { id = izinTalepleriModel.FK_PersonelID }, izinTalepleriModel);
+            return CreatedAtAction("GetIzinTalepleriModel", new { id = izinTalepleriModel.TalepID }, izinTalepleriModel);
         }
 
         // DELETE: api/IzinTalepleri/5
@@ -88,7 +103,22 @@ namespace Api.Controllers
 
         private bool IzinTalepleriModelExists(int id)
         {
-            return _context.IzinTalepleri.Any(e => e.FK_PersonelID == id);
+            return _context.IzinTalepleri.Any(e => e.TalepID == id);
+        }
+
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PatchIzinTalepleriModel(int id, [FromBody] JsonPatchDocument<IzinTalepModel> patchDoc)
+        {
+            var entity = await _context.IzinTalepleri.FindAsync(id);
+            if (entity == null)
+            {
+                return NotFound();
+            }
+
+            patchDoc.ApplyTo(entity);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
     }
 }

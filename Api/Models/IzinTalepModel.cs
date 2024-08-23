@@ -3,9 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Api.Models
 {
-    [Keyless]
     public class IzinTalepModel
     {
+        [Key]
+        public int TalepID { get; set; }
         public int FK_PersonelID { get; set; }
         public string? Ad_Soyad { get; set; }
         public DateTime IzinBaslangicTar { get; set; }

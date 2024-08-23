@@ -9,7 +9,7 @@
     <RootNamespace>EmployeeTrackingSystem</RootNamespace>
     <AssemblyName>EmployeeTrackingSystem</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-	<LangVersion>8.0</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -138,6 +138,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LokasyonlarDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Models\IzinTalepModel.cs" />
+    <Compile Include="Models\IzinTipModel.cs" />
+    <Compile Include="Models\PersonelModel.cs" />
+    <Compile Include="Models\YoneticiModel.cs" />
     <Compile Include="NavigationMenu.cs">
       <SubType>Form</SubType>
     </Compile>

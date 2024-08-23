@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EmployeeTrackingSystem.Models;
 
 namespace EmployeeTrackingSystem.UserControls
 {
@@ -99,59 +100,5 @@ namespace EmployeeTrackingSystem.UserControls
                 MessageBox.Show("Hata: " + ex, "Hata Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    }
-    public class PersonelModel
-    {
-        public int PersonelID { get; set; }
-        public string SICIL { get; set; }
-        public string AD { get; set; }
-        public string SOYAD { get; set; }
-        public string AD_SOYAD => $"{AD} {SOYAD}";
-        public string CINSIYET { get; set; }
-        public DateTime? DOGUM_TAR { get; set; }
-        public DateTime? GIRIS_TAR { get; set; }
-        public DateTime? CIKIS_TAR { get; set; }
-        public string UNVAN { get; set; }
-        public string YAKA { get; set; }
-        public string ISLETME_KOD { get; set; }
-        public string DEPARTMAN_KOD { get; set; }
-        public string DEPARTMAN_ALT_KOD { get; set; }
-        public string POZISYON_KOD { get; set; }
-        public string LOKASYON_KOD { get; set; }
-        public string GECIS_KOD { get; set; }
-        public bool? SENKRON { get; set; }
-        public string SENDIKA_KOD { get; set; }
-        public string TASERON_KOD { get; set; }
-        public string CALISMA_SEKLI { get; set; }
-        public string CALISMA_KONUMU { get; set; }
-        public string DURUM { get; set; }
-        public string SICIL_EK { get; set; }
-        public string SGK_NO { get; set; }
-        public string MASRAF_KODU { get; set; }
-        public int FK_YoneticiID { get; set; }
-    }
-    public class YoneticiModel
-    {
-        public int YoneticiID { get; set; }
-        public int FK_PersonelID { get; set; }
-        public string AD { get; set; }
-        public string SOYAD { get; set; }
-        public string AD_SOYAD => $"{AD} {SOYAD}";
-    }
-    public class IzinTalepModel
-    {
-        public int FK_PersonelID { get; set; }
-        public string Ad_Soyad { get; set; }
-        public DateTime IzinBaslangicTar { get; set; }
-        public DateTime IzinBitisTar { get; set; }
-        public string FK_IzinTipi { get; set; }
-        public int FK_YoneticiID { get; set; }
-        public string Yonetici { get; set; }
-        public string OnayDurumu { get; set; }
-    }
-    public class IzinTipModel
-    {
-        public int ID { get; set; }
-        public string IZIN_TIPI { get; set; }
     }
 }

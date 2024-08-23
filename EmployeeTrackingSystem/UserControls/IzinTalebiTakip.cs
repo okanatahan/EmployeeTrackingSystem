@@ -1,11 +1,13 @@
-﻿using System;
+﻿using EmployeeTrackingSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,43 +15,35 @@ namespace EmployeeTrackingSystem.UserControls
 {
     public partial class IzinTalebiTakip : UserControl
     {
-        string id;
-        SqlConnection conn = new SqlConnection(@"Data Source=OKAN\SQLEXPRESS;Initial Catalog=Company;Integrated Security=True;Encrypt=False;TrustServerCertificate=True");
+        HttpClient _httpClient;
         public IzinTalebiTakip(string id)
         {
-            this.id = id;
             InitializeComponent();
+            _httpClient = new HttpClient
+            {
+                BaseAddress = new Uri("http://localhost:5000/api/")
+            };
+            DisplayTable(id);
         }
 
-        private void DisplayTable()
+        private async void DisplayTable(string id)
         {
             try
             {
-                conn.Open();
-                String GetIzinTalepleri = "SELECT * FROM IzinTalepleri WHERE FK_PersonelID = @id";
-
-                using (SqlCommand cmd = new SqlCommand(GetIzinTalepleri, conn))
-                {
-                    cmd.Parameters.AddWithValue("@id", id);
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    dgv.DataSource = dt;
-                }
+                var json = await _httpClient.GetStringAsync("izintalepleri");
+                var izintalepleri = JsonSerializer.Deserialize<List<IzinTalepModel>>(json);
+                var results = izintalepleri.FindAll(
+                    delegate (IzinTalepModel it)
+                    {
+                        return it.FK_PersonelID == int.Parse(id);
+                    }
+                    );
+                IzinTalepleriDGV.DataSource = results;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hata: " + ex, "Hata Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
 
-        private void tlp_grntl_btn_Click(object sender, EventArgs e)
-        {
-            DisplayTable();
+            }
         }
     }
 }

@@ -28,20 +28,6 @@ namespace Api.Controllers
             return await _context.IzinTalepleri.ToListAsync();
         }
 
-        // GET: api/IzinTalepleri/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<IzinTalepModel>> GetIzinTalepleriModel(int id)
-        {
-            var izinTalepleriModel = await _context.IzinTalepleri.FindAsync(id);
-
-            if (izinTalepleriModel == null)
-            {
-                return NotFound();
-            }
-
-            return izinTalepleriModel;
-        }
-
         // PUT: api/IzinTalepleri/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

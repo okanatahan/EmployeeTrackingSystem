@@ -1,10 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace Api.Models
 {
+    [Keyless]
     public class IzinTalepModel
     {
-        [Key]
         public int FK_PersonelID { get; set; }
         public string? Ad_Soyad { get; set; }
         public DateTime IzinBaslangicTar { get; set; }

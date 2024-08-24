@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace EmployeeTrackingSystem.Models
 {
-    public class YoneticiModel
+    public class KullaniciModel
     {
         [Key]
-        public int YoneticiID { get; set; }
         public int FK_PersonelID { get; set; }
-        public string AD { get; set; }
-        public string SOYAD { get; set; }
-        public string AD_SOYAD => $"{AD} {SOYAD}";
+        public string kullanıcı_adı { get; set; }
+        public string parola { get; set; }
+        public string rol { get; set; }
     }
 }

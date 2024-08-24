@@ -120,6 +120,7 @@
     <Compile Include="Models\DepartmanModel.cs" />
     <Compile Include="Models\IzinTalepModel.cs" />
     <Compile Include="Models\IzinTipModel.cs" />
+    <Compile Include="Models\KullaniciModel.cs" />
     <Compile Include="Models\PersonelModel.cs" />
     <Compile Include="Models\YoneticiModel.cs" />
     <Compile Include="NavigationMenu.cs">

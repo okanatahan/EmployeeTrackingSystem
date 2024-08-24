@@ -15,5 +15,6 @@ namespace Api.Data
         public DbSet<YoneticiModel> Yoneticiler { get; set; } = default!;
         public DbSet<IzinTalepModel> IzinTalepleri { get; set; } = default!;
         public DbSet<IzinTipModel> IzinTipleri { get; set; } = default!;
+        public DbSet<KullaniciModel> Kullanicilar { get; set; } = default!;
     }
 }

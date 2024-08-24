@@ -30,6 +30,7 @@
         {
             this.PersonellerDGV = new System.Windows.Forms.DataGridView();
             this.YoneticiAtaBtn = new System.Windows.Forms.Button();
+            this.YoneticiSilBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PersonellerDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             // 
             this.YoneticiAtaBtn.BackColor = System.Drawing.Color.Purple;
             this.YoneticiAtaBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YoneticiAtaBtn.Location = new System.Drawing.Point(812, 683);
+            this.YoneticiAtaBtn.Location = new System.Drawing.Point(650, 683);
             this.YoneticiAtaBtn.Name = "YoneticiAtaBtn";
             this.YoneticiAtaBtn.Size = new System.Drawing.Size(175, 64);
             this.YoneticiAtaBtn.TabIndex = 2;
@@ -57,11 +58,24 @@
             this.YoneticiAtaBtn.UseVisualStyleBackColor = false;
             this.YoneticiAtaBtn.Click += new System.EventHandler(this.YoneticiAtaBtn_Click);
             // 
+            // YoneticiSilBtn
+            // 
+            this.YoneticiSilBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.YoneticiSilBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YoneticiSilBtn.Location = new System.Drawing.Point(975, 683);
+            this.YoneticiSilBtn.Name = "YoneticiSilBtn";
+            this.YoneticiSilBtn.Size = new System.Drawing.Size(182, 64);
+            this.YoneticiSilBtn.TabIndex = 3;
+            this.YoneticiSilBtn.Text = "Yöneticilikten Çıkart";
+            this.YoneticiSilBtn.UseVisualStyleBackColor = false;
+            this.YoneticiSilBtn.Click += new System.EventHandler(this.YoneticiSilBtn_Click);
+            // 
             // YoneticiAtama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
+            this.Controls.Add(this.YoneticiSilBtn);
             this.Controls.Add(this.YoneticiAtaBtn);
             this.Controls.Add(this.PersonellerDGV);
             this.Name = "YoneticiAtama";
@@ -75,5 +89,6 @@
 
         private System.Windows.Forms.DataGridView PersonellerDGV;
         private System.Windows.Forms.Button YoneticiAtaBtn;
+        private System.Windows.Forms.Button YoneticiSilBtn;
     }
 }

@@ -49,7 +49,7 @@ namespace EmployeeTrackingSystem
                     {
                         conn.Open();
 
-                        String selectUser = "SELECT * FROM Kullanıcılar WHERE kullanıcı_adı = @username AND parola = @password";
+                        String selectUser = "SELECT * FROM Kullanicilar WHERE kullanıcı_adı = @username AND parola = @password";
 
                         using (SqlCommand cmd = new SqlCommand(selectUser, conn))
                         {
@@ -63,7 +63,7 @@ namespace EmployeeTrackingSystem
                                 reader.Close();
 
                                 cmd.Parameters.Clear();
-                                String rolQuery = "SELECT rol FROM Kullanıcılar WHERE kullanıcı_adı = @username AND parola = @password";
+                                String rolQuery = "SELECT rol FROM Kullanicilar WHERE kullanıcı_adı = @username AND parola = @password";
                                 cmd.CommandText = rolQuery;
                                 cmd.Parameters.AddWithValue("@username", username_input.Text);
                                 cmd.Parameters.AddWithValue("@password", password_input.Text);
@@ -71,7 +71,7 @@ namespace EmployeeTrackingSystem
                                 string rol = result.ToString();
 
                                 cmd.Parameters.Clear();
-                                String idQuery = "SELECT FK_PersonelID FROM Kullanıcılar WHERE kullanıcı_adı = @username AND parola = @password";
+                                String idQuery = "SELECT FK_PersonelID FROM Kullanicilar WHERE kullanıcı_adı = @username AND parola = @password";
                                 cmd.CommandText = idQuery;
                                 cmd.Parameters.AddWithValue("@username", username_input.Text);
                                 cmd.Parameters.AddWithValue("@password", password_input.Text);

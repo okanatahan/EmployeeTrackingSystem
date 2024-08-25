@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DepartmanlarDGV = new System.Windows.Forms.DataGridView();
             this.DepartmanEkleBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,25 +46,27 @@
             this.DepartmanlarDGV.AllowUserToAddRows = false;
             this.DepartmanlarDGV.AllowUserToDeleteRows = false;
             this.DepartmanlarDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DepartmanlarDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DepartmanlarDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DepartmanlarDGV.ColumnHeadersHeight = 25;
             this.DepartmanlarDGV.Location = new System.Drawing.Point(3, 3);
             this.DepartmanlarDGV.Name = "DepartmanlarDGV";
             this.DepartmanlarDGV.ReadOnly = true;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepartmanlarDGV.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.DepartmanlarDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartmanlarDGV.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.DepartmanlarDGV.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.DepartmanlarDGV.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DepartmanlarDGV.RowTemplate.Height = 25;
             this.DepartmanlarDGV.Size = new System.Drawing.Size(531, 966);
             this.DepartmanlarDGV.TabIndex = 0;
+            this.DepartmanlarDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DepartmanlarDGV_CellClick);
             // 
             // DepartmanEkleBtn
             // 
@@ -108,11 +109,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1229, 404);
+            this.label2.Location = new System.Drawing.Point(1221, 404);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 18);
+            this.label2.Size = new System.Drawing.Size(186, 18);
             this.label2.TabIndex = 5;
-            this.label2.Text = "YENİ DEPARTMAN ADI:";
+            this.label2.Text = "DEPARTMANIN YENİ ADI:";
             // 
             // DepartmanDznBtn
             // 

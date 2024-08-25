@@ -53,6 +53,7 @@ namespace EmployeeTrackingSystem.UserControls
 
                     UpdateListAsync();
                     MessageBox.Show("Departman Başarıyla Eklendi", "İşlem Başarılı!");
+                    DepartmanAdı.Text = "";
                 }
                 else
                 {
@@ -100,11 +101,17 @@ namespace EmployeeTrackingSystem.UserControls
             {
                 UpdateListAsync();
                 MessageBox.Show("Seçili Departman Başarıyla Güncellendi", "İşlem Başarılı");
+                YeniDepartmanAd.Text = "";
             }
             else
             {
                 MessageBox.Show($"Hata: {response.StatusCode} - {response.ReasonPhrase}", "İşlem Başarısız!");
             }
+        }
+
+        private void DepartmanlarDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DepartmanAdı.Text = DepartmanlarDGV.Rows[DepartmanlarDGV.CurrentRow.Index].Cells[2].Value.ToString();
         }
     }
 }

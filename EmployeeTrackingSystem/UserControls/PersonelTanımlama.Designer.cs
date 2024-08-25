@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PersonelEkleBtn = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.PersonellerDGV = new System.Windows.Forms.DataGridView();
@@ -77,7 +79,7 @@
             this.Sendikalar = new System.Windows.Forms.ComboBox();
             this.Taseronlar = new System.Windows.Forms.ComboBox();
             this.Masraflar = new System.Windows.Forms.ComboBox();
-            this.PersonelCikartBtn = new System.Windows.Forms.Button();
+            this.PersonelSilBtn = new System.Windows.Forms.Button();
             this.PersonelGncBtn = new System.Windows.Forms.Button();
             this.Isletmeler = new System.Windows.Forms.ComboBox();
             this.Gecisler = new System.Windows.Forms.ComboBox();
@@ -113,19 +115,38 @@
             this.PersonellerDGV.AllowUserToAddRows = false;
             this.PersonellerDGV.AllowUserToDeleteRows = false;
             this.PersonellerDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.PersonellerDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.PersonellerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PersonellerDGV.ColumnHeadersHeight = 25;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.PersonellerDGV.DefaultCellStyle = dataGridViewCellStyle2;
             this.PersonellerDGV.Location = new System.Drawing.Point(6, 3);
             this.PersonellerDGV.Name = "PersonellerDGV";
             this.PersonellerDGV.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PersonellerDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.PersonellerDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.PersonellerDGV.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.PersonellerDGV.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PersonellerDGV.RowTemplate.Height = 25;
             this.PersonellerDGV.Size = new System.Drawing.Size(1791, 422);
             this.PersonellerDGV.TabIndex = 60;
             this.PersonellerDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PersonellerDGV_CellClick);
@@ -567,16 +588,16 @@
             this.Masraflar.Size = new System.Drawing.Size(200, 25);
             this.Masraflar.TabIndex = 117;
             // 
-            // PersonelCikartBtn
+            // PersonelSilBtn
             // 
-            this.PersonelCikartBtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PersonelCikartBtn.Location = new System.Drawing.Point(836, 877);
-            this.PersonelCikartBtn.Name = "PersonelCikartBtn";
-            this.PersonelCikartBtn.Size = new System.Drawing.Size(137, 50);
-            this.PersonelCikartBtn.TabIndex = 118;
-            this.PersonelCikartBtn.Text = "Seçili Personeli Çıkart";
-            this.PersonelCikartBtn.UseVisualStyleBackColor = true;
-            this.PersonelCikartBtn.Click += new System.EventHandler(this.PersonelCikartBtn_Click);
+            this.PersonelSilBtn.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PersonelSilBtn.Location = new System.Drawing.Point(836, 877);
+            this.PersonelSilBtn.Name = "PersonelSilBtn";
+            this.PersonelSilBtn.Size = new System.Drawing.Size(137, 50);
+            this.PersonelSilBtn.TabIndex = 118;
+            this.PersonelSilBtn.Text = "Seçili Personeli Sil";
+            this.PersonelSilBtn.UseVisualStyleBackColor = true;
+            this.PersonelSilBtn.Click += new System.EventHandler(this.PersonelSilBtn_Click);
             // 
             // PersonelGncBtn
             // 
@@ -692,7 +713,7 @@
             this.Controls.Add(this.Gecisler);
             this.Controls.Add(this.Isletmeler);
             this.Controls.Add(this.PersonelGncBtn);
-            this.Controls.Add(this.PersonelCikartBtn);
+            this.Controls.Add(this.PersonelSilBtn);
             this.Controls.Add(this.Masraflar);
             this.Controls.Add(this.Taseronlar);
             this.Controls.Add(this.Sendikalar);
@@ -797,71 +818,16 @@
         private System.Windows.Forms.ComboBox Sendikalar;
         private System.Windows.Forms.ComboBox Taseronlar;
         private System.Windows.Forms.ComboBox Masraflar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn personelIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sICILDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sOYADDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aDSOYADDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cINSIYETDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dOGUMTARDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gIRISTARDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cIKISTARDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uNVANDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn yAKADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iSLETMEKODDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dEPARTMANKODDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dEPARTMANALTKODDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pOZISYONKODDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lOKASYONKODDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gECISKODDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn sENKRONDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sENDIKAKODDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tASERONKODDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cALISMASEKLIDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cALISMAKONUMUDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dURUMDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sICILEKDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sGKNODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mASRAFKODUDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn yoneticiIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button PersonelCikartBtn;
+        private System.Windows.Forms.Button PersonelSilBtn;
         private System.Windows.Forms.Button PersonelGncBtn;
         private System.Windows.Forms.ComboBox Isletmeler;
         private System.Windows.Forms.ComboBox Gecisler;
         private System.Windows.Forms.ComboBox Yoneticiler;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton SenkronHayir;
         private System.Windows.Forms.RadioButton SenkronEvet;
         private System.Windows.Forms.TextBox SicilInput;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fKYoneticiIDDataGridViewTextBoxColumn;
     }
 }

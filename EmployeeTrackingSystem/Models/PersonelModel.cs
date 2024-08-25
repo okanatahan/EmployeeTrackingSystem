@@ -25,7 +25,7 @@ namespace EmployeeTrackingSystem.Models
         public string POZISYON_KOD { get; set; }
         public string LOKASYON_KOD { get; set; }
         public string GECIS_KOD { get; set; }
-        public bool? SENKRON { get; set; }
+        public string SENKRON { get; set; }
         public string SENDIKA_KOD { get; set; }
         public string TASERON_KOD { get; set; }
         public string CALISMA_SEKLI { get; set; }

@@ -117,11 +117,19 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AltDepartmanModel.cs" />
     <Compile Include="Models\DepartmanModel.cs" />
+    <Compile Include="Models\GecisModel.cs" />
+    <Compile Include="Models\IsletmeModel.cs" />
     <Compile Include="Models\IzinTalepModel.cs" />
     <Compile Include="Models\IzinTipModel.cs" />
     <Compile Include="Models\KullaniciModel.cs" />
+    <Compile Include="Models\LokasyonModel.cs" />
+    <Compile Include="Models\MasrafModel.cs" />
     <Compile Include="Models\PersonelModel.cs" />
+    <Compile Include="Models\PozisyonModel.cs" />
+    <Compile Include="Models\SendikaModel.cs" />
+    <Compile Include="Models\TaseronModel.cs" />
     <Compile Include="Models\YoneticiModel.cs" />
     <Compile Include="NavigationMenu.cs">
       <SubType>Form</SubType>

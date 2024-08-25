@@ -29,7 +29,7 @@ namespace EmployeeTrackingSystem.UserControls
         private async void UpdateListAsync()
         {
             var response = await _httpClient.GetStringAsync("izintipleri");
-            var izintipleri = JsonSerializer.Deserialize<List<DepartmanModel>>(response);
+            var izintipleri = JsonSerializer.Deserialize<List<IzinTipModel>>(response);
             IzinTipleriDGV.DataSource = izintipleri;
         }
 

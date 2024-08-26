@@ -65,7 +65,7 @@ namespace EmployeeTrackingSystem.UserControls
             int TalepID = (int)OnayTalepleriDGV.Rows[OnayTalepleriDGV.CurrentRow.Index].Cells[0].Value;
 
             var PersonelJson = await _httpClient.GetStringAsync($"izintalepleri/{TalepID}");
-            var PersonelResponse= JsonSerializer.Deserialize<IzinTalepModel>(PersonelJson);
+            var PersonelResponse = JsonSerializer.Deserialize<IzinTalepModel>(PersonelJson);
 
             var izinTalepModel = new IzinTalepModel
             {

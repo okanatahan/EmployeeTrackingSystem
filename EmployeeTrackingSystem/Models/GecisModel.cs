@@ -12,6 +12,6 @@ namespace EmployeeTrackingSystem.Models
         [Key]
         public int ID { get; set; }
         public string GecisID => $"GEC{ID}";
-        public string? Gecis_Bilgisi { get; set; }
+        public string Gecis_Bilgisi { get; set; }
     }
 }

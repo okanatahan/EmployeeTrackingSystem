@@ -1,11 +1,14 @@
-﻿using System;
+﻿using EmployeeTrackingSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,11 +16,14 @@ namespace EmployeeTrackingSystem
 {
     public partial class LoginPage : System.Windows.Forms.Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=OKAN\SQLEXPRESS;Initial Catalog=Company;Integrated Security=True;Encrypt=False;TrustServerCertificate=True");
-
+        private readonly HttpClient _httpClient;
         public LoginPage()
         {
             InitializeComponent();
+            _httpClient = new HttpClient()
+            {
+                BaseAddress = new Uri("http://localhost:5000/api/")
+            };
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -35,69 +41,34 @@ namespace EmployeeTrackingSystem
             password_input.PasswordChar = show_password_btn.Checked ? '\0' : '*';
         }
 
-        private void login_btn_Click(object sender, EventArgs e)
+        private async void login_btn_Click(object sender, EventArgs e)
         {
             if (username_input.Text == "" || password_input.Text == "")
             {
                 MessageBox.Show("Lütfen Tüm Alanları Doldurunuz!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+            try
             {
-                if (conn.State == ConnectionState.Closed)
+                var json = await _httpClient.GetStringAsync("kullanicilar");
+                var kullanicilar = JsonSerializer.Deserialize<List<KullaniciModel>>(json);
+
+                var kullanici = kullanicilar.Find(k => k.kullanıcı_adı == username_input.Text && k.parola == password_input.Text);
+                if (kullanici != null)
                 {
-                    try
-                    {
-                        conn.Open();
-
-                        String selectUser = "SELECT * FROM Kullanicilar WHERE kullanıcı_adı = @username AND parola = @password";
-
-                        using (SqlCommand cmd = new SqlCommand(selectUser, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@username", username_input.Text);
-                            cmd.Parameters.AddWithValue("@password", password_input.Text);
-
-                            SqlDataReader reader = cmd.ExecuteReader();
-
-                            if (reader.HasRows)
-                            {
-                                reader.Close();
-
-                                cmd.Parameters.Clear();
-                                String rolQuery = "SELECT rol FROM Kullanicilar WHERE kullanıcı_adı = @username AND parola = @password";
-                                cmd.CommandText = rolQuery;
-                                cmd.Parameters.AddWithValue("@username", username_input.Text);
-                                cmd.Parameters.AddWithValue("@password", password_input.Text);
-                                object result = cmd.ExecuteScalar();
-                                string rol = result.ToString();
-
-                                cmd.Parameters.Clear();
-                                String idQuery = "SELECT FK_PersonelID FROM Kullanicilar WHERE kullanıcı_adı = @username AND parola = @password";
-                                cmd.CommandText = idQuery;
-                                cmd.Parameters.AddWithValue("@username", username_input.Text);
-                                cmd.Parameters.AddWithValue("@password", password_input.Text);
-                                result = cmd.ExecuteScalar();
-                                string id = cmd.ExecuteScalar().ToString();
-
-                                this.Hide();
-                                Singleton.SetInstance(rol, id);
-                                NavigationMenu NaviObj = Singleton.GetInstance();
-                                NaviObj.ShowDialog();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Hatalı Kullanıcı Adı veya Şifre!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Hata: " + ex, "Hata Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    finally
-                    {
-                        conn.Close();
-                    }
+                    Singleton.SetInstance(kullanici.rol, kullanici.FK_PersonelID.ToString());
+                    NavigationMenu NaviObj = Singleton.GetInstance();
+                    this.Hide();
+                    NaviObj.ShowDialog();
                 }
+                else
+                {
+                    MessageBox.Show("Hatalı Kullanıcı Adı veya Şifre!", "Hata!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Exception: {ex.Message}", "Hata");
             }
         }
 
@@ -105,6 +76,7 @@ namespace EmployeeTrackingSystem
         {
             if (e.KeyCode == Keys.Enter)
             {
+                e.SuppressKeyPress = true;
                 login_btn_Click(sender, e);
             }
         }
